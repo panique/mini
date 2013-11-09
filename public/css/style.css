@@ -1,0 +1,20 @@
+/* Demo CSS */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+}
+
+table {
+    font-size: 13px;
+}
+
+.container {
+    border: 1px solid #555;
+    padding: 20px;
+    margin: 10px;
+}
