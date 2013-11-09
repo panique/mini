@@ -19,7 +19,7 @@ not-so-advanced coder.
 
 - fitting PSR 1/2 coding guidelines
 - usage of PDO
-- promoting the usage of Composer, in the exactly the way it should be used
+- promoting the usage of Composer, in exactly the way it should be used
 - more or less clean folder/file structure
 - promoting developing with max. error reporting
 
