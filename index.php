@@ -10,8 +10,10 @@
  * @license http://opensource.org/licenses/MIT MIT License
  */
 
-// OPTIONAL: Loads the Composer auto-loader (TODO: Composer tutorial)
-// require 'vendor/autoload.php';
+// OPTIONAL: Loads the Composer auto-loader
+if (file_exists('vendor/autoload.php')) {
+    require 'vendor/autoload.php';
+}
 
 // Load application config (error reporting etc.)
 require 'application/config/config.php';
