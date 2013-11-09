@@ -1,8 +1,35 @@
+# This is an in-development project, in a very early stage! Please keep that in mind. The release of this thing might
+be in early 2014.
+
 # PHP-MVC
 
-A simple and easy to understand MVC skeleton application.
-Perfect for quickly building real and clean applications.
-Perfect to learn how MVC works.
+A simple and easy to understand MVC skeleton application, reduced to the max.
+Everything is as simple as possible, as readable as possible and as manually as possible.
+This project tries to be the extremely slimmed down opposite of big frameworks like Zend2, Symfony or Laravel.
+
+## Why does this project exist ?
+
+One of the biggest question in the PHP world is "How do I build an application ?".
+It's hard to find a good base, a good file structure and useful information on that, but at the same time
+there are masses of frameworks that might be really good, but hard to understand, hard to use and extremely complex.
+This project tries to be some kind of naked skeleton bare-bone for quick application building, especially for the
+not-so-advanced coder.
+
+### This project tries to promote clean and modern PHP coding, by
+
+- fitting PSR 1/2 coding guidelines
+- usage of PDO
+- promoting the usage of Composer, in the exactly the way it should be used
+- more or less clean folder/file structure
+- promoting developing with max. error reporting
+
+## Installation
+
+As this is just a preview, not a finished project: See the the TODO file.
+
+# TODO: Content of DOCUMENTATION.md goes here !
+
+# TODO: see TODO file
 
 # License
 
