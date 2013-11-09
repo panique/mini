@@ -1,5 +1,5 @@
-# This is an in-development project, in a very early stage! Please keep that in mind. The release of this thing might
-be in early 2014.
+*This is an in-development project, in a very early stage! Please keep that in mind. The release of this thing might
+be in early 2014.*
 
 # PHP-MVC
 
