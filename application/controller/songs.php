@@ -9,8 +9,12 @@
  * This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
  *
  */
-class Songs
+class Songs extends Controller
 {
+    //function __construct() {
+    //    parent::__construct();
+    //}
+
     /**
      * PAGE:
      */
@@ -20,8 +24,7 @@ class Songs
         echo 'Message from Controller: You are in the Controller: Songs, using the method index().';
 
         // load model, perform an action on the model
-        require 'application/models/songs_model.php';
-        $songs_model = new Songs_Model();
+        $songs_model = $this->loadModel('Songs_Model');
         $songs_model->getAllSongs();
 
         // load header and view
@@ -40,8 +43,7 @@ class Songs
 
         if (isset($_POST["submit_add_song"])) {
             // load model, perform an action on the model
-            require 'application/models/songs_model.php';
-            $songs_model = new Songs_Model();
+            $songs_model = $this->loadModel('Songs_Model');
             $songs_model->addSong($_POST["artist"], $_POST["track"],  $_POST["link"]);
         }
 
@@ -59,8 +61,7 @@ class Songs
 
         if (isset($song_id)) {
             // load model, perform an action on the model
-            require 'application/models/songs_model.php';
-            $songs_model = new Songs_Model();
+            $songs_model = $this->loadModel('Songs_Model');
             $songs_model->deleteSong($song_id);
         }
 

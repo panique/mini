@@ -18,8 +18,7 @@ if (file_exists('vendor/autoload.php')) {
 // Load application config (error reporting etc.)
 require 'application/config/config.php';
 
-// Load application & database class, start the application.
-// The constructor in application/libs/application.php does the rest.
+// Load application class, start the application.
 require 'application/libs/application.php';
-require 'application/libs/database.php';
+require 'application/libs/controller.php';
 $app = new Application();

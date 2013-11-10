@@ -1,6 +1,6 @@
 <?php
 
-class Songs_Model extends Database
+class Songs_Model
 {
     /**
      * @var array The list of the songs, usually an array of objects (as each PDO result is an object here)
@@ -11,9 +11,9 @@ class Songs_Model extends Database
      * Every model needs this constructor that creates a database connection.
      * It creates a PDO database connection when a model is constructed.
      */
-    function __construct() {
+    function __construct($db) {
         try {
-            $this->db = new Database();
+            $this->db = $db;
         } catch (PDOException $e) {
             exit('Database connection could not be established.');
         }
