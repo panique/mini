@@ -19,6 +19,13 @@
 ### Perfect code (?), rewrite code so PHPStorm notices disappear
 ### Paths: Use constants, directory separators etc.
 
+# Ideas
+
+1. basic version and advanced version ?
+
+Basic version could be totally manually and reduced (manual require() of models and views),
+advanced could automate things
+
 # Code styles
 
 ### PSR 0/1/2/3
