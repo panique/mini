@@ -19,6 +19,11 @@
                 <li><a href="<?php echo URL; ?>home/exampletwo"><?php echo URL; ?>home/exampletwo</a></li>
                 <!-- "songs" and "songs/index" are the same -->
                 <li><a href="<?php echo URL; ?>songs/"><?php echo URL; ?>songs/index</a></li>
+                <li>
+                    <a href="<?php echo URL; ?>songs/multiplemodels"><?php echo URL; ?>
+                        songs/multiplemodels (two models in one controller)
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

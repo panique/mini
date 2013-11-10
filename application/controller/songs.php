@@ -67,4 +67,28 @@ class Songs
         // where to go after song has been added ?
         header('location: ' . URL . 'songs/index');
     }
+
+    /**
+     * PAGE:
+     */
+    public function multipleModels()
+    {
+        // simple message to show where you are
+        echo 'Message from Controller: You are in the Controller: Songs, using the method index().';
+
+        // load first model, perform an action on the model
+        require 'application/models/songs_model.php';
+        $songs_model = new Songs_Model();
+        $songs_model->getAllSongs();
+
+        // load second model, perform an action on the model (useful sometimes !)
+        require 'application/models/stats_model.php';
+        $stats_model = new Stats_Model();
+        $stats_model->getPageStats();
+
+        // load header and view
+        require 'application/views/_templates/header.php';
+        require 'application/views/songs/multiple_models.php';
+        require 'application/views/_templates/footer.php';
+    }
 }
