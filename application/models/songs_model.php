@@ -20,7 +20,7 @@ class Songs_Model extends Database
     }
 
     /**
-     * Gets all songs from database table
+     * Puts all songs from database table into the $song property of this class
      */
     public function getAllSongs()
     {

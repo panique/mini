@@ -1,9 +1,9 @@
 <?php
 
-class Database extends PDO {
-
-    public function __construct() {
-
+class Database extends PDO
+{
+    public function __construct()
+    {
         // set the (optional) options of the PDO connection. in this case, we set the fetch mode to
         // "objects", which means all results will be objects, like this: $result->user_name !
         // For example, fetch mode FETCH_ASSOC would return results like this: $result["user_name] !
@@ -14,5 +14,4 @@ class Database extends PDO {
         // @see http://net.tutsplus.com/tutorials/php/why-you-should-be-using-phps-pdo-for-database-access/
         parent::__construct(DB_TYPE . ':host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS, $options);
     }
-
 }
