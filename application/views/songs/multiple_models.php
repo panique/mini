@@ -19,12 +19,13 @@
     <!-- stats output -->
     <div>
         <h3>Amount of songs (data from second model)</h3>
-        <?php echo $stats_model->amount_of_songs; ?>
+        <p>This data comes from the STAT-model: We have <?php echo $stats_model->amount_of_songs; ?> songs.</p>
     </div>
 
     <!-- main content output -->
     <div>
         <h3>List of songs (data from first model)</h3>
+        <p>This data comes from the SONG-model.</p>
         <table>
             <thead style="background-color: #ddd; font-weight: bold;">
             <tr>
