@@ -3,7 +3,7 @@ be in early 2014.*
 
 # PHP-MVC
 
-A simple and easy to understand MVC skeleton application, reduced to the max.
+An extremely simple and easy to understand MVC skeleton application, reduced to the max.
 Everything is as simple as possible, as readable as possible and as manually as possible.
 This project tries to be the extremely slimmed down opposite of big frameworks like Zend2, Symfony or Laravel.
 
@@ -11,9 +11,9 @@ This project tries to be the extremely slimmed down opposite of big frameworks l
 
 One of the biggest question in the PHP world is "How do I build an application ?".
 It's hard to find a good base, a good file structure and useful information on that, but at the same time
-there are masses of frameworks that might be really good, but hard to understand, hard to use and extremely complex.
-This project tries to be some kind of naked skeleton bare-bone for quick application building, especially for the
-not-so-advanced coder.
+there are masses of frameworks that might be really good, but really hard to understand, hard to use and extremely
+complex. This project tries to be some kind of naked skeleton bare-bone for quick application building,
+especially for the not-so-advanced coder.
 
 ### This project tries to promote clean and modern PHP coding, by
 
@@ -27,17 +27,21 @@ not-so-advanced coder.
 
 As this is just a preview, not a finished project: See the the TODO file.
 
-# TODO: Content of DOCUMENTATION.md goes here !
+## TODO
 
-# TODO: see TODO file
+Content of DOCUMENTATION.md goes here !
 
-# What is a model, a view, a controller
+## TODO
 
-## Controller
+TODO file
+
+## What is a model, a view, a controller
+
+### Controller
 
 TODO
 
-## Model
+### Model
 
 A model is that part of the application that reads, manipulates, deletes etc. data, according to the information
 the model gets from the controller. The definition of what a model is or should be is not *really* clear, as a class
@@ -46,11 +50,11 @@ holds all the data from several models (song model, stats model, etc.) can be de
 constructs collect data from several models and put everything in a container (let's say $model) and pass this to the
 view. The view only accesses this $model, not the real model objects.
 
-## View
+### View
 
 TODO
 
-# License
+## License
 
 This project is licensed under the MIT License.
 This means you can use and modify it for free in private or commercial projects.
@@ -76,6 +80,6 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# Statistics (by BitDeli)
+## Statistics (by BitDeli)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/panique/php-mvc/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
