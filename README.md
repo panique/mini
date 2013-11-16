@@ -121,6 +121,7 @@ If you think this script is useful and saves you a lot of work, then think about
    or [GitTip](https://www.gittip.com/Panique/)
 2. Renting your next server at [DigitalOcean](https://www.digitalocean.com/?refcode=40d978532a20).
    SSD servers for $5+ per month or $0.007 per hour (!). PHP-MVC will get a small reward for every new customer.
+3. Contributing to this project. Feel free to improve this project with your skills.
 
 ## Statistics (by BitDeli)
 
