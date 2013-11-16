@@ -28,6 +28,10 @@ class Songs extends Controller
         $songs_model = $this->loadModel('Songs_Model');
         $this->model->songs = $songs_model->getAllSongs();
 
+        // load a second model, perform an action, pass the data to model-container
+        $stats_model = $this->loadModel('Stats_Model');
+        $this->model->amount_of_songs = $stats_model->getAmountOfSongs();
+
         // load view, always write without .php (header/footer are automatically loaded, see libs/controller for more)
         $this->loadView('songs/index', $this->model);
     }

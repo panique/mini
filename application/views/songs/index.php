@@ -18,7 +18,11 @@
 
     <!-- main content output -->
     <div>
-        <h3>List of songs</h3>
+        <h3>Amount of songs (data from second model)</h3>
+        <div>
+            <?php echo $model->amount_of_songs; ?>
+        </div>
+        <h3>List of songs (data from first model)</h3>
         <table>
             <thead style="background-color: #ddd; font-weight: bold;">
             <tr>
