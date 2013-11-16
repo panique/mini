@@ -40,16 +40,20 @@ If you have put the project into a sub-folder, then put the name of the sub-fold
 RewriteBase /sub-folder/
 
 4. Edit the application/config/config.php, change this line
+```php
 define('URL', 'http://127.0.0.1/php-mvc/');
+```
 to where your project is. Real domain, IP or 127.0.0.1 when developing locally. Make sure you put the sub-folder
 in here (when installing in a sub-folder) too, also don't forget the trailing slash !
 
 5. Edit the application/config/config.php, change this lines
+```php
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'php-mvc');
 define('DB_USER', 'root');
 define('DB_PASS', 'mysql');
+```
 to your database credentials. If you don't have an empty database, create one. Only change the type `mysql` if you
 know what you are doing.
 
