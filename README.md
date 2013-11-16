@@ -80,6 +80,13 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+## Support this project via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG) or [GitTip](https://www.gittip.com/Panique/)
+
+If you think this script is useful and saves you a lot of work, then donating a small amount would be very cool.
+
+[![Paypal](http://www.php-login.net/img/paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG) or via [GitTip](https://www.gittip.com/Panique/)
+
+
 ## Statistics (by BitDeli)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/panique/php-mvc/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
