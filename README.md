@@ -32,12 +32,18 @@ especially for the not-so-advanced coder.
 application/_install folder (which contains demo data).
 
 3. Change the .htaccess file from
+```htaccess
 RewriteBase /php-mvc/
+```
 to where you put this project, relative to the web root folder (usually /var/www). So when you put this project into
 the web root, like directly in /var/www, then the line should look like or can be commented out:
+```htaccess
 RewriteBase /
+```
 If you have put the project into a sub-folder, then put the name of the sub-folder here:
+```htaccess
 RewriteBase /sub-folder/
+```
 
 4. Edit the application/config/config.php, change this line
 ```php
