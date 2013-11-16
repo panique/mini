@@ -1,6 +1,10 @@
 <div class="container">
 
-    <h2>You are in the View: application/views/song/index.php (everything in this box comes from that file)</h2>
+    <!-- Info -->
+    <div class="where-are-we-box">
+        Everything in this box is loaded from <span class="bold">application/views/songs/index.php</span> !
+    </div>
+    <h1>The view (that displays data, in this case from TWO models)</h1>
 
     <!-- add song form -->
     <div>
@@ -16,9 +20,16 @@
         </form>
     </div>
 
+    <!-- stats output -->
+    <div>
+        <h3>Amount of songs (data from second model)</h3>
+        <p>This data comes from the STAT-model: We have <?php echo $stats_model->amount_of_songs; ?> songs.</p>
+    </div>
+
     <!-- main content output -->
     <div>
-        <h3>List of songs</h3>
+        <h3>List of songs (data from first model)</h3>
+        <p>This data comes from the SONG-model.</p>
         <table>
             <thead style="background-color: #ddd; font-weight: bold;">
             <tr>

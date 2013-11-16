@@ -20,9 +20,9 @@ class Stats_Model extends Database
     }
 
     /**
-     * Gets simple "stats", in this demo just to show how to use two models in one controller
+     * Gets amount of songs, in this demo just to show how to use two models in one controller
      */
-    public function getPageStats()
+    public function getAmountOfSongs()
     {
         $sql = "SELECT COUNT(id) AS amount_of_songs FROM song";
         $query = $this->db->prepare($sql);

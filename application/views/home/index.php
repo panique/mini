@@ -1,7 +1,8 @@
 <div class="container">
-
-    <h2>You are in the View: application/views/home/index.php (everything in the box comes from this file)</h2>
-
+    <!-- Info -->
+    <div class="where-are-we-box">
+        Everything in this box is loaded from <span class="bold">application/views/home/index.php</span> !
+    </div>
+    <h1>The view</h1>
     <p>In a real application this could be the homepage.</p>
-
 </div>

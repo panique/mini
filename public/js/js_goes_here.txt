@@ -1,1 +1,0 @@
-This file exists as Git does not allow to push empty folders.

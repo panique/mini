@@ -31,6 +31,25 @@ As this is just a preview, not a finished project: See the the TODO file.
 
 # TODO: see TODO file
 
+# What is a model, a view, a controller
+
+## Controller
+
+TODO
+
+## Model
+
+A model is that part of the application that reads, manipulates, deletes etc. data, according to the information
+the model gets from the controller. The definition of what a model is or should be is not *really* clear, as a class
+that handles all the data of - in this example - the songs can be defined as a model, but also the container that
+holds all the data from several models (song model, stats model, etc.) can be defined as "the model". Some MVC
+constructs collect data from several models and put everything in a container (let's say $model) and pass this to the
+view. The view only accesses this $model, not the real model objects.
+
+## View
+
+TODO
+
 # License
 
 This project is licensed under the MIT License.
