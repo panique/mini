@@ -29,7 +29,7 @@
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($songs_model->songs as $song) { ?>
+            <?php foreach ($model->songs as $song) { ?>
                 <tr>
                     <td><?php if (isset($song->artist)) echo $song->artist; ?></td>
                     <td><?php if (isset($song->track)) echo $song->track; ?></td>

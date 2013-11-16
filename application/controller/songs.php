@@ -11,9 +11,10 @@
  */
 class Songs extends Controller
 {
-    //function __construct() {
-    //    parent::__construct();
-    //}
+    /**
+     * @var null A container that collects data from the model(s) to pass it to the view
+     */
+    private $model = null;
 
     /**
      * PAGE:
@@ -23,14 +24,12 @@ class Songs extends Controller
         // simple message to show where you are
         echo 'Message from Controller: You are in the Controller: Songs, using the method index().';
 
-        // load model, perform an action on the model
+        // load a model, perform an action, pass the data to model-container
         $songs_model = $this->loadModel('Songs_Model');
-        $songs_model->getAllSongs();
+        $this->model->songs = $songs_model->getAllSongs();
 
-        // load header and view
-        require 'application/views/_templates/header.php';
-        require 'application/views/songs/index.php';
-        require 'application/views/_templates/footer.php';
+        // load view, always write without .php (header/footer are automatically loaded, see libs/controller for more)
+        $this->loadView('songs/index', $this->model);
     }
 
     /**

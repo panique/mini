@@ -3,13 +3,7 @@
 class Songs_Model
 {
     /**
-     * @var array The list of the songs, usually an array of objects (as each PDO result is an object here)
-     */
-    public $songs = array();
-
-    /**
-     * Every model needs this constructor that creates a database connection.
-     * It creates a PDO database connection when a model is constructed.
+     * Every model needs a database connection, passed to the model
      */
     function __construct($db) {
         try {
@@ -29,7 +23,7 @@ class Songs_Model
         $query->execute();
 
         // fetchAll() is the PDO method that gets all result rows
-        $this->songs = $query->fetchAll();
+        return $query->fetchAll();
     }
 
     /**
