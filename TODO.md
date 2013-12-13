@@ -30,6 +30,3 @@ advanced could automate things
 
 ### PSR 0/1/2/3
 ### Modern PHP does not use closing tags
-
-
-

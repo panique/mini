@@ -1,0 +1,19 @@
+{
+    "name": "panique/php-mvc",
+    "description": "A simple PHP MVC boilerplate",
+    "keywords": ["MVC, skeleton, boilerplate, naked, application"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Panique",
+            "homepage": "http://careers.stackoverflow.com/panique"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/panique/php-mvc/issues",
+        "source": "https://github.com/panique/php-mvc"
+    },
+    "require": {
+        "php": ">=5.3.0"
+    }
+}

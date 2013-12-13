@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `song` (
   `link` text CHARACTER SET latin1,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=43 ;
 
 INSERT INTO `song` (`id`, `artist`, `track`, `link`) VALUES
 (10, 'Dena', 'Cash, Diamond Ring, Swimming Pools', 'http://www.youtube.com/watch?v=r4CDc9yCAqE'),
@@ -46,7 +46,8 @@ INSERT INTO `song` (`id`, `artist`, `track`, `link`) VALUES
 (38, 'Flight Facilities (ft. Christine Hoberg)', 'Clair De Lune', 'http://www.youtube.com/watch?v=Jcu1AHaTchM'),
 (39, 'Karmon', 'Turning Point (Original Mix)', 'https://www.youtube.com/watch?v=-tB-zyLSPEo'),
 (40, 'Shuttle Life', 'The Birds', 'http://www.youtube.com/watch?v=-I3m3cWDEtM'),
-(41, 'SantÃ©', 'Homegirl (Rampa Mix)', ' 	http://www.youtube.com/watch?v=fnhMNOWxLYw');
+(41, 'SantÃ©', 'Homegirl (Rampa Mix)', 'http://www.youtube.com/watch?v=fnhMNOWxLYw'),
+(42, 'Glen Brown', 'Jahova Come / World Conference', 'http://www.youtube.com/watch?v=MHxCWlRiZeU');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
