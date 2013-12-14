@@ -5,7 +5,7 @@
  *
  * @package php-mvc
  * @author Panique
- * @link http://www.php-mvc.com
+ * @link http://www.php-mvc.net
  * @link https://github.com/panique/php-mvc/
  * @license http://opensource.org/licenses/MIT MIT License
  */
