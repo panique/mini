@@ -1,5 +1,7 @@
 # Activates URL rewriting (like myproject.com/controller/action/1/2/3)
 RewriteEngine On
+# Disallows others to look directly into /public/ folder
+Options -Indexes
 
 # When using the script within a sub-folder, put this path here, like /mysubfolder/
 # If your app is in the root of your web folder, then leave it commented out
