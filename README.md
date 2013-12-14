@@ -23,6 +23,11 @@ especially for the not-so-advanced coder.
 - more or less clean folder/file structure
 - promoting developing with max. error reporting
 
+## Contributing
+
+Please contribute into the develop branch (which holds the in-development version), not into master branch
+(which holds the tested and stable version).
+
 ## Installation
 
 1. [TODO] Install mod_rewrite, follow this guideline:
