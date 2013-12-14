@@ -14,7 +14,8 @@ class Stats_Model
     }
 
     /**
-     * Gets simple "stats", in this demo just to show how to use two models in one controller
+     * Gets simple "stats". This is just a simple demo to show
+     * how to use more than one model in a controller (see controller/songs.php for more)
      */
     public function getAmountOfSongs()
     {
@@ -24,28 +25,5 @@ class Stats_Model
 
         // fetchAll() is the PDO method that gets all result rows
         return $query->fetch()->amount_of_songs;
-    }
-
-    /**
-     * Adds a song (from form) to database table
-     * @param $artist string Artist
-     * @param $track string Track
-     * @param $link string Link
-     */
-    public function addSong($artist, $track, $link)
-    {
-        $sql = "INSERT INTO song (artist, track, link) VALUES (:artist, :track, :link)";
-        $query = $this->db->prepare($sql);
-        $query->execute(array(':artist' => $artist, ':track' => $track, ':link' => $link));
-    }
-
-    /**
-     * @param $song_id integer ID of song
-     */
-    public function deleteSong($song_id)
-    {
-        $sql = "DELETE FROM song WHERE id = :song_id";
-        $query = $this->db->prepare($sql);
-        $query->execute(array(':song_id' => $song_id));
     }
 }

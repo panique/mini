@@ -43,15 +43,18 @@ class Application
             // check for method: does such a method exist in the controller ?
             if (method_exists($this->url_controller, $this->url_action)) {
 
-                // call the method and pass the parameters to it
+                // call the method and pass the arguments to it
                 if (isset($this->url_parameter_3)) {
+                    // will translate to something like $this->home->method($param_1, $param_2, $param_3);
                     $this->url_controller->{$this->url_action}($this->url_parameter_1, $this->url_parameter_2, $this->url_parameter_3);
                 } elseif (isset($this->url_parameter_2)) {
+                    // will translate to something like $this->home->method($param_1, $param_2);
                     $this->url_controller->{$this->url_action}($this->url_parameter_1, $this->url_parameter_2);
                 } elseif (isset($this->url_parameter_1)) {
+                    // will translate to something like $this->home->method($param_1);
                     $this->url_controller->{$this->url_action}($this->url_parameter_1);
                 } else {
-                    // if no parameters given, just call the method without parameters
+                    // if no parameters given, just call the method without parameters, like $this->home->method();
                     $this->url_controller->{$this->url_action}();
                 }
             } else {

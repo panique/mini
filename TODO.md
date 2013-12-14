@@ -1,5 +1,7 @@
 # TODO
 
+FIX: Warning: Creating default object from empty value in D:\Entwicklung\Ampps\www\php-mvc\application\controller\songs.php on line 29
+
 ### Full documentation on how to use this
 ### Full documentation on how this works (graphics !)
 
@@ -18,6 +20,7 @@
 
 ### Perfect code (?), rewrite code so PHPStorm notices disappear
 ### Paths: Use constants, directory separators etc.
+### Controllers: Eventually work with GET/POST routes instead of page/action
 
 # Ideas
 

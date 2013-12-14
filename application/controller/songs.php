@@ -12,11 +12,6 @@
 class Songs extends Controller
 {
     /**
-     * @var null A container that collects data from the model(s) to pass it to the view
-     */
-    private $model = null;
-
-    /**
      * PAGE:
      */
     public function index()
@@ -24,16 +19,18 @@ class Songs extends Controller
         // simple message to show where you are
         echo 'Message from Controller: You are in the Controller: Songs, using the method index().';
 
-        // load a model, perform an action, pass the data to model-container
-        $songs_model = $this->loadModel('Songs_Model');
-        $this->model->songs = $songs_model->getAllSongs();
+        // load a model, perform an action, pass the returned data to a variable
+        $songs_model = $this->loadModel('songs_model');
+        $songs = $songs_model->getAllSongs();
 
-        // load a second model, perform an action, pass the data to model-container
-        $stats_model = $this->loadModel('Stats_Model');
-        $this->model->amount_of_songs = $stats_model->getAmountOfSongs();
+        // load another model, perform an action, pass the returned data to a variable
+        $stats_model = $this->loadModel('stats_model');
+        $amount_of_songs = $stats_model->getAmountOfSongs();
 
-        // load view, always write without .php (header/footer are automatically loaded, see libs/controller for more)
-        $this->loadView('songs/index', $this->model);
+        // load views. within the views we can echo out $songs and $amount_of_songs easily
+        require 'application/views/_templates/header.php';
+        require 'application/views/songs/index.php';
+        require 'application/views/_templates/footer.php';
     }
 
     /**
@@ -44,6 +41,7 @@ class Songs extends Controller
         // simple message to show where you are
         echo 'Message from Controller: You are in the Controller: Songs, using the method addSong().';
 
+        // if we have POST data to create a new song entry
         if (isset($_POST["submit_add_song"])) {
             // load model, perform an action on the model
             $songs_model = $this->loadModel('Songs_Model');
@@ -62,13 +60,14 @@ class Songs extends Controller
         // simple message to show where you are
         echo 'Message from Controller: You are in the Controller: Songs, using the method deleteSong().';
 
+        // if we have an id of a song that should be deleted
         if (isset($song_id)) {
             // load model, perform an action on the model
             $songs_model = $this->loadModel('Songs_Model');
             $songs_model->deleteSong($song_id);
         }
 
-        // where to go after song has been added ?
+        // where to go after song has been added. as deleteSong() is an action
         header('location: ' . URL . 'songs/index');
     }
 }

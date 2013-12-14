@@ -8,8 +8,11 @@ class Controller
     /**
      * @var null Database Connection
      */
-    private $db = null;
+    public $db = null;
 
+    /**
+     * Whenever a controller is created, also open a database connection
+     */
     function __construct()
     {
         $this->openDatabaseConnection();
@@ -34,26 +37,13 @@ class Controller
     /**
      * loads the model with the given name.
      * loadModel("test_model") would include models/test_model.php and create the object $this->model in the controller
-     * @param string $model_name The name of the model
+     * @param $model_name string The name of the model
+     * @return object
      */
     public function loadModel($model_name)
     {
         require 'application/models/' . $model_name . '.php';
         // return new model (and passing the database connection to the model)
         return new $model_name($this->db);
-    }
-
-    /**
-     * load the view with the given file path
-     * loadView("songs/index") would include views/songs/index.php
-     * @param $view_name The name / file path of the view
-     * @param $model The (optional) model (which contains all the data)
-     */
-    public function loadView($view_name, $model = null)
-    {
-        // well, load the view
-        require 'application/views/_templates/header.php';
-        require 'application/views/' . $view_name . '.php';
-        require 'application/views/_templates/footer.php';
     }
 }
