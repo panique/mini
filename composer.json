@@ -2,7 +2,7 @@
     "name": "panique/php-mvc",
     "type": "project",
     "description": "A simple PHP MVC boilerplate",
-    "keywords": ["mvc", "skeleton", "boilerplate", "naked", "application"],
+    "keywords": ["mvc", "skeleton", "boilerplate", "naked", "barebone", "application"],
     "homepage": "https://github.com/panique/php-mvc",
     "license": "MIT",
     "authors": [
