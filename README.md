@@ -72,6 +72,13 @@ define('DB_PASS', 'mysql');
 to your database credentials. If you don't have an empty database, create one. Only change the type `mysql` if you
 know what you are doing.
 
+## Add external libraries via Composer
+
+To add external libraries/tools/whatever into your project in an extremely clean way, simply add a line with the
+repo name and version to the composer.json! Take a look on these tutorials if you want to get into Composer:
+[How to install (and update) Composer on Windows 7 or Ubuntu, Debian and CentOS](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/)
+and [Getting started with Composer](http://www.dev-metal.com/getting-started-composer/)
+
 ## Useful information
 
 1. SQLite does not have a rowCount() method (!). Keep that in mind in case you use SQLite.
@@ -136,10 +143,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 If you think this script is useful and saves you a lot of work, then think about supporting the project by
 
-1. Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG)
-   or [GitTip](https://www.gittip.com/Panique/)
-2. Rent your next server at [DigitalOcean](https://www.digitalocean.com/?refcode=40d978532a20).
-   SSD servers for $5+ per month or $0.007 per hour (!). PHP-MVC will get a small reward for every new customer.
+1. Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG) or [GitTip](https://www.gittip.com/Panique/)
+2. Rent your next server at [DigitalOcean](https://www.digitalocean.com/?refcode=40d978532a20). SSD servers for $5+ per month or $0.007 per hour (!). PHP-MVC will get a small reward for every new customer.
 3. Contribute to this project. Feel free to improve this project with your skills.
 
 ## Statistics (by BitDeli)
