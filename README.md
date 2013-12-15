@@ -32,7 +32,7 @@ Please contribute into the develop branch (which holds the in-development versio
 
 First, copy this repo into a public accessible folder on your server.
 Common techniques are a) downloading and extracting the .zip / .tgz by hand, b) cloning the repo with git or
-c) getting the repo via Composer, you'll need to "require" this: `"panique/php-mvc": "0.1"`!
+c) getting the repo via Composer, you'll need to "require" this: `"panique/php-mvc": "dev-master"`!
 
 1. [TODO] Install mod_rewrite, follow this guideline:
 [How to install mod_rewite in Ubuntu](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)
