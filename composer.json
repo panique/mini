@@ -1,12 +1,15 @@
 {
     "name": "panique/php-mvc",
+    "type": "project",
     "description": "A simple PHP MVC boilerplate",
     "keywords": ["MVC, skeleton, boilerplate, naked, application"],
+    "homepage": "https://github.com/panique/php-mvc",
     "license": "MIT",
     "authors": [
         {
             "name": "Panique",
-            "homepage": "http://careers.stackoverflow.com/panique"
+            "homepage": "http://careers.stackoverflow.com/panique",
+            "role": "Developer"
         }
     ],
     "support": {
