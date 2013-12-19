@@ -1,5 +1,6 @@
 # Activates URL rewriting (like myproject.com/controller/action/1/2/3)
 RewriteEngine On
+
 # Disallows others to look directly into /public/ folder
 Options -Indexes
 
@@ -7,9 +8,9 @@ Options -Indexes
 # If your app is in the root of your web folder, then leave it commented out
 RewriteBase /php-mvc/
 
+# General rewrite rules
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
 
-#
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]

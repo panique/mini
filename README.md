@@ -28,7 +28,7 @@ especially for the not-so-advanced coder.
 
 ## Contribute
 
-Please contribute into the develop branch (which holds the in-development version), not into master branch
+Please commit into the develop branch (which holds the in-development version), not into master branch
 (which holds the tested and stable version).
 
 ## Installation
