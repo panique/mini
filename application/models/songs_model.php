@@ -14,7 +14,7 @@ class Songs_Model
     }
 
     /**
-     * Gets all songs from database table
+     * Get all songs from database
      */
     public function getAllSongs()
     {
@@ -27,19 +27,25 @@ class Songs_Model
     }
 
     /**
-     * Adds a song (from form) to database table
+     * Add a song to database
      * @param $artist string Artist
      * @param $track string Track
      * @param $link string Link
      */
     public function addSong($artist, $track, $link)
     {
+        // clean the input from javascript code for example
+        $artist = strip_tags($artist);
+        $track = strip_tags($track);
+        $link = strip_tags($link);
+
         $sql = "INSERT INTO song (artist, track, link) VALUES (:artist, :track, :link)";
         $query = $this->db->prepare($sql);
         $query->execute(array(':artist' => $artist, ':track' => $track, ':link' => $link));
     }
 
     /**
+     * Delete a song in the database
      * @param $song_id integer ID of song
      */
     public function deleteSong($song_id)
