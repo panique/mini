@@ -15,15 +15,18 @@ there are masses of frameworks that might be really good, but really hard to und
 complex. This project tries to be some kind of naked skeleton bare-bone for quick application building,
 especially for the not-so-advanced coder.
 
-### This project tries to promote clean and modern PHP coding, by
+### Goals of this project:
 
-- fitting PSR 1/2 coding guidelines
-- usage of PDO
-- promoting the usage of Composer, in exactly the way it should be used
-- more or less clean folder/file structure
-- promoting developing with max. error reporting
+- giving people a clean base MVC structure to build a modern PHP application with
+- teaching people the basics of Model-View-Controller architecture
+- encourage people to code according to PSR 1/2 coding guidelines
+- promote the usage of PDO
+- promote the usage of external libraries via Composer
+- promote development with max. error reporting
+- promote to comment code
+- promote the usage of OOP code
 
-## Contributing
+## Contribute
 
 Please contribute into the develop branch (which holds the in-development version), not into master branch
 (which holds the tested and stable version).
@@ -34,11 +37,11 @@ First, copy this repo into a public accessible folder on your server.
 Common techniques are a) downloading and extracting the .zip / .tgz by hand, b) cloning the repo with git or
 c) getting the repo via Composer, you'll need to "require" this: `"panique/php-mvc": "dev-master"`!
 
-1. [TODO] Install mod_rewrite, follow this guideline:
+1. Install mod_rewrite, for example by following this guideline:
 [How to install mod_rewite in Ubuntu](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)
 
 2. Create a new database (and remember the name, you'll need that in step 5) and import the SQL file from the
-application/_install folder (which contains demo data).
+*application/_install* folder (which contains demo data).
 
 3. Change the .htaccess file from
 ```
@@ -54,14 +57,14 @@ If you have put the project into a sub-folder, then put the name of the sub-fold
 RewriteBase /sub-folder/
 ```
 
-4. Edit the application/config/config.php, change this line
+4. Edit the *application/config/config.php*, change this line
 ```php
 define('URL', 'http://127.0.0.1/php-mvc/');
 ```
 to where your project is. Real domain, IP or 127.0.0.1 when developing locally. Make sure you put the sub-folder
 in here (when installing in a sub-folder) too, also don't forget the trailing slash !
 
-5. Edit the application/config/config.php, change this lines
+5. Edit the *application/config/config.php*, change these lines
 ```php
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
@@ -76,42 +79,24 @@ know what you are doing.
 
 To add external libraries/tools/whatever into your project in an extremely clean way, simply add a line with the
 repo name and version to the composer.json! Take a look on these tutorials if you want to get into Composer:
-[How to install (and update) Composer on Windows 7 or Ubuntu, Debian and CentOS](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/)
-and [Getting started with Composer](http://www.dev-metal.com/getting-started-composer/)
+[How to install (and update) Composer on Windows 7 or Ubuntu / Debian](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/)
+and [Getting started with Composer](http://www.dev-metal.com/getting-started-composer/).
 
 ## Useful information
 
 1. SQLite does not have a rowCount() method (!). Keep that in mind in case you use SQLite.
 
-2. Don't use the same name for class and method, as this might trigger an (unintended) __construct of the class.
+2. Don't use the same name for class and method, as this might trigger an (unintended) *__construct* of the class.
    This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
 
 ## TODO
 
-Content of DOCUMENTATION.md goes here !
-
-## TODO
-
-TODO file
+TODO: Explain how this framework works.
 
 ## What is a model, a view, a controller
 
-### Controller
-
-TODO
-
-### Model
-
-A model is that part of the application that reads, manipulates, deletes etc. data, according to the information
-the model gets from the controller. The definition of what a model is or should be is not *really* clear, as a class
-that handles all the data of - in this example - the songs can be defined as a model, but also the container that
-holds all the data from several models (song model, stats model, etc.) can be defined as "the model". Some MVC
-constructs collect data from several models and put everything in a container (let's say $model) and pass this to the
-view. The view only accesses this $model, not the real model objects.
-
-### View
-
-TODO
+There are thousands of explanations, discussions and info-graphics on that topic on the web, and most of them can
+explain this much better than this README ever could.
 
 ## License
 
@@ -120,28 +105,9 @@ This means you can use and modify it for free in private or commercial projects.
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Panique
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 ## Support / Donate
 
-If you think this script is useful and saves you a lot of work, then think about supporting the project by
+If you think this script is useful and saves you a lot of work, then think about supporting the project:
 
 1. Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG) or [GitTip](https://www.gittip.com/Panique/)
 2. Rent your next server at [A2 Hosting](http://www.a2hosting.com/4471.html) or [DigitalOcean](https://www.digitalocean.com/?refcode=40d978532a20).
