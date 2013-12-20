@@ -17,8 +17,8 @@ especially for the not-so-advanced coder.
 
 ### Goals of this project:
 
-- giving people a clean base MVC structure to build a modern PHP application with
-- teaching people the basics of Model-View-Controller architecture
+- give people a clean base MVC structure to build a modern PHP application with
+- teach people the basics of the Model-View-Controller architecture
 - encourage people to code according to PSR 1/2 coding guidelines
 - promote the usage of PDO
 - promote the usage of external libraries via Composer
