@@ -13,4 +13,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
 
+# Block direct access to everything in the "application" folder (to prevent people looking into the views etc)
+RewriteRule ^/application - [F]
+
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
