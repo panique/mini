@@ -14,8 +14,8 @@ class Stats_Model
     }
 
     /**
-     * Gets simple "stats". This is just a simple demo to show
-     * how to use more than one model in a controller (see controller/songs.php for more)
+     * Get simple "stats". This is just a simple demo to show
+     * how to use more than one model in a controller (see application/controller/songs.php for more)
      */
     public function getAmountOfSongs()
     {

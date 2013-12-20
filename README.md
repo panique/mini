@@ -28,7 +28,7 @@ especially for the not-so-advanced coder.
 
 ## Contribute
 
-Please contribute into the develop branch (which holds the in-development version), not into master branch
+Please commit into the develop branch (which holds the in-development version), not into master branch
 (which holds the tested and stable version).
 
 ## Installation
@@ -40,8 +40,7 @@ c) getting the repo via Composer, you'll need to "require" this: `"panique/php-m
 1. Install mod_rewrite, for example by following this guideline:
 [How to install mod_rewite in Ubuntu](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)
 
-2. Create a new database (and remember the name, you'll need that in step 5) and import the SQL file from the
-*application/_install* folder (which contains demo data).
+2. Run the SQL statements in the *application/_install* folder.
 
 3. Change the .htaccess file from
 ```

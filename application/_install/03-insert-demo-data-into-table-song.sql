@@ -1,4 +1,4 @@
-INSERT INTO `song` (`id`, `artist`, `track`, `link`) VALUES
+INSERT INTO `php-mvc`.`song` (`id`, `artist`, `track`, `link`) VALUES
 (1, 'Dena', 'Cash, Diamond Ring, Swimming Pools', 'http://www.youtube.com/watch?v=r4CDc9yCAqE'),
 (2, 'Jessy Lanza', 'Kathy Lee', 'http://vimeo.com/73455369'),
 (3, 'The Orwells', 'In my Bed (live)', 'http://www.youtube.com/watch?v=8tA_2qCGnmE'),

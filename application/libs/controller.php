@@ -19,7 +19,7 @@ class Controller
     }
 
     /**
-     * Opens the database connection with the credentials from application/config/config.php
+     * Open the database connection with the credentials from application/config/config.php
      */
     private function openDatabaseConnection()
     {
@@ -35,7 +35,7 @@ class Controller
     }
 
     /**
-     * loads the model with the given name.
+     * Load the model with the given name.
      * loadModel("test_model") would include models/test_model.php and create the object $this->model in the controller
      * @param $model_name string The name of the model
      * @return object
@@ -43,7 +43,7 @@ class Controller
     public function loadModel($model_name)
     {
         require 'application/models/' . $model_name . '.php';
-        // return new model (and passing the database connection to the model)
+        // return new model (and pass the database connection to the model)
         return new $model_name($this->db);
     }
 }
