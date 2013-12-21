@@ -54,7 +54,7 @@ class Songs extends Controller
             $songs_model->addSong($_POST["artist"], $_POST["track"],  $_POST["link"]);
         }
 
-        // where to go after song has been added ?
+        // where to go after song has been added
         header('location: ' . URL . 'songs/index');
     }
 
@@ -78,7 +78,7 @@ class Songs extends Controller
             $songs_model->deleteSong($song_id);
         }
 
-        // where to go after song has been added. as deleteSong() is an action
+        // where to go after song has been deleted
         header('location: ' . URL . 'songs/index');
     }
 }
