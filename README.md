@@ -95,11 +95,11 @@ explain this much better than this README ever could.
 
 ## How this framework works
 
-![php-mvc introduction tutorial - page 1](_introduction/intro-part-01.png)
-![php-mvc introduction tutorial - page 2](_introduction/intro-part-02.png)
-![php-mvc introduction tutorial - page 3](_introduction/intro-part-03.png)
-![php-mvc introduction tutorial - page 4](_introduction/intro-part-04.png)
-![php-mvc introduction tutorial - page 5](_introduction/intro-part-05.png)
+![php-mvc introduction tutorial - page 1](application/_introduction/intro-part-01.png)
+![php-mvc introduction tutorial - page 2](application/_introduction/intro-part-02.png)
+![php-mvc introduction tutorial - page 3](application/_introduction/intro-part-03.png)
+![php-mvc introduction tutorial - page 4](application/_introduction/intro-part-04.png)
+![php-mvc introduction tutorial - page 5](application/_introduction/intro-part-05.png)
 
 ## License
 
