@@ -88,14 +88,18 @@ and [Getting started with Composer](http://www.dev-metal.com/getting-started-com
 2. Don't use the same name for class and method, as this might trigger an (unintended) *__construct* of the class.
    This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
 
-## TODO
-
-TODO: Explain how this framework works.
-
-## What is a model, a view, a controller
+## What does MVC mean, and what is a model, a view, a controller
 
 There are thousands of explanations, discussions and info-graphics on that topic on the web, and most of them can
 explain this much better than this README ever could.
+
+## How this framework works
+
+![php-mvc introduction tutorial - page 1](_introduction/intro-part-01.png)
+![php-mvc introduction tutorial - page 2](_introduction/intro-part-02.png)
+![php-mvc introduction tutorial - page 3](_introduction/intro-part-03.png)
+![php-mvc introduction tutorial - page 4](_introduction/intro-part-04.png)
+![php-mvc introduction tutorial - page 5](_introduction/intro-part-05.png)
 
 ## License
 
