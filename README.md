@@ -1,6 +1,3 @@
-*This is an in-development project, in a very early stage! Please keep that in mind. The release of this thing might
-be in early 2014.*
-
 # PHP-MVC
 
 An extremely simple and easy to understand MVC skeleton application, reduced to the max.
@@ -88,14 +85,13 @@ and [Getting started with Composer](http://www.dev-metal.com/getting-started-com
 2. Don't use the same name for class and method, as this might trigger an (unintended) *__construct* of the class.
    This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
 
-## TODO
+## How this framework works
 
-TODO: Explain how this framework works.
-
-## What is a model, a view, a controller
-
-There are thousands of explanations, discussions and info-graphics on that topic on the web, and most of them can
-explain this much better than this README ever could.
+![php-mvc introduction tutorial - page 1](application/_introduction/intro-part-01.png)
+![php-mvc introduction tutorial - page 2](application/_introduction/intro-part-02.png)
+![php-mvc introduction tutorial - page 3](application/_introduction/intro-part-03.png)
+![php-mvc introduction tutorial - page 4](application/_introduction/intro-part-04.png)
+![php-mvc introduction tutorial - page 5](application/_introduction/intro-part-05.png)
 
 ## License
 
