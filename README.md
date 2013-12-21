@@ -85,7 +85,9 @@ and [Getting started with Composer](http://www.dev-metal.com/getting-started-com
 2. Don't use the same name for class and method, as this might trigger an (unintended) *__construct* of the class.
    This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
 
-## How this framework works
+## A quickstart tutorial
+
+You can also find these tutorial pictures in the *_introduction* folder.
 
 ![php-mvc introduction tutorial - page 1](application/_introduction/intro-part-01.png)
 ![php-mvc introduction tutorial - page 2](application/_introduction/intro-part-02.png)
@@ -107,6 +109,7 @@ If you think this script is useful and saves you a lot of work, then think about
 1. Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG) or [GitTip](https://www.gittip.com/Panique/)
 2. Rent your next server at [A2 Hosting](http://www.a2hosting.com/4471.html) or [DigitalOcean](https://www.digitalocean.com/?refcode=40d978532a20).
 3. Contribute to this project. Feel free to improve this project with your skills.
+4. Spread the word: Tell others about this project.
 
 ## Statistics (by BitDeli)
 
