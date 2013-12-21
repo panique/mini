@@ -78,13 +78,6 @@ repo name and version to the composer.json! Take a look on these tutorials if yo
 [How to install (and update) Composer on Windows 7 or Ubuntu / Debian](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/)
 and [Getting started with Composer](http://www.dev-metal.com/getting-started-composer/).
 
-## Useful information
-
-1. SQLite does not have a rowCount() method (!). Keep that in mind in case you use SQLite.
-
-2. Don't use the same name for class and method, as this might trigger an (unintended) *__construct* of the class.
-   This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
-
 ## A quickstart tutorial
 
 You can also find these tutorial pictures in the *_introduction* folder.
@@ -94,6 +87,13 @@ You can also find these tutorial pictures in the *_introduction* folder.
 ![php-mvc introduction tutorial - page 3](application/_introduction/intro-part-03.png)
 ![php-mvc introduction tutorial - page 4](application/_introduction/intro-part-04.png)
 ![php-mvc introduction tutorial - page 5](application/_introduction/intro-part-05.png)
+
+## Useful information
+
+1. SQLite does not have a rowCount() method (!). Keep that in mind in case you use SQLite.
+
+2. Don't use the same name for class and method, as this might trigger an (unintended) *__construct* of the class.
+   This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
 
 ## License
 
