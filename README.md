@@ -23,11 +23,6 @@ especially for the not-so-advanced coder.
 - promote to comment code
 - promote the usage of OOP code
 
-## Contribute
-
-Please commit into the develop branch (which holds the in-development version), not into master branch
-(which holds the tested and stable version).
-
 ## Installation
 
 First, copy this repo into a public accessible folder on your server.
@@ -71,13 +66,6 @@ define('DB_PASS', 'mysql');
 to your database credentials. If you don't have an empty database, create one. Only change the type `mysql` if you
 know what you are doing.
 
-## Add external libraries via Composer
-
-To add external libraries/tools/whatever into your project in an extremely clean way, simply add a line with the
-repo name and version to the composer.json! Take a look on these tutorials if you want to get into Composer:
-[How to install (and update) Composer on Windows 7 or Ubuntu / Debian](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/)
-and [Getting started with Composer](http://www.dev-metal.com/getting-started-composer/).
-
 ## A quickstart tutorial
 
 You can also find these tutorial pictures in the *_introduction* folder.
@@ -95,12 +83,24 @@ You can also find these tutorial pictures in the *_introduction* folder.
 2. Don't use the same name for class and method, as this might trigger an (unintended) *__construct* of the class.
    This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
 
+## Add external libraries via Composer
+
+To add external libraries/tools/whatever into your project in an extremely clean way, simply add a line with the
+repo name and version to the composer.json! Take a look on these tutorials if you want to get into Composer:
+[How to install (and update) Composer on Windows 7 or Ubuntu / Debian](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/)
+and [Getting started with Composer](http://www.dev-metal.com/getting-started-composer/).
+
 ## License
 
 This project is licensed under the MIT License.
 This means you can use and modify it for free in private or commercial projects.
 
 The MIT License (MIT)
+
+## Contribute
+
+Please commit into the develop branch (which holds the in-development version), not into master branch
+(which holds the tested and stable version).
 
 ## Support / Donate
 
