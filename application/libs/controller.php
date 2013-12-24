@@ -37,7 +37,7 @@ class Controller
     /**
      * Load the model with the given name.
      * loadModel("test_model") would include models/test_model.php and create the object $this->model in the controller
-     * @param $model_name string The name of the model
+     * @param string $model_name The name of the model
      * @return object
      */
     public function loadModel($model_name)

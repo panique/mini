@@ -4,6 +4,7 @@ class SongsModel
 {
     /**
      * Every model needs a database connection, passed to the model
+     * @param object $db A PDO database connection
      */
     function __construct($db) {
         try {
@@ -28,9 +29,9 @@ class SongsModel
 
     /**
      * Add a song to database
-     * @param $artist string Artist
-     * @param $track string Track
-     * @param $link string Link
+     * @param string $artist Artist
+     * @param string $track Track
+     * @param string $link Link
      */
     public function addSong($artist, $track, $link)
     {
@@ -46,7 +47,7 @@ class SongsModel
 
     /**
      * Delete a song in the database
-     * @param $song_id integer Id of song
+     * @param int $song_id Id of song
      */
     public function deleteSong($song_id)
     {
