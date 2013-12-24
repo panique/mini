@@ -21,11 +21,11 @@ class Songs extends Controller
         echo 'Message from Controller: You are in the Controller: Songs, using the method index().';
 
         // load a model, perform an action, pass the returned data to a variable
-        $songs_model = $this->loadModel('songs_model');
+        $songs_model = $this->loadModel('SongsModel');
         $songs = $songs_model->getAllSongs();
 
         // load another model, perform an action, pass the returned data to a variable
-        $stats_model = $this->loadModel('stats_model');
+        $stats_model = $this->loadModel('StatsModel');
         $amount_of_songs = $stats_model->getAmountOfSongs();
 
         // load views. within the views we can echo out $songs and $amount_of_songs easily
@@ -50,7 +50,7 @@ class Songs extends Controller
         // if we have POST data to create a new song entry
         if (isset($_POST["submit_add_song"])) {
             // load model, perform an action on the model
-            $songs_model = $this->loadModel('Songs_Model');
+            $songs_model = $this->loadModel('SongsModel');
             $songs_model->addSong($_POST["artist"], $_POST["track"],  $_POST["link"]);
         }
 
@@ -74,7 +74,7 @@ class Songs extends Controller
         // if we have an id of a song that should be deleted
         if (isset($song_id)) {
             // load model, perform an action on the model
-            $songs_model = $this->loadModel('Songs_Model');
+            $songs_model = $this->loadModel('SongsModel');
             $songs_model->deleteSong($song_id);
         }
 

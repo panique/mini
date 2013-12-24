@@ -1,6 +1,6 @@
 <?php
 
-class Songs_Model
+class SongsModel
 {
     /**
      * Every model needs a database connection, passed to the model
@@ -46,7 +46,7 @@ class Songs_Model
 
     /**
      * Delete a song in the database
-     * @param $song_id integer ID of song
+     * @param $song_id integer Id of song
      */
     public function deleteSong($song_id)
     {
