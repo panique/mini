@@ -1,6 +1,6 @@
 <?php
 
-class Stats_Model
+class StatsModel
 {
     /**
      * Every model needs a database connection, passed to the model
