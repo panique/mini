@@ -21,10 +21,12 @@ class Songs extends Controller
         echo 'Message from Controller: You are in the Controller: Songs, using the method index().';
 
         // load a model, perform an action, pass the returned data to a variable
+        // NOTE: you can write the model name like "SongsModel" or "songsmodel", both will work
         $songs_model = $this->loadModel('SongsModel');
         $songs = $songs_model->getAllSongs();
 
         // load another model, perform an action, pass the returned data to a variable
+        // NOTE: you can write the model name like "StatsModel" or "statsmodel", both will work
         $stats_model = $this->loadModel('StatsModel');
         $amount_of_songs = $stats_model->getAmountOfSongs();
 
