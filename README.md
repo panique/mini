@@ -68,13 +68,13 @@ know what you are doing.
 
 ## A quickstart tutorial
 
-You can also find these tutorial pictures in the *_introduction* folder.
+You can also find these tutorial pictures in the *_tutorial* folder.
 
-![php-mvc introduction tutorial - page 1](application/_introduction/intro-part-01.png)
-![php-mvc introduction tutorial - page 2](application/_introduction/intro-part-02.png)
-![php-mvc introduction tutorial - page 3](application/_introduction/intro-part-03.png)
-![php-mvc introduction tutorial - page 4](application/_introduction/intro-part-04.png)
-![php-mvc introduction tutorial - page 5](application/_introduction/intro-part-05.png)
+![php-mvc introduction tutorial - page 1](_tutorial/tutorial-part-01.png)
+![php-mvc introduction tutorial - page 2](_tutorial/tutorial-part-02.png)
+![php-mvc introduction tutorial - page 3](_tutorial/tutorial-part-03.png)
+![php-mvc introduction tutorial - page 4](_tutorial/tutorial-part-04.png)
+![php-mvc introduction tutorial - page 5](_tutorial/tutorial-part-05.png)
 
 ## Useful information
 

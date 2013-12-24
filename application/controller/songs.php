@@ -67,6 +67,7 @@ class Songs extends Controller
      * directs the user after the click. This method handles all the data from the GET request (in the URL!) and then
      * redirects the user back to songs/index via the last line: header(...)
      * This is an example of how to handle a GET request.
+     * @param $song_id int Id of the to-delete song
      */
     public function deleteSong($song_id)
     {
