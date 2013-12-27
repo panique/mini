@@ -2,6 +2,7 @@
 
 An extremely simple and easy to understand MVC skeleton application, reduced to the max.
 Everything is as simple as possible, as readable as possible and as manually as possible.
+This project is - by intention - NOT a framework, it's a bare-bone structure.
 This project tries to be the extremely slimmed down opposite of big frameworks like Zend2, Symfony or Laravel.
 
 ## Why does this project exist ?
