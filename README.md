@@ -31,7 +31,7 @@ Common techniques are a) downloading and extracting the .zip / .tgz by hand, b) 
 c) getting the repo via Composer, you'll need to "require" this: `"panique/php-mvc": "dev-master"`!
 
 1. Install mod_rewrite, for example by following this guideline:
-[How to install mod_rewite in Ubuntu](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)
+[How to install mod_rewrite in Ubuntu](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)
 
 2. Run the SQL statements in the *application/_install* folder.
 
@@ -82,7 +82,7 @@ You can also find these tutorial pictures in the *_tutorial* folder.
 1. SQLite does not have a rowCount() method (!). Keep that in mind in case you use SQLite.
 
 2. Don't use the same name for class and method, as this might trigger an (unintended) *__construct* of the class.
-   This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
+   This is really weird behaviour, but documented here: [php.net - Constructors and Destructors](http://php.net/manual/en/language.oop5.decon.php).
 
 ## Add external libraries via Composer
 
@@ -95,8 +95,6 @@ and [Getting started with Composer](http://www.dev-metal.com/getting-started-com
 
 This project is licensed under the MIT License.
 This means you can use and modify it for free in private or commercial projects.
-
-The MIT License (MIT)
 
 ## Contribute
 
