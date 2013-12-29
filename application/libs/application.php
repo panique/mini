@@ -2,25 +2,19 @@
 
 class Application
 {
-    /**
-     * @var null The controller
-     */
+    /** @var null The controller */
     private $url_controller = null;
-    /**
-     * @var null The method (of the above controller)
-     */
+    
+    /** @var null The method (of the above controller) */
     private $url_action = null;
-    /**
-     * @var null Parameter one
-     */
+
+    /** @var null Parameter one */
     private $url_parameter_1 = null;
-    /**
-     * @var null Parameter two
-     */
+
+    /** @var null Parameter two */
     private $url_parameter_2 = null;
-    /**
-     * @var null Parameter three
-     */
+
+    /** @var null Parameter three */
     private $url_parameter_3 = null;
 
     /**
@@ -82,15 +76,15 @@ class Application
             $url = explode('/', $url);
 
             // Put URL parts into according properties
-            // By the way, the syntax here if just a short form of if/else, called "Ternary Operators"
-            // http://davidwalsh.name/php-shorthand-if-else-ternary-operators
+            // By the way, the syntax here is just a short form of if/else, called "Ternary Operators"
+            // @see http://davidwalsh.name/php-shorthand-if-else-ternary-operators
             $this->url_controller = (isset($url[0]) ? $url[0] : null);
             $this->url_action = (isset($url[1]) ? $url[1] : null);
             $this->url_parameter_1 = (isset($url[2]) ? $url[2] : null);
             $this->url_parameter_2 = (isset($url[3]) ? $url[3] : null);
             $this->url_parameter_3 = (isset($url[4]) ? $url[4] : null);
 
-            // DEBUG
+            // for debugging. uncomment this if you have problems with the URL
             // echo 'Controller: ' . $this->url_controller . '<br />';
             // echo 'Action: ' . $this->url_action . '<br />';
             // echo 'Parameter 1: ' . $this->url_parameter_1 . '<br />';
