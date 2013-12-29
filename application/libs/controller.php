@@ -42,7 +42,7 @@ class Controller
      */
     public function loadModel($model_name)
     {
-        require 'application/models/' . $model_name . '.php';
+        require 'application/models/' . strtolower($model_name) . '.php';
         // return new model (and pass the database connection to the model)
         return new $model_name($this->db);
     }
