@@ -110,6 +110,11 @@ If you think this script is useful and saves you a lot of work, then think about
 3. Contribute to this project. Feel free to improve this project with your skills.
 4. Spread the word: Tell others about this project.
 
+## Music tracks used in the demo application
+
+The linked tracks in this naked application are just some of my personal favourites of the last few months.
+I think it's always a good idea to fill boring nerd-code stuff with quality culture.
+
 ## Statistics (by BitDeli)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/panique/php-mvc/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
