@@ -27,8 +27,17 @@ especially for the not-so-advanced coder.
 ## Installation
 
 First, copy this repo into a public accessible folder on your server.
-Common techniques are a) downloading and extracting the .zip / .tgz by hand, b) cloning the repo with git or
-c) getting the repo via Composer, you'll need to "require" this: `"panique/php-mvc": "dev-master"`!
+Common techniques are a) downloading and extracting the .zip / .tgz by hand, b) cloning the repo with git (into var/www)
+
+```
+git clone https://github.com/panique/php-mvc.git /var/www
+```
+
+or c) getting the repo via Composer (here we copy into var/www)
+
+```
+composer create-project panique/php-mvc /var/www dev-master
+```
 
 1. Install mod_rewrite, for example by following this guideline:
 [How to install mod_rewrite in Ubuntu](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)
