@@ -2,8 +2,9 @@
 
 An extremely simple and easy to understand MVC skeleton application, reduced to the max.
 Everything is **as simple as possible**, as **manually as possible** and as readable as possible.
-This project is - by intention - NOT a full framework, it's a bare-bone structure.
-The php-mvc skeleton tries to be the extremely slimmed down opposite of big frameworks like Zend2, Symfony or Laravel.
+This project is - by intention - NOT a full framework, it's a bare-bone structure, written in
+purely native PHP ! The php-mvc skeleton tries to be the extremely slimmed down opposite of big frameworks
+like Zend2, Symfony or Laravel.
 
 ## Why does this project exist ?
 
@@ -23,6 +24,7 @@ especially for the not-so-advanced coder.
 - promote development with max. error reporting
 - promote to comment code
 - promote the usage of OOP code
+- using only native PHP code, so people don't have to learn a framework
 
 ## Installation
 
