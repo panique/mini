@@ -88,6 +88,23 @@ You can also find these tutorial pictures in the *_tutorial* folder.
 ![php-mvc introduction tutorial - page 4](_tutorial/tutorial-part-04.png)
 ![php-mvc introduction tutorial - page 5](_tutorial/tutorial-part-05.png)
 
+## You like what you see ?
+
+Then please also check out:
+
+1. My other project **php-login**, a collection of 4 similar login scripts for PHP, from a super-simple one-file
+script with a SQLite one-file to a highly professional MVC frameworks solution. All scripts use the most advanced
+hashing algorithms possible in PHP, exactly like the PHP core developers want you to use them.
+
+https://github.com/panique/php-login (full MVC framework)
+https://github.com/panique/php-login-minimal (minimal)
+https://github.com/panique/php-login-advanced (advanced)
+https://github.com/panique/php-login-one-file (one-file)
+
+2. Check out my PHP and frontend blog! Lot's of non-boring development stuff and tutorials there.
+
+http://www.dev-metal.com
+
 ## Useful information
 
 1. SQLite does not have a rowCount() method (!). Keep that in mind in case you use SQLite.
