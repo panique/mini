@@ -106,7 +106,6 @@ https://github.com/panique/php-login-advanced (advanced)
 
 https://github.com/panique/php-login-one-file (one-file)
 
-
 #### My PHP and frontend blog
 
 Lot's of non-boring development stuff and tutorials there.
