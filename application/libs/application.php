@@ -5,7 +5,7 @@ class Application
     /** @var null The controller */
     private $url_controller = null;
     
-    /** @var null The method (of the above controller) */
+    /** @var null The method (of the above controller), often also named "action" */
     private $url_action = null;
 
     /** @var null Parameter one */
