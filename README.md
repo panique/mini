@@ -108,7 +108,7 @@ https://github.com/panique/php-login-one-file (one-file)
 
 #### My PHP and frontend blog
 
-Lot's of non-boring development stuff and tutorials there.
+Lots of non-boring development stuff and tutorials there.
 
 http://www.dev-metal.com
 
