@@ -11,7 +11,8 @@ class Controller
     public $db = null;
 
     /**
-     * Whenever a controller is created, also open a database connection
+     * Whenever a controller is created, open a database connection too. The idea behind is to have ONE connection
+     * that can be used by multiple models (there are frameworks that open one connection per model).
      */
     function __construct()
     {
@@ -36,9 +37,11 @@ class Controller
 
     /**
      * Load the model with the given name.
-     * loadModel("test_model") would include models/test_model.php and create the object $this->model in the controller
+     * loadModel("SongModel") would include models/songmodel.php and create the object in the controller, like this:
+     * $songs_model = $this->loadModel('SongsModel');
+     * Note that the model class name is written in "CamelCase", the model's filename is the same in lowercase letters
      * @param string $model_name The name of the model
-     * @return object
+     * @return object model
      */
     public function loadModel($model_name)
     {
