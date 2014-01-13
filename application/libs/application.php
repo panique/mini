@@ -26,7 +26,7 @@ class Application
         // create array with URL parts in $url
         $this->splitUrl();
 
-        // check for controller: does such an controller exist ?
+        // check for controller: does such a controller exist ?
         if (file_exists('./application/controller/' . $this->url_controller . '.php')) {
 
             // if so, then load this file and create this controller
