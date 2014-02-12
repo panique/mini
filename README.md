@@ -6,6 +6,12 @@ This project is - by intention - NOT a full framework, it's a bare-bone structur
 purely native PHP ! The php-mvc skeleton tries to be the extremely slimmed down opposite of big frameworks
 like Zend2, Symfony or Laravel.
 
+## Basic and Advanced version
+
+This is the basic version. There's another "Advanced" version in development which has
+additional features, currently Twig and SASS. More to come!
+Have a look here: https://github.com/panique/php-mvc-advanced
+
 ## Why does this project exist ?
 
 One of the biggest question in the PHP world is "How do I build an application ?".
