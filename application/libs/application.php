@@ -2,10 +2,10 @@
 
 class Application
 {
-    /** @var null The controller */
+    /** @var null The controllers */
     private $url_controller = null;
 
-    /** @var null The method (of the above controller), often also named "action" */
+    /** @var null The method (of the above controllers), often also named "action" */
     private $url_action = null;
 
     /** @var null Parameter one */
@@ -19,22 +19,22 @@ class Application
 
     /**
      * "Start" the application:
-     * Analyze the URL elements and calls the according controller/method or the fallback
+     * Analyze the URL elements and calls the according controllers/method or the fallback
      */
     public function __construct()
     {
         // create array with URL parts in $url
         $this->splitUrl();
 
-        // check for controller: does such a controller exist ?
-        if (file_exists('./application/controller/' . $this->url_controller . '.php')) {
+        // check for controllers: does such a controllers exist ?
+        if (file_exists('./application/controllers/' . $this->url_controller . '.php')) {
 
-            // if so, then load this file and create this controller
-            // example: if controller would be "car", then this line would translate into: $this->car = new car();
-            require './application/controller/' . $this->url_controller . '.php';
+            // if so, then load this file and create this controllers
+            // example: if controllers would be "car", then this line would translate into: $this->car = new car();
+            require './application/controllers/' . $this->url_controller . '.php';
             $this->url_controller = new $this->url_controller();
 
-            // check for method: does such a method exist in the controller ?
+            // check for method: does such a method exist in the controllers ?
             if (method_exists($this->url_controller, $this->url_action)) {
 
                 // call the method and pass the arguments to it
@@ -52,12 +52,12 @@ class Application
                     $this->url_controller->{$this->url_action}();
                 }
             } else {
-                // default/fallback: call the index() method of a selected controller
+                // default/fallback: call the index() method of a selected controllers
                 $this->url_controller->index();
             }
         } else {
             // invalid URL, so simply show home/index
-            require './application/controller/home.php';
+            require './application/controllers/home.php';
             $home = new Home();
             $home->index();
         }
