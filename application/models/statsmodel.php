@@ -4,7 +4,7 @@ class StatsModel extends Model
 {
     /**
      * Get simple "stats". This is just a simple demo to show
-     * how to use more than one model in a controllers (see application/controllers/songs.php for more)
+     * how to use more than one model in a controllers (see application/controllers/SongsController.php for more)
      */
     public function getAmountOfSongs()
     {

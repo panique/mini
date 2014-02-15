@@ -9,7 +9,7 @@
  * This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
  *
  */
-class Songs extends Controller
+class SongsController extends Controller
 {
     /**
      * PAGE: index
