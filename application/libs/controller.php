@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This is the "base controller class". All other "real" controllers extend this class.
+ * This is the "base controllers class". All other "real" controllers extend this class.
  */
 class Controller
 {
@@ -11,7 +11,7 @@ class Controller
     public $db = null;
 
     /**
-     * Whenever a controller is created, open a database connection too. The idea behind is to have ONE connection
+     * Whenever a controllers is created, open a database connection too. The idea behind is to have ONE connection
      * that can be used by multiple models (there are frameworks that open one connection per model).
      */
     function __construct()
@@ -37,7 +37,7 @@ class Controller
 
     /**
      * Load the model with the given name.
-     * loadModel("SongModel") would include models/songmodel.php and create the object in the controller, like this:
+     * loadModel("SongModel") would include models/songmodel.php and create the object in the controllers, like this:
      * $songs_model = $this->loadModel('SongsModel');
      * Note that the model class name is written in "CamelCase", the model's filename is the same in lowercase letters
      * @param string $model_name The name of the model
@@ -45,7 +45,7 @@ class Controller
      */
     public function loadModel($model_name)
     {
-        require 'application/models/' . strtolower($model_name) . '.php';
+        require 'application/models/' . $model_name . '.php';
         // return new model (and pass the database connection to the model)
         return new $model_name($this->db);
     }
