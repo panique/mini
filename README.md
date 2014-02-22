@@ -34,6 +34,12 @@ especially for the not-so-advanced coder.
 
 ## Installation
 
+### On Windows 7 (with EasyPHP)
+
+There's a tutorial on [How to install php-mvc on Windows 7, 8 and 8.1](http://www.dev-metal.com/install-php-mvc-windows-7/).
+
+### On Ubuntu etc.
+
 First, copy this repo into a public accessible folder on your server.
 Common techniques are a) downloading and extracting the .zip / .tgz by hand, b) cloning the repo with git (into var/www)
 
