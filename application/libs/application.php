@@ -52,7 +52,7 @@ class Application
                     $this->url_controller->{$this->url_action}();
                 }
             } else {
-                if(empty($this->url_action)) {
+                if(strlen($this->url_action) == 0) {
                     // no action defined: call the default index() method of a selected controller
                     $this->url_controller->index();
                 }
