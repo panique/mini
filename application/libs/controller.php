@@ -49,4 +49,11 @@ class Controller
         // return new model (and pass the database connection to the model)
         return new $model_name($this->db);
     }
+    
+    /**
+     * Fallback function which is called when the user-requested action is not available
+     */
+    public function nonExistentActionCalled() {
+        // can be implemented here or in specific controller
+    }
 }
