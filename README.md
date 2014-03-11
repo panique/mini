@@ -90,6 +90,11 @@ define('DB_PASS', 'mysql');
 to your database credentials. If you don't have an empty database, create one. Only change the type `mysql` if you
 know what you are doing.
 
+## Configuration for nginx
+
+Change line 74 of /application/libs/application.php from rtrim to trim if it isn't already, then see the example conf file. Or simply change the location block to be 
+```try_files $uri $uri/ /index.php?url=$uri;
+
 ## A quickstart tutorial
 
 You can also find these tutorial pictures in the *_tutorial* folder.
