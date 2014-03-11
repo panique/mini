@@ -94,7 +94,7 @@ know what you are doing.
 
 Change line 74 of /application/libs/application.php from rtrim to trim if it isn't already, then see the example conf file or just change the location block to be
 
-try_files $uri $uri/ /index.php?url=$uri;
+    try_files $uri $uri/ /index.php?url=$uri;
 
 ## A quickstart tutorial
 
