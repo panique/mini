@@ -93,7 +93,9 @@ know what you are doing.
 ## Configuration for nginx
 
 Change line 74 of /application/libs/application.php from rtrim to trim if it isn't already, then see the example conf file. Or simply change the location block to be 
-```try_files $uri $uri/ /index.php?url=$uri;
+
+    try_files $uri $uri/ /index.php?url=$uri;
+
 
 ## A quickstart tutorial
 
