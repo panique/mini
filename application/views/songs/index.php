@@ -3,7 +3,7 @@
     <!-- add song form -->
     <div>
         <h3>Add a song</h3>
-        <form action="<?php echo URL; ?>songs/addsong" method="POST">
+        <form action="songs/addsong" method="POST">
             <label>Artist</label>
             <input type="text" name="artist" value="" required />
             <label>Track</label>
@@ -41,7 +41,7 @@
                             <a href="<?php echo $song->link; ?>"><?php echo $song->link; ?></a>
                         <?php } ?>
                     </td>
-                    <td><a href="<?php echo URL . 'songs/deletesong/' . $song->id; ?>">x</a></td>
+                    <td><a href="<?php echo 'songs/deletesong/' . $song->id; ?>">x</a></td>
                 </tr>
             <?php } ?>
             </tbody>

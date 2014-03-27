@@ -15,6 +15,16 @@ if (file_exists('vendor/autoload.php')) {
     require 'vendor/autoload.php';
 }
 
+// set the URL constant
+if (dirname($_SERVER['SCRIPT_NAME']) === '/')
+{
+    define('URL', 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']));
+}
+else
+{
+    define('URL', 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']) . '/');
+}
+
 // load application config (error reporting etc.)
 require 'application/config/config.php';
 
