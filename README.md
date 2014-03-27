@@ -58,14 +58,7 @@ composer create-project panique/php-mvc /var/www dev-master
 
 2. Run the SQL statements in the *application/_install* folder.
 
-3. Edit the *application/config/config.php*, change this line
-```php
-define('URL', 'http://127.0.0.1/php-mvc/');
-```
-to where your project is. Real domain, IP or 127.0.0.1 when developing locally. Make sure you put the sub-folder
-in here (when installing in a sub-folder) too, also don't forget the trailing slash !
-
-4. Edit the *application/config/config.php*, change these lines
+3. Edit the *application/config/config.php*, change these lines
 ```php
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
