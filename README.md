@@ -6,6 +6,8 @@ This project is - by intention - NOT a full framework, it's a bare-bone structur
 purely native PHP ! The php-mvc skeleton tries to be the extremely slimmed down opposite of big frameworks
 like Zend2, Symfony or Laravel.
 
+[![Donate with PayPal banner](_tutorial/donate-with-paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG)
+
 ## Basic and Advanced version
 
 This is the basic version. There's another "Advanced" version in development which has
