@@ -15,14 +15,14 @@
         <!-- Info -->
         <div class="where-are-we-box">
             Everything in this box is loaded from <strong>application/views/_templates/header.php</strong> !
-            <br />
+            <br>
             The green line is added via JavaScript (to show how to integrate JavaScript).
         </div>
         <h1>The header (used on all pages)</h1>
         <!-- demo image -->
         <h3>Demo image, to show usage of public/img folder</h3>
         <div>
-            <img src="<?php echo URL; ?>public/img/demo-image.png" />
+            <img src="<?php echo URL; ?>public/img/demo-image.png" alt="Demo image">
         </div>
         <!-- navigation -->
         <h3>Demo Navigation</h3>
