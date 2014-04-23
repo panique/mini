@@ -18,7 +18,7 @@
 <div class="container">
     <!-- Info -->
     <div class="where-are-we-box">
-        Everything in this box is loaded from <span class="bold">application/views/_templates/header.php</span> !
+        Everything in this box is loaded from <strong>application/views/_templates/header.php</strong> !
         <br />
         The green line is added via JavaScript (to show how to integrate JavaScript).
     </div>
