@@ -1,8 +1,11 @@
 CHANGE LOG
 ==========
 
-** April 28th 2014 **
+** April 2014 **
 - updated jQuery link to 2.1
+- more than 3 parameters (arguments to be concrete) are possible
+- cleaner way of parameter handling
+- smaller cleanings and improvements
 
 **January 4th 2014**
 - fixed htaccess issue when there's a controller named "index" and a base index.php (which collide)
