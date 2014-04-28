@@ -40,7 +40,10 @@ especially for the not-so-advanced coder.
 
 There's a tutorial on [How to install php-mvc on Windows 7, 8 and 8.1](http://www.dev-metal.com/install-php-mvc-windows-7/).
 
-### On Ubuntu etc.
+### On Ubuntu 12.04 LTS
+
+Ubuntu 12.04 LTS is the most common mainstream server operating system. Unless you know what you do and have a very good
+reason to use something else: Use this version!
 
 First, copy this repo into a public accessible folder on your server.
 Common techniques are a) downloading and extracting the .zip / .tgz by hand, b) cloning the repo with git (into var/www)
@@ -91,6 +94,15 @@ define('DB_PASS', 'mysql');
 ```
 to your database credentials. If you don't have an empty database, create one. Only change the type `mysql` if you
 know what you are doing.
+
+### On Ubuntu 14.04 LTS
+
+Ubuntu 14.04 LTS comes with a newer version of Apache (2.4) that has slightly different configs, config syntax and
+different filenames. Here's a tutorial on
+[how to enable mod_rewrite in Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/).
+To update the application itself for Ubuntu 14.04 LTS, change `application/.htaccess` to `Require all denied`, more
+details in [the official Apache docs](http://httpd.apache.org/docs/2.4/upgrading.html).
+Thanks to *adamholte* for the info!
 
 ## A quickstart tutorial
 

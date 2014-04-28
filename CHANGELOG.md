@@ -6,6 +6,7 @@ CHANGE LOG
 - more than 3 parameters (arguments to be concrete) are possible
 - cleaner way of parameter handling
 - smaller cleanings and improvements
+- Apache 2.4 install information
 
 **January 4th 2014**
 - fixed htaccess issue when there's a controller named "index" and a base index.php (which collide)
