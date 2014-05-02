@@ -46,8 +46,6 @@ class Songs extends Controller
      */
     public function addSong()
     {
-        // simple message to show where you are
-        echo 'Message from Controller: You are in the Controller: Songs, using the method addSong().';
 
         // if we have POST data to create a new song entry
         if (isset($_POST["submit_add_song"])) {
@@ -71,8 +69,6 @@ class Songs extends Controller
      */
     public function deleteSong($song_id)
     {
-        // simple message to show where you are
-        echo 'Message from Controller: You are in the Controller: Songs, using the method deleteSong().';
 
         // if we have an id of a song that should be deleted
         if (isset($song_id)) {
