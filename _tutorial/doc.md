@@ -71,7 +71,7 @@ How to pass data via URL arguments
 Now we do something like before, but this time we 1.) pass an argument (that's the variable you pass to a parameter) to a method (or let's call it controller-action) and 2.) handle this request and then move back to the page the user was before (which is basically the advanced way to handle form submits, called Post-Redirect-Get).
 
 ```
-http://www.example.com/songs/index
+http://www.example.com/songs/delete/7
 ```
 
 ![image](images/img3.png)
