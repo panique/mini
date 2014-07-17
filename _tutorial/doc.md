@@ -67,3 +67,39 @@ Everything should be clear here. Note that we get database results in the "objec
 
 How to pass data via URL arguments
 --------
+
+Now we do something like before, but this time we 1.) pass an argument (that's the variable you pass to a parameter) to a method (or let's call it controller-action) and 2.) handle this request and then move back to the page the user was before (which is basically the advanced way to handle form submits, called Post-Redirect-Get).
+
+```
+http://www.example.com/songs/index
+```
+
+![image](images/img3.png)
+
+That sould be self-explaining. Please note that this will result in an error if no parameter is passed. There would be also an error if two or more parameters be passed (as the used model method needs exactly one argument).
+
+Please note the very last line of the deleteSong-method in the Songs-controller: This header()-function redirects the user to (for example) http://www.example.com/songs/index.
+This is really useful for actions like this which usually handle form submits or other database actions. Side-note: To transport error or success messages etc. between these locations ```$_SESSION``` is usually used.
+
+
+A general application structure overview
+--------
+
+![image](images/img4.png)
+
+- **_install**/ : Folder holds the SQL statements for creating the demo database / database tables.
+- **config/** : The base configuration, like YRL of your project and database credentials.
+- **controller/** : The controllers, we just talked about them.
+- **libs/** : The libs folder holds the core of the application, don't change it you don't know what you do.
+- **models/** : Application models to manage data. 
+- **views/** : The view ! *_templates* holds stuff that is used very often, like page header and footer. The other folders contain views for static or data-filled pages.
+- **application/.htaccess** : Blocks direct access to your .php-files from the outside. Cool!
+- **public/** : Contains typical public files, like your CSS, images, and JavaScript.
+- **/.htaccess** : Makes "beautiful URLS" possible.
+- **index.php, composer.json, README.md** : Are self-explaining ;)
+
+
+
+
+
+
