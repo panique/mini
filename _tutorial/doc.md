@@ -88,11 +88,11 @@ A general application structure overview
 ![image](images/img4.png)
 
 - **_install**/ : Folder holds the SQL statements for creating the demo database / database tables.
-- **config/** : The base configuration, like YRL of your project and database credentials.
+- **config/** : The base configuration, like URL of your project and database credentials.
 - **controller/** : The controllers, we just talked about them.
 - **libs/** : The libs folder holds the core of the application, don't change it you don't know what you do.
 - **models/** : Application models to manage data. 
-- **views/** : The view ! *_templates* holds stuff that is used very often, like page header and footer. The other folders contain views for static or data-filled pages.
+- **views/** : The views ! *_templates* holds stuff that is used very often, like page header and footer. The other folders contain views for static or data-filled pages.
 - **application/.htaccess** : Blocks direct access to your .php-files from the outside. Cool!
 - **public/** : Contains typical public files, like your CSS, images, and JavaScript.
 - **/.htaccess** : Makes "beautiful URLS" possible.
