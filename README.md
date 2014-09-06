@@ -6,7 +6,7 @@ This project is - by intention - NOT a full framework, it's a bare-bone structur
 purely native PHP ! The php-mvc skeleton tries to be the extremely slimmed down opposite of big frameworks
 like Zend2, Symfony or Laravel.
 
-[![Donate with PayPal banner](_tutorial/donate-with-paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG)
+[![Donate with PayPal banner](_tutorial/images/donate-with-paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG)
 
 [![Donate with Flattr banner](_tutorial/donate-with-flattr.png)](https://flattr.com/submit/auto?user_id=panique&url=https%3A%2F%2Fgithub.com%2Fpanique%2Fphp-mvc)
 
@@ -114,13 +114,8 @@ Thanks to *adamholte* for the info!
 
 ## A quickstart tutorial
 
-You can also find these tutorial pictures in the *_tutorial* folder.
+[Go To Tutorial](_tutorial/doc.md)
 
-![php-mvc introduction tutorial - page 1](_tutorial/tutorial-part-01.png)
-![php-mvc introduction tutorial - page 2](_tutorial/tutorial-part-02.png)
-![php-mvc introduction tutorial - page 3](_tutorial/tutorial-part-03.png)
-![php-mvc introduction tutorial - page 4](_tutorial/tutorial-part-04.png)
-![php-mvc introduction tutorial - page 5](_tutorial/tutorial-part-05.png)
 
 ## You like what you see ?
 
