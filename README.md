@@ -34,6 +34,10 @@ especially for the not-so-advanced coder.
 - promote the usage of OOP code
 - using only native PHP code, so people don't have to learn a framework
 
+## Support forum
+
+If you are stuck with something even AFTER reading and following the install tutorials and the quick-manual, then feel free to ask in the [official forum](http://forum.php-mvc.net/). Note that this forum is fresh and new, more content will come over time.
+
 ## Installation
 
 ### On Windows 7 (with EasyPHP)
