@@ -77,6 +77,15 @@ If you have put the project into a sub-folder, then put the name of the sub-fold
 ```
 RewriteBase /sub-folder/
 ```
+If you prefer to use php-mvc with Nginx instead of Apache, make sure your 'server' block contains for the location part
+the line :
+```
+try_files $uri $uri/ /index.php?url=$uri;
+```
+Same thing for the location part that handles the requests ending with '.php' :
+```
+try_files $uri /index.php?url=$uri;
+```
 
 4. Edit the *application/config/config.php*, change this line
 ```php
