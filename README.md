@@ -40,6 +40,10 @@ If you are stuck with something even AFTER reading and following the install tut
 free to ask in the [official forum](http://forum.php-mvc.net/). Note that this forum is fresh and new, more content
 will come over time.
 
+## Keep on track with development by following ...
+
+... on [Facebook](https://www.facebook.com/pages/The-PHP-MVC-Project/1488883564703966) or check this GitHub repo.
+
 ## Installation
 
 ### On Windows 7 (with EasyPHP)
