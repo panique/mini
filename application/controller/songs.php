@@ -30,10 +30,13 @@ class Songs extends Controller
         $stats_model = $this->loadModel('StatsModel');
         $amount_of_songs = $stats_model->getAmountOfSongs();
 
+        // Store variables in viewBag to be used by the view
+        $this->viewBag->songs = $songs;
+        $this->viewBag->amount_of_songs = $amount_of_songs;
+        $this->viewBag->title = 'Songs';
+        
         // load views. within the views we can echo out $songs and $amount_of_songs easily
-        require 'application/views/_templates/header.php';
-        require 'application/views/songs/index.php';
-        require 'application/views/_templates/footer.php';
+        $this->loadView('application/views/shared/layout.php', 'application/views/songs/index.php');
     }
 
     /**

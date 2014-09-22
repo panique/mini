@@ -1,3 +1,9 @@
+<?php
+    // Get values from viewBag
+    $amount_of_songs = $viewBag->amount_of_songs;
+    $songs = $viewBag->songs;
+?>
+
 <div class="container">
     <h2>You are in the View: application/views/song/index.php (everything in this box comes from that file)</h2>
     <!-- add song form -->
