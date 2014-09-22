@@ -9,13 +9,19 @@ class Controller
      * @var null Database Connection
      */
     public $db = null;
-
+    
+    /**
+     *
+     * @var stdClass Object that will hold all variables for the view via its properties
+     */
+    public $viewBag = null;
     /**
      * Whenever a controller is created, open a database connection too. The idea behind is to have ONE connection
      * that can be used by multiple models (there are frameworks that open one connection per model).
      */
     function __construct()
     {
+        $this->viewBag = new stdClass();
         $this->openDatabaseConnection();
     }
 
@@ -48,5 +54,12 @@ class Controller
         require 'application/models/' . strtolower($model_name) . '.php';
         // return new model (and pass the database connection to the model)
         return new $model_name($this->db);
+    }
+    
+    public function loadView($layoutPath, $bodyPath) {
+        require 'application/libs/view.php';
+        $view = new View($layoutPath, $bodyPath);
+        $view->viewBag = $this->viewBag;
+        $view->renderLayout();
     }
 }
