@@ -21,6 +21,19 @@ require 'application/config/config.php';
 // load application class
 require 'application/libs/application.php';
 require 'application/libs/controller.php';
+require 'application/libs/exceptions.php';
 
 // start the application
-$app = new Application();
+
+try {
+    $app = new Application();
+} catch (PageNotFoundException $e) {
+    header('HTTP/1.1 404 Not Found', true, 404);
+    include "application/views/errors/404.php";
+} catch (InternalServerException $e) {
+    header('HTTP/1.1 500 Internal Server Error', true, 500);
+    include "application/views/errors/500.php";
+}
+
+// you can also catch PDOException and all base class Exception and send a
+// header with 500 Internal Server Error status.
