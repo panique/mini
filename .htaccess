@@ -1,26 +1,36 @@
-# Necessary to prevent problems when using a controller named "index" and having a root index.php
-# more here: http://httpd.apache.org/docs/2.2/content-negotiation.html
+# Necessary to prevent problems when using a controller named "index" and having
+# a root index.php file.
+# For more information, see
+# http://httpd.apache.org/docs/2.2/content-negotiation.html
 Options -MultiViews
 
-# Activates URL rewriting (like myproject.com/controller/action/1/2/3)
+# In some cases, setting RewriteEngine On results in 403 Forbidden unless you
+# uncomment the following line.
+# Options +FollowSymLinks
+
+# Activates URL rewriting, using the rewriting rules defined later in this file.
+# For example, allows Apache to rewrite a URL like
+# http://myproject.com/controller/action/1/2/3 to go to the appropriate page.
 RewriteEngine On
 
-# Disallows others to look directly into /public/ folder
+# Prevents others from looking directly into the /public/ folder.
 Options -Indexes
 
-# When using the script within a sub-folder, put this path here, like /mysubfolder/
-# If your app is in the root of your web folder, then leave it commented out
-RewriteBase /php-mvc/
+# If you're installing php-mvc in a subfolder, then specify the php-mvc
+# root folder here, like /mysubfolder/
+# If your app is in the root of your web folder, then leave this line
+# commented out.
+# RewriteBase /php-mvc/
 
 # If the following conditions are true, then rewrite the URL.
 
-# If the requested filename is not a directory
+# If the requested filename is not a directory,
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# and if the requested filename is not a regular file that exists
+# and if the requested filename is not a regular file that exists,
 RewriteCond %{REQUEST_FILENAME} !-f
 
-# and if the requested filename is not a symbolic link
+# and if the requested filename is not a symbolic link,
 RewriteCond %{REQUEST_FILENAME} !-l
 
 # then rewrite the URL in the following way:
