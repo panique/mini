@@ -26,6 +26,6 @@ define('URL', 'http://127.0.0.1/php-mvc/');
  */
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'php-mvc');
+define('DB_NAME', 'rbooks');
 define('DB_USER', 'root');
 define('DB_PASS', 'mysql');
