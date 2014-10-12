@@ -15,10 +15,18 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 /**
- * Configuration for: Project URL
- * Put your URL here, for local development "127.0.0.1" or "localhost" (plus sub-folder) is fine
+ * Configuration for: Base URL
+ * You do not have to edit this. It automatically detects the base directory.
  */
-define('URL', 'http://127.0.0.1/php-mvc/');
+define('URL',
+    (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https://' : 'http://'.
+    $_SERVER['HTTP_HOST'].
+    str_replace(
+        $_SERVER['DOCUMENT_ROOT'],
+        '',
+        str_replace('\\', '/', dirname(dirname(__DIR__))).'/'
+    )
+);
 
 /**
  * Configuration for: Database
@@ -28,4 +36,4 @@ define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'php-mvc');
 define('DB_USER', 'root');
-define('DB_PASS', 'mysql');
+define('DB_PASS', 'password');
