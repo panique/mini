@@ -1,23 +1,37 @@
-# Necessary to prevent problems when using a controller named "index" and having a root index.php
-# more here: http://httpd.apache.org/docs/2.2/content-negotiation.html
+#------------------------------------------------------------------------------
+# Disable MultiViews
+#------------------------------------------------------------------------------
+# 
+# Necessary to prevent problems when using a controller named "index" and having 
+# a root index.php. 
+# 
+# More here: http://httpd.apache.org/docs/2.2/content-negotiation.html.
+# 
 Options -MultiViews
 
-# Activates URL rewriting (like myproject.com/controller/action/1/2/3)
-RewriteEngine On
 
-# Prevent people from looking directly into folders
+#------------------------------------------------------------------------------
+# Disable Indexes
+#------------------------------------------------------------------------------
+# 
+# Prevents people from looking directly into directories if no default file like
+# index.php or index.html exists.
+# 
 Options -Indexes
 
-# If the following conditions are true, then rewrite the URL:
-# If the requested filename is not a directory,
+
+RewriteEngine On
+
+
+#------------------------------------------------------------------------------
+# Pretty URL's
+#------------------------------------------------------------------------------
+#
+# If the accessed page is not a directory, file or symbolic link, direct URL's 
+# like http://example.com/my/url/17/ to http://example.com/index.php?url=my/url/17/.
+# 
 RewriteCond %{REQUEST_FILENAME} !-d
-# and if the requested filename is not a regular file that exists,
 RewriteCond %{REQUEST_FILENAME} !-f
-# and if the requested filename is not a symbolic link,
 RewriteCond %{REQUEST_FILENAME} !-l
-# then rewrite the URL in the following way:
-# Take the whole request filename and provide it as the value of a
-# "url" query parameter to index.php. Append any query string from
-# the original URL as further query parameters (QSA), and stop
-# processing this .htaccess file (L).
-RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+    # Append to query string (QSA) and end the condition (L)
+    RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
