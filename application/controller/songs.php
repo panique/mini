@@ -30,7 +30,7 @@ class Songs extends Controller
         $stats_model = $this->loadModel('StatsModel');
         $amount_of_songs = $stats_model->getAmountOfSongs();
 
-        // load views. within the views we can echo out $songs and $amount_of_songs easily
+       // load views. within the views we can echo out $songs and $amount_of_songs easily
         require APP . 'views/_templates/header.php';
         require APP . 'views/songs/index.php';
         require APP . 'views/_templates/footer.php';
@@ -80,4 +80,59 @@ class Songs extends Controller
         // where to go after song has been deleted
         header('location: ' . URL . 'songs/index');
     }
+     /**
+     * ACTION: editSong
+     * This method handles what happens when you move to http://yourproject/songs/editsong
+     * IMPORTANT: This is not a normal page, it's an ACTION. This is where the "edit a song" link on songs/index
+     * directs the user after the click. This method handles all the data from the GET request (in the URL!) and then
+     * redirects the user to songs/edit via the line: require(...)
+     * This is an example of how to handle a GET request.
+     * @param int $song_id Id of the to-edit song
+     */
+    public function editSong($song_id)
+    {
+        //die($song_id);
+        // if we have an id of a song that should be deleted
+        if (isset($song_id)) {
+            // load model, perform an action on the model
+            $songs_model = $this->loadModel('SongsModel');
+            //An array of objetcs
+            $song = $songs_model->getSong($song_id);
+            //An object of stdClass
+            $song = $song[0];
+            
+            /*echo "<pre> [D E B U G]:\n";
+            var_dump($song);
+            echo "</pre>";
+            die();*/
+
+         // load views. within the views we can echo out $song easily
+        require APP . 'views/_templates/header.php';
+        require APP . 'views/songs/edit.php';
+        require APP . 'views/_templates/footer.php';
+        }
+    }
+    
+    /**
+     * ACTION: updateSong
+     * This method handles what happens when you move to http://yourproject/songs/updatesong
+     * IMPORTANT: This is not a normal page, it's an ACTION. This is where the "update a song" form on songs/edit
+     * directs the user after the form submit. This method handles all the POST data from the form and then redirects
+     * the user back to songs/index via the last line: header(...)
+     * This is an example of how to handle a POST request.
+     */
+    public function updateSong()
+    {
+
+        // if we have POST data to create a new song entry
+        if (isset($_POST["submit_update_song"])) {
+            // load model, perform an action on the model
+            $songs_model = $this->loadModel('SongsModel');
+            $songs_model->updateSong($_POST["artist"], $_POST["track"],  $_POST["link"], $_POST['song_id']);
+        }
+
+        // where to go after song has been added
+        header('location: ' . URL . 'songs/index');
+    }
+
 }
