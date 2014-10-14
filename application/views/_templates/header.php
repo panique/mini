@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
-    <link href="<?php echo URL; ?>public/css/style.css" rel="stylesheet">
+    <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
     <!-- jQuery -->
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <!-- our JavaScript -->
-    <script src="<?php echo URL; ?>public/js/application.js"></script>
+    <script src="<?php echo URL; ?>js/application.js"></script>
 </head>
 <body>
 <!-- header -->
@@ -26,7 +26,7 @@
     <!-- demo image -->
     <h3>Demo image, to show usage of public/img folder</h3>
     <div>
-        <img src="<?php echo URL; ?>public/img/demo-image.png" />
+        <img src="<?php echo URL; ?>img/demo-image.png" />
     </div>
     <!-- navigation -->
     <h3>Demo Navigation</h3>
