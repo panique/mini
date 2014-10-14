@@ -80,36 +80,29 @@ class Songs extends Controller
         // where to go after song has been deleted
         header('location: ' . URL . 'songs/index');
     }
+
      /**
      * ACTION: editSong
      * This method handles what happens when you move to http://yourproject/songs/editsong
-     * IMPORTANT: This is not a normal page, it's an ACTION. This is where the "edit a song" link on songs/index
-     * directs the user after the click. This method handles all the data from the GET request (in the URL!) and then
-     * redirects the user to songs/edit via the line: require(...)
-     * This is an example of how to handle a GET request.
      * @param int $song_id Id of the to-edit song
      */
     public function editSong($song_id)
     {
-        //die($song_id);
-        // if we have an id of a song that should be deleted
+        // if we have an id of a song that should be edited
         if (isset($song_id)) {
-            // load model, perform an action on the model
+            // load model, perform an action on the model: here we get the song by its id
             $songs_model = $this->loadModel('SongsModel');
-            //An array of objetcs
             $song = $songs_model->getSong($song_id);
-            //An object of stdClass
-            $song = $song[0];
-            
-            /*echo "<pre> [D E B U G]:\n";
-            var_dump($song);
-            echo "</pre>";
-            die();*/
+            // in a real application we would also check if this db entry exists and therefore show the result or
+            // redirect the user to an error page or similar
 
-         // load views. within the views we can echo out $song easily
-        require APP . 'views/_templates/header.php';
-        require APP . 'views/songs/edit.php';
-        require APP . 'views/_templates/footer.php';
+            // load views. within the views we can echo out $song easily
+            require APP . 'views/_templates/header.php';
+            require APP . 'views/songs/edit.php';
+            require APP . 'views/_templates/footer.php';
+        } else {
+            // redirect user to songs index page (as we don't have a song_id)
+            header('location: ' . URL . 'songs/index');
         }
     }
     

@@ -42,8 +42,8 @@
                             <a href="<?php echo $song->link; ?>"><?php echo $song->link; ?></a>
                         <?php } ?>
                     </td>
-                    <td><a href="<?php echo URL . 'songs/deletesong/' . $song->id; ?>">x</a></td>
-                     <td><a href="<?php echo URL . 'songs/editsong/' . $song->id; ?>">E</a></td>
+                    <td><a href="<?php echo URL . 'songs/deletesong/' . $song->id; ?>">delete</a></td>
+                    <td><a href="<?php echo URL . 'songs/editsong/' . $song->id; ?>">edit</a></td>
                 </tr>
             <?php } ?>
             </tbody>
