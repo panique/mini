@@ -10,6 +10,7 @@
  * @license http://opensource.org/licenses/MIT MIT License
  */
 
+// TODO this looks weird here, maybe it's possible to put this into config or so
 define('ROOT', dirname(__DIR__) . DIRECTORY_SEPARATOR);
 define('APP', ROOT . 'application' . DIRECTORY_SEPARATOR);
 

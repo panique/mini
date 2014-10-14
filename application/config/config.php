@@ -35,6 +35,10 @@ ini_set("display_errors", 1);
  * The final, auto-detected URL (build via the segments above). If you don't want to use auto-detection,
  * then replace this line with full URL (and sub-folder) and a trailing slash.
  */
+
+// TODO: get rid of unnecessary constants
+// more https://github.com/panique/php-mvc/commit/f4add025bedb681e467cd8aa8b5883249f0b6d42
+
 define('URL_PUBLIC_FOLDER', 'public');
 define('URL_PROTOCOL', 'http://');
 define('URL_DOMAIN', $_SERVER['HTTP_HOST']);
