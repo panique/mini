@@ -5,6 +5,7 @@ CHANGE LOG
 
 - [bst27] fallback for non-existing controller / method
 - fallback will show error-page now
+- [digitaltoast] URL split fix to make php-mvc work flawlessly on nginx
 
 ** September 2014 **
 - added link to support forum
