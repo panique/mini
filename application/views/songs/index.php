@@ -28,6 +28,7 @@
                 <td>Track</td>
                 <td>Link</td>
                 <td>DELETE</td>
+                <td>EDIT</td>
             </tr>
             </thead>
             <tbody>
@@ -42,6 +43,7 @@
                         <?php } ?>
                     </td>
                     <td><a href="<?php echo URL . 'songs/deletesong/' . $song->id; ?>">x</a></td>
+                     <td><a href="<?php echo URL . 'songs/editsong/' . $song->id; ?>">E</a></td>
                 </tr>
             <?php } ?>
             </tbody>

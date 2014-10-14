@@ -61,4 +61,42 @@ class SongsModel
         $query = $this->db->prepare($sql);
         $query->execute(array(':song_id' => $song_id));
     }
+
+    /**
+     * Get a song from database
+     */
+    public function getSong($song_id)
+    {
+        $sql = "SELECT id, artist, track, link FROM song WHERE id = :song_id";
+        $query = $this->db->prepare($sql);
+        $query->execute(array(':song_id' => $song_id));
+
+        // fetchAll() is the PDO method that gets all result rows, here in object-style because we defined this in
+        // libs/controller.php! If you prefer to get an associative array as the result, then do
+        // $query->fetchAll(PDO::FETCH_ASSOC); or change libs/controller.php's PDO options to
+        // $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ...
+        return $query->fetchAll();
+    }
+
+    /**
+     * Update a song in database
+     * @param string $artist Artist
+     * @param string $track Track
+     * @param string $link Link
+     * @param int $song_id Id
+     */
+    public function updateSong($artist, $track, $link, $song_id)
+    {
+        // clean the input from html tags and javascript code for example
+        $artist = strip_tags($artist);
+        $track = strip_tags($track);
+        $link = strip_tags($link);
+        $song_id = strip_tags($song_id);
+
+
+        $sql = "UPDATE song SET `artist` = :artist, `track` = :track, `link` = :link WHERE `id` = :song_id";
+        $query = $this->db->prepare($sql);
+        $query->execute(array(':artist' => $artist, ':track' => $track, ':link' => $link, ':song_id' => $song_id));
+    }
+
 }
