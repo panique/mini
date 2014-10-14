@@ -11,7 +11,7 @@
     <!-- See more here: http://stackoverflow.com/q/2105327/1114320 -->
 
     <!-- CSS -->
-    <link href="<?php echo URL; ?>public/css/style.css" rel="stylesheet">
+    <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
 </head>
 <body>
     <!-- header -->
@@ -26,7 +26,7 @@
         <!-- demo image -->
         <h3>Demo image, to show usage of public/img folder</h3>
         <div>
-            <img src="<?php echo URL; ?>public/img/demo-image.png" alt="Demo image">
+            <img src="<?php echo URL; ?>img/demo-image.png" alt="Demo image">
         </div>
         <!-- navigation -->
         <h3>Demo Navigation</h3>
