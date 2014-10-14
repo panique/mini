@@ -10,15 +10,28 @@
 /**
  * Configuration for: Error reporting
  * Useful to show every little problem during development, but only show hard errors in production
+ * TODO: production values
+ * TODO: production switch
  */
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
+
+// TODO docs
+// TODO maybe a little bit sexier
+// TODO testing
+define('URL_PUBLIC_FOLDER', 'public');
+define('URL_PROTOCOL', 'http://');
+define('URL_DOMAIN', $_SERVER['HTTP_HOST']);
+define('URL_SUBFOLDER', str_replace(URL_PUBLIC_FOLDER, '', dirname($_SERVER['SCRIPT_NAME'])));
+
+define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUBFOLDER);
 
 /**
  * Configuration for: Project URL
  * Put your URL here, for local development "127.0.0.1" or "localhost" (plus sub-folder) is fine
  */
-define('URL', 'http://127.0.0.1/php-mvc/');
+//define('URL', 'http://192.168.33.10/');
+//define('URL', 'http://' . $_SERVER['HTTP_HOST'] . '/');
 
 /**
  * Configuration for: Database
