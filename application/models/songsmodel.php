@@ -13,6 +13,8 @@ class SongsModel
         } catch (PDOException $e) {
             exit('Database connection could not be established.');
         }
+        //Only for PDO debugging
+        require_once APP . 'libs/pdo-debug.php';
     }
 
     /**
@@ -46,7 +48,9 @@ class SongsModel
 
         $sql = "INSERT INTO song (artist, track, link) VALUES (:artist, :track, :link)";
         $query = $this->db->prepare($sql);
-        $query->execute(array(':artist' => $artist, ':track' => $track, ':link' => $link));
+        $parameters = array(':artist' => $artist, ':track' => $track, ':link' => $link);
+        //echo "[ PDO DEBUG ]: " . debugPDO($sql, $parameters);  die();
+        $query->execute($parameters);
     }
 
     /**
@@ -59,7 +63,10 @@ class SongsModel
     {
         $sql = "DELETE FROM song WHERE id = :song_id";
         $query = $this->db->prepare($sql);
-        $query->execute(array(':song_id' => $song_id));
+        
+        $parameters = array(':song_id' => $song_id);
+        //echo "[ PDO DEBUG ]: " . debugPDO($sql, $parameters);  die();
+        $query->execute($parameters);
     }
 
     /**
@@ -69,7 +76,10 @@ class SongsModel
     {
         $sql = "SELECT id, artist, track, link FROM song WHERE id = :song_id";
         $query = $this->db->prepare($sql);
-        $query->execute(array(':song_id' => $song_id));
+        
+        $parameters = array(':song_id' => $song_id);
+        //echo "[ PDO DEBUG ]: " . debugPDO($sql, $parameters);  die();
+        $query->execute($parameters);
 
         // fetchAll() is the PDO method that gets all result rows, here in object-style because we defined this in
         // libs/controller.php! If you prefer to get an associative array as the result, then do
@@ -96,7 +106,11 @@ class SongsModel
 
         $sql = "UPDATE song SET `artist` = :artist, `track` = :track, `link` = :link WHERE `id` = :song_id";
         $query = $this->db->prepare($sql);
-        $query->execute(array(':artist' => $artist, ':track' => $track, ':link' => $link, ':song_id' => $song_id));
+        $parameters = array(':artist' => $artist, ':track' => $track, ':link' => $link, ':song_id' => $song_id);
+        
+        //echo "[ PDO DEBUG ]: " . debugPDO($sql, $parameters);  die();
+       
+        $query->execute($parameters);
     }
 
 }
