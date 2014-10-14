@@ -48,9 +48,14 @@ will come over time.
 
 ### On Windows 7 (with EasyPHP)
 
+TODO: [this tutorial is now outdated]
+
 There's a tutorial on [How to install php-mvc on Windows 7, 8 and 8.1](http://www.dev-metal.com/install-php-mvc-windows-7/).
 
 ### On Ubuntu 12.04 LTS
+
+TODO: [this tutorial is now outdated]
+TODO: [add server setup here: apache, php etc.]
 
 Ubuntu 12.04 LTS is the most common mainstream server operating system. Unless you know what you do and have a very good
 reason to use something else: Use this version!
@@ -73,19 +78,7 @@ composer create-project panique/php-mvc /var/www dev-master
 
 2. Run the SQL statements in the *application/_install* folder.
 
-3. Change the .htaccess file from
-```
-RewriteBase /php-mvc/
-```
-to where you put this project, relative to the web root folder (usually /var/www). So when you put this project into
-the web root, like directly in /var/www, then the line should look like or can be commented out:
-```
-RewriteBase /
-```
-If you have put the project into a sub-folder, then put the name of the sub-folder here:
-```
-RewriteBase /sub-folder/
-```
+3. REMOVED
 
 4. Edit the *application/config/config.php*, change this line
 ```php
