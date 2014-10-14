@@ -2,6 +2,7 @@ CHANGE LOG
 ==========
 
 ** October 2014 **
+- [tarcnux] basic CRUD (create/read/update/delete) examples have now an U (update)
 - [panique] URL is now config-free, application detects URL and sub-folder
 - [elysdir] htaccess has some good explanation-comments now 
 - [bst27] fallback for non-existing controller / method
