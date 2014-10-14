@@ -20,8 +20,15 @@ class Application
         // create array with URL parts in $url
         $this->splitUrl();
 
-        // check for controller: does such a controller exist ?
-        if (file_exists('./application/controller/' . $this->url_controller . '.php')) {
+        // check for controller: no controller given ? then load start-page
+        if (!$this->url_controller) {
+
+            require './application/controller/home.php';
+            $page = new Home();
+            $page->index();
+
+        } elseif (file_exists('./application/controller/' . $this->url_controller . '.php')) {
+            // here we did check for controller: does such a controller exist ?
 
             // if so, then load this file and create this controller
             // example: if controller would be "car", then this line would translate into: $this->car = new car();
@@ -45,15 +52,16 @@ class Application
                     $this->url_controller->index();
                 }
                 else {
-                    // defined action not existent: call the nonExistentActionCalled() method of a selected controller
-                    $this->url_controller->nonExistentActionCalled();
+                    // defined action not existent: show the error page
+                    require './application/controller/error.php';
+                    $page = new Error();
+                    $page->index();
                 }
             }
         } else {
-            // invalid URL, so simply show home/index
-            require './application/controller/home.php';
-            $home = new Home();
-            $home->index();
+            require './application/controller/error.php';
+            $page = new Error();
+            $page->index();
         }
     }
 
