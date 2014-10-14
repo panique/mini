@@ -40,8 +40,14 @@ class Application
                 }
 
             } else {
-                // default/fallback: call the index() method of a selected controller
-                $this->url_controller->index();
+                if(strlen($this->url_action) == 0) {
+                    // no action defined: call the default index() method of a selected controller
+                    $this->url_controller->index();
+                }
+                else {
+                    // defined action not existent: call the nonExistentActionCalled() method of a selected controller
+                    $this->url_controller->nonExistentActionCalled();
+                }
             }
         } else {
             // invalid URL, so simply show home/index
