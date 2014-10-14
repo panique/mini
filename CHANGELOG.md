@@ -3,6 +3,8 @@ CHANGE LOG
 
 ** October 2014 **
 
+- [panique] URL is now config-free, application detects URL and sub-folder
+- [elysdir] htaccess has some good explanation-comments now 
 - [bst27] fallback for non-existing controller / method
 - fallback will show error-page now
 - [digitaltoast] URL split fix to make php-mvc work flawlessly on nginx
