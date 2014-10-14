@@ -31,9 +31,9 @@ class Songs extends Controller
         $amount_of_songs = $stats_model->getAmountOfSongs();
 
         // load views. within the views we can echo out $songs and $amount_of_songs easily
-        require 'application/views/_templates/header.php';
-        require 'application/views/songs/index.php';
-        require 'application/views/_templates/footer.php';
+        require APP . 'views/_templates/header.php';
+        require APP . 'views/songs/index.php';
+        require APP . 'views/_templates/footer.php';
     }
 
     /**
