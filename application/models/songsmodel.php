@@ -33,17 +33,17 @@ class SongsModel
 
     /**
      * Add a song to database
+     * // TODO put this explaination into readme and remove it from here
+     * Please note that it's not necessary to "clean" our input in any way. With PDO all input is escaped properly
+     * automatically. We also don't use strip_tags() etc. here so we keep the input 100% original (so it's possible
+     * to save HTML and JS to the database, which is a valid use case). Data will only be cleaned when putting it out
+     * in the views (see the views for more info).
      * @param string $artist Artist
      * @param string $track Track
      * @param string $link Link
      */
     public function addSong($artist, $track, $link)
     {
-        // clean the input from javascript code for example
-        $artist = strip_tags($artist);
-        $track = strip_tags($track);
-        $link = strip_tags($link);
-
         $sql = "INSERT INTO song (artist, track, link) VALUES (:artist, :track, :link)";
         $query = $this->db->prepare($sql);
         $query->execute(array(':artist' => $artist, ':track' => $track, ':link' => $link));
@@ -77,6 +77,11 @@ class SongsModel
 
     /**
      * Update a song in database
+     * // TODO put this explaination into readme and remove it from here
+     * Please note that it's not necessary to "clean" our input in any way. With PDO all input is escaped properly
+     * automatically. We also don't use strip_tags() etc. here so we keep the input 100% original (so it's possible
+     * to save HTML and JS to the database, which is a valid use case). Data will only be cleaned when putting it out
+     * in the views (see the views for more info).
      * @param string $artist Artist
      * @param string $track Track
      * @param string $link Link
@@ -84,12 +89,6 @@ class SongsModel
      */
     public function updateSong($artist, $track, $link, $song_id)
     {
-        // clean the input from html tags and javascript code for example
-        $artist = strip_tags($artist);
-        $track = strip_tags($track);
-        $link = strip_tags($link);
-        $song_id = strip_tags($song_id);
-
         $sql = "UPDATE song SET artist = :artist, track = :track, link = :link WHERE id = :song_id";
         $query = $this->db->prepare($sql);
         $query->execute(array(':artist' => $artist, ':track' => $track, ':link' => $link, ':song_id' => $song_id));
