@@ -24,8 +24,8 @@ if (file_exists(ROOT . 'vendor/autoload.php')) {
 require APP . '/config/config.php';
 
 // load application class
-require APP . '/libs/application.php';
-require APP . '/libs/controller.php';
+require APP . '/core/application.php';
+require APP . '/core/controller.php';
 
 // start the application
 $app = new Application();
