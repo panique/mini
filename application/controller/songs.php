@@ -128,4 +128,18 @@ class Songs extends Controller
         header('location: ' . URL . 'songs/index');
     }
 
+    /**
+     * AJAX-ACTION: ajaxGetStats
+     * TODO documentation
+     */
+    public function ajaxGetStats()
+    {
+        $stats_model = $this->loadModel('StatsModel');
+        $amount_of_songs = $stats_model->getAmountOfSongs();
+
+        // simply echo out something
+        // side-fact: This is also a nice way to build an API. For serious application you would output JSON here
+        echo $amount_of_songs;
+    }
+
 }
