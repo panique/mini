@@ -22,7 +22,7 @@ $(function() {
 
             // send an ajax-request to this URL: current-server.com/songs/ajaxGetStats
             // TODO this will not work directly when using the project in a sub-folder
-            $.ajax("songs/ajaxGetStats")
+            $.ajax("/songs/ajaxGetStats")
                 .done(function(result) {
                     // this will be executed if the ajax-call was successful
                     // here we get the feedback from the ajax-call (result) and show it in #javascript-ajax-result-box
