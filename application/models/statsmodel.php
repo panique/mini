@@ -25,7 +25,7 @@ class StatsModel
         $query = $this->db->prepare($sql);
         $query->execute();
 
-        // fetchAll() is the PDO method that gets all result rows
+        // fetch() is the PDO method that get exactly one result
         return $query->fetch()->amount_of_songs;
     }
 }
