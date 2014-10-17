@@ -1,12 +1,14 @@
 <?php
 
+// if it does not exist, add the function debugPDO to PHP
+// for more info about this function, see https://github.com/panique/pdo-debug
 if (!function_exists('debugPDO')) {
 
     /**
-     * <b>debugPDO</b>
-     * Shows the SQL query constructed by PDO. The magic behind: A simple 
-     * function that combines your parameters and the raw query. Not perfect, 
-     * but does the job.
+     * debugPDO
+     *
+     * Shows the SQL query constructed by PDO. The magic behind: A simple function that combines your parameters and
+     * the raw query. Not perfect, but does the job.
      * 
      * @author Panique <https://github.com/panique/pdo-debug>
      * @param string $raw_sql
@@ -14,6 +16,7 @@ if (!function_exists('debugPDO')) {
      * @return string
      */
     function debugPDO($raw_sql, $parameters) {
+
         $keys = array();
         $values = $parameters;
 
@@ -26,7 +29,6 @@ if (!function_exists('debugPDO')) {
                 $keys[] = '/[?]/';
             }
 
-
             // bring parameter into human-readable format
             if (is_string($value)) {
                 $values[$key] = "'" . $value . "'";
@@ -36,6 +38,7 @@ if (!function_exists('debugPDO')) {
                 $values[$key] = 'NULL';
             }
         }
+
         /*
         echo "<br> [DEBUG] Keys:<pre>";
         print_r($keys);

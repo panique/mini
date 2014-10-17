@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class SongsModel
+ *
+ * TODO documentation
+ */
 class SongsModel
 {
     /**
@@ -13,8 +18,6 @@ class SongsModel
         } catch (PDOException $e) {
             exit('Database connection could not be established.');
         }
-        //Only for PDO debugging
-        require_once APP . 'libs/pdo-debug.php';
     }
 
     /**
@@ -49,7 +52,10 @@ class SongsModel
         $sql = "INSERT INTO song (artist, track, link) VALUES (:artist, :track, :link)";
         $query = $this->db->prepare($sql);
         $parameters = array(':artist' => $artist, ':track' => $track, ':link' => $link);
-        //echo "[ PDO DEBUG ]: " . debugPDO($sql, $parameters);  die();
+
+        // useful for debugging: you can see the SQL behind above construction by using:
+        // echo '[ PDO DEBUG ]: ' . debugPDO($sql, $parameters);  exit();
+
         $query->execute($parameters);
     }
 
@@ -63,9 +69,11 @@ class SongsModel
     {
         $sql = "DELETE FROM song WHERE id = :song_id";
         $query = $this->db->prepare($sql);
-        
         $parameters = array(':song_id' => $song_id);
-        //echo "[ PDO DEBUG ]: " . debugPDO($sql, $parameters);  die();
+
+        // useful for debugging: you can see the SQL behind above construction by using:
+        // echo '[ PDO DEBUG ]: ' . debugPDO($sql, $parameters);  exit();
+
         $query->execute($parameters);
     }
 
@@ -76,9 +84,11 @@ class SongsModel
     {
         $sql = "SELECT id, artist, track, link FROM song WHERE id = :song_id LIMIT 1";
         $query = $this->db->prepare($sql);
-        
         $parameters = array(':song_id' => $song_id);
-        //echo "[ PDO DEBUG ]: " . debugPDO($sql, $parameters);  die();
+
+        // useful for debugging: you can see the SQL behind above construction by using:
+        // echo '[ PDO DEBUG ]: ' . debugPDO($sql, $parameters);  exit();
+
         $query->execute($parameters);
 
         // fetch() is the PDO method that get exactly one result
@@ -102,8 +112,9 @@ class SongsModel
         $sql = "UPDATE song SET artist = :artist, track = :track, link = :link WHERE id = :song_id";
         $query = $this->db->prepare($sql);
         $parameters = array(':artist' => $artist, ':track' => $track, ':link' => $link, ':song_id' => $song_id);
-        
-        //echo "[ PDO DEBUG ]: " . debugPDO($sql, $parameters);  die();
+
+        // useful for debugging: you can see the SQL behind above construction by using:
+        // echo '[ PDO DEBUG ]: ' . debugPDO($sql, $parameters);  exit();
        
         $query->execute($parameters);
     }
