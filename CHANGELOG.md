@@ -2,6 +2,8 @@ CHANGE LOG
 ==========
 
 ** October 2014 **
+- [tarcnux/panique] PDO debugging
+- [panique] demo ajax call
 - [panique] better output escaping
 - [panique] renamed /libs to /core
 - [tarcnux] basic CRUD (create/read/update/delete) examples have now an U (update)
