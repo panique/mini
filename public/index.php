@@ -10,8 +10,12 @@
  * @license http://opensource.org/licenses/MIT MIT License
  */
 
-// TODO this looks weird here, maybe it's possible to put this into config or so
+// TODO maybe it's possible to put this into config or so
+
+// set a constant that holds the project's folder path, like "/var/www/".
+// DIRECTORY_SEPARATOR adds a slash to the end of the path
 define('ROOT', dirname(__DIR__) . DIRECTORY_SEPARATOR);
+// set a constant that holds the project's "application" folder, like "/var/www/application".
 define('APP', ROOT . 'application' . DIRECTORY_SEPARATOR);
 
 // This is the (totally optional) auto-loader for Composer-dependencies (to load tools into your project).
