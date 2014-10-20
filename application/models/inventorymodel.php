@@ -1,6 +1,6 @@
 <?php
 
-class StatsModel
+class InventoryModel
 {
     /**
      * Every model needs a database connection, passed to the model
@@ -14,22 +14,22 @@ class StatsModel
         }
     }
 
-
-    public function getAmountOfBooks()
+    public function getAllBooks()
     {
-        $sql = "SELECT COUNT(*) AS amount_of_books FROM inventory";
+        $sql = "SELECT * FROM inventory";
         $query = $this->db->prepare($sql);
         $query->execute();
-
-        return $query->fetch()->amount_of_books;
+        return $query->fetchAll();
     }
 
-    public function getAmountOfBooksCart()
+    public function getBook($id)
     {
-        $sql = "SELECT SUM(quantity) AS amount_of_books FROM shopping_cart";
+        $sql = "SELECT * FROM inventory WHERE item_id = :id";
         $query = $this->db->prepare($sql);
-        $query->execute();
+        $query->execute(array(':id' => $id));
+        return $query->fetchAll();
 
-        return $query->fetch()->amount_of_books;
     }
+
+
 }

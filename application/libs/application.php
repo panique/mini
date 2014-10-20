@@ -57,8 +57,8 @@ class Application
             }
         } else {
             // invalid URL, so simply show home/index
-            require './application/controller/home.php';
-            $home = new Home();
+            require './application/controller/inventory.php';
+            $home = new inventory();
             $home->index();
         }
     }
