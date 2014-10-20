@@ -9,7 +9,7 @@
  * This is really weird behaviour, but documented here: http://php.net/manual/en/language.oop5.decon.php
  *
  */
-class Songs extends Controller
+class Inventory extends Controller
 {
     /**
      * PAGE: index
@@ -18,21 +18,30 @@ class Songs extends Controller
     public function index()
     {
         // simple message to show where you are
-        echo 'Message from Controller: You are in the Controller: Songs, using the method index().';
+        //echo 'Message from Controller: You are in the Controller: Inventory, using the method index().';
 
         // load a model, perform an action, pass the returned data to a variable
         // NOTE: please write the name of the model "LikeThis"
-        $songs_model = $this->loadModel('SongsModel');
-        $songs = $songs_model->getAllSongs();
+        $inventory_model = $this->loadModel('InventoryModel');
+        $inventory = $inventory_model->getAllBooks();
 
         // load another model, perform an action, pass the returned data to a variable
         // NOTE: please write the name of the model "LikeThis"
         $stats_model = $this->loadModel('StatsModel');
-        $amount_of_songs = $stats_model->getAmountOfSongs();
+        $amount_of_books = $stats_model->getAmountOfBooks();
 
         // load views. within the views we can echo out $songs and $amount_of_songs easily
         require 'application/views/_templates/header.php';
-        require 'application/views/songs/index.php';
+        require 'application/views/inventory/index.php';
+        require 'application/views/_templates/footer.php';
+    }
+
+    public function detailview($inventory_id)
+    {
+        $inventory_model = $this->loadModel('InventoryModel');
+        $book = $inventory_model->getBook($inventory_id);
+        require 'application/views/_templates/header.php';
+        require 'application/views/inventory/item.php';
         require 'application/views/_templates/footer.php';
     }
 
@@ -44,7 +53,7 @@ class Songs extends Controller
      * the user back to songs/index via the last line: header(...)
      * This is an example of how to handle a POST request.
      */
-    public function addSong()
+  /*  public function addSong()
     {
         // simple message to show where you are
         echo 'Message from Controller: You are in the Controller: Songs, using the method addSong().';
@@ -58,7 +67,7 @@ class Songs extends Controller
 
         // where to go after song has been added
         header('location: ' . URL . 'songs/index');
-    }
+    }*/
 
     /**
      * ACTION: deleteSong
@@ -69,7 +78,7 @@ class Songs extends Controller
      * This is an example of how to handle a GET request.
      * @param int $song_id Id of the to-delete song
      */
-    public function deleteSong($song_id)
+  /*  public function deleteSong($song_id)
     {
         // simple message to show where you are
         echo 'Message from Controller: You are in the Controller: Songs, using the method deleteSong().';
@@ -83,5 +92,5 @@ class Songs extends Controller
 
         // where to go after song has been deleted
         header('location: ' . URL . 'songs/index');
-    }
+    }*/
 }
