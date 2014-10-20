@@ -23,4 +23,13 @@ class StatsModel
 
         return $query->fetch()->amount_of_books;
     }
+
+    public function getAmountOfBooksCart()
+    {
+        $sql = "SELECT SUM(quantity) AS amount_of_books FROM shopping_cart";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+
+        return $query->fetch()->amount_of_books;
+    }
 }

@@ -47,4 +47,7 @@
 </div> -->
 <div class="container">
   <h3> Rare Books </h3>
+<br>
+    <a href=<?php echo URL.'cart/view'?> > cart </a>
 </div>
+
