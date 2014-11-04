@@ -149,6 +149,10 @@ and [Getting started with Composer](http://www.dev-metal.com/getting-started-com
 This project is licensed under the MIT License.
 This means you can use and modify it for free in private or commercial projects.
 
+## Future of the project in 2015
+
+![announcement for 2015's restructuring](_tutorial/announcement-mini-massive-2015.png)
+
 ## Contribute
 
 Please commit into the develop branch (which holds the in-development version), not into master branch
