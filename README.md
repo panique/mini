@@ -1,173 +1,140 @@
-# PHP-MVC
+[![MINI - A naked barebone PHP application](_installation/php-mini.png)](http://www.php-mini.com)
 
-An extremely simple and easy to understand MVC skeleton application, reduced to the max.
-Everything is **as simple as possible**, as **manually as possible** and as readable as possible.
-This project is - by intention - NOT a full framework, it's a bare-bone structure, written in
-purely native PHP ! The php-mvc skeleton tries to be the extremely slimmed down opposite of big frameworks
-like Zend2, Symfony or Laravel.
+# MINI
 
-[![Donate by server affiliate sale](_tutorial/support-a2hosting.png)](https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579)
+MINI is an extremely simple and easy to understand skeleton PHP application, reduced to the max.
+MINI is NOT a professional framework and it does not come with all the stuff real frameworks have.
+If you just want to show some pages, do a few database calls and a little-bit of AJAX here and there, without
+reading in massive documentations of highly complex professional frameworks, then MINI might be very useful for you.
+MINI is easy to install, runs nearly everywhere and doesn't make things more complicated than necessary.
 
-## Basic and Advanced version
+## Features
 
-This is the basic version. There's another "Advanced" version in development which has
-additional features, currently Twig and SASS. More to come!
-Have a look here: https://github.com/panique/php-mvc-advanced
+- extremely simple, easy to understand
+- simple but clean structure
+- makes "beautiful" clean URLs
+- demo CRUD actions: Create, Read, Update and Delete database entries easily
+- demo AJAX call
+- tries to follow PSR 1/2 coding guidelines
+- uses PDO for any database requests, comes with an additional PDO debug tool to emulate your SQL statements
+- commented code
+- uses only native PHP code, so people don't have to learn a framework
 
-## Why does this project exist ?
+## Requirements
 
-One of the biggest question in the PHP world is "How do I build an application ?".
-It's hard to find a good base, a good file structure and useful information on that, but at the same time
-there are masses of frameworks that might be really good, but really hard to understand, hard to use and extremely
-complex. This project tries to be some kind of naked skeleton bare-bone for quick application building,
-especially for the not-so-advanced coder.
-
-### Goals of this project:
-
-- give people a clean base MVC structure to build a modern PHP application with
-- teach people the basics of the Model-View-Controller architecture
-- encourage people to code according to PSR 1/2 coding guidelines
-- promote the usage of PDO
-- promote the usage of external libraries via Composer
-- promote development with max. error reporting
-- promote to comment code
-- promote the usage of OOP code
-- using only native PHP code, so people don't have to learn a framework
-
-## Support forum
-
-If you are stuck with something even AFTER reading and following the install tutorials and the quick-manual, then feel free to ask in the [official forum](http://forum.php-mvc.net/). Note that this forum is fresh and new, more content will come over time.
+- PHP 5.3.0+
+- MySQL
+- mod_rewrite activated (tutorials below)
 
 ## Installation
 
-### On Windows 7 (with EasyPHP)
+1. Edit the database credentials in `application/config/config.php`
+2. Execute the .sql statements in the `_installation/`-folder (with PHPMyAdmin for example).
+3. Make sure you have mod_rewrite activated on your server / in your environment. Some guidelines:
+   [Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/),
+   [Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/),
+   [EasyPHP on Windows](http://stackoverflow.com/questions/8158770/easyphp-and-htaccess),
+   [AMPPS on Windows/Mac OS](http://www.softaculous.com/board/index.php?tid=3634&title=AMPPS_rewrite_enable/disable_option%3F_please%3F),
+   [XAMPP for Windows](http://www.leonardaustin.com/blog/technical/enable-mod_rewrite-in-xampp/),
+   [MAMP on Mac OS](http://stackoverflow.com/questions/7670561/how-to-get-htaccess-to-work-on-mamp)
 
-There's a tutorial on [How to install php-mvc on Windows 7, 8 and 8.1](http://www.dev-metal.com/install-php-mvc-windows-7/).
+MINI runs without any further configuration.
 
-### On Ubuntu etc.
+## When installing in a sub-folder
 
-First, copy this repo into a public accessible folder on your server.
-Common techniques are a) downloading and extracting the .zip / .tgz by hand, b) cloning the repo with git (into var/www)
+In case you run the script inside a sub-folder: Then the AJAX-calls will not work by default. To fix this, you'll need
+to add the folder's name to all paths in AJAX-calls in `public/js/application.js`. This will be fixed in future
+versions.
 
-```
-git clone https://github.com/panique/php-mvc.git /var/www
-```
+## Security
 
-or c) getting the repo via Composer (here we copy into var/www)
+The script makes use of mod_rewrite and blocks all access to everything outside the /public folder.
+Your .git folder/files, operating system temp files, the application-folder and everything else is not accessible
+(when set up correctly). For database requests PDO is used, so no need to think about SQL injection.
 
-```
-composer create-project panique/php-mvc /var/www dev-master
-```
+## Goodies
 
-1. Install mod_rewrite, for example by following this guideline:
-[How to install mod_rewrite in Ubuntu](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)
-
-2. Run the SQL statements in the *application/_install* folder.
-
-3. Change the .htaccess file from
-```
-RewriteBase /php-mvc/
-```
-to where you put this project, relative to the web root folder (usually /var/www). So when you put this project into
-the web root, like directly in /var/www, then the line should look like or can be commented out:
-```
-RewriteBase /
-```
-If you have put the project into a sub-folder, then put the name of the sub-folder here:
-```
-RewriteBase /sub-folder/
-```
-
-4. Edit the *application/config/config.php*, change this line
-```php
-define('URL', 'http://127.0.0.1/php-mvc/');
-```
-to where your project is. Real domain, IP or 127.0.0.1 when developing locally. Make sure you put the sub-folder
-in here (when installing in a sub-folder) too, also don't forget the trailing slash !
-
-5. Edit the *application/config/config.php*, change these lines
-```php
-define('DB_TYPE', 'mysql');
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'php-mvc');
-define('DB_USER', 'root');
-define('DB_PASS', 'mysql');
-```
-to your database credentials. If you don't have an empty database, create one. Only change the type `mysql` if you
-know what you are doing.
-
-## A quickstart tutorial
-
-You can also find these tutorial pictures in the *_tutorial* folder.
-
-![php-mvc introduction tutorial - page 1](_tutorial/tutorial-part-01.png)
-![php-mvc introduction tutorial - page 2](_tutorial/tutorial-part-02.png)
-![php-mvc introduction tutorial - page 3](_tutorial/tutorial-part-03.png)
-![php-mvc introduction tutorial - page 4](_tutorial/tutorial-part-04.png)
-![php-mvc introduction tutorial - page 5](_tutorial/tutorial-part-05.png)
-
-## You like what you see ?
-
-Then please also have a look on ...
-
-#### My other project php-login
-
-A collection of 4 similar login scripts for PHP, from a super-simple one-file
-script with a SQLite one-file to a highly professional MVC frameworks solution. All scripts use the most advanced
-hashing algorithms possible in PHP, exactly like the PHP core developers want you to use them.
-
-https://github.com/panique/php-login (full MVC framework)
-
-https://github.com/panique/php-login-minimal (minimal)
-
-https://github.com/panique/php-login-advanced (advanced)
-
-https://github.com/panique/php-login-one-file (one-file)
-
-#### My PHP and frontend blog
-
-Lots of non-boring development stuff and tutorials there.
-
-http://www.dev-metal.com
-
-## Useful information
-
-1. SQLite does not have a rowCount() method (!). Keep that in mind in case you use SQLite.
-
-2. Don't use the same name for class and method, as this might trigger an (unintended) *__construct* of the class.
-   This is really weird behaviour, but documented here: [php.net - Constructors and Destructors](http://php.net/manual/en/language.oop5.decon.php).
-
-## Add external libraries via Composer
-
-To add external libraries/tools/whatever into your project in an extremely clean way, simply add a line with the
-repo name and version to the composer.json! Take a look on these tutorials if you want to get into Composer:
-[How to install (and update) Composer on Windows 7 or Ubuntu / Debian](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/)
-and [Getting started with Composer](http://www.dev-metal.com/getting-started-composer/).
+MINI comes with a little PDO debugger tool, making it easy to see your PDO statements.
 
 ## License
 
 This project is licensed under the MIT License.
 This means you can use and modify it for free in private or commercial projects.
 
-## Future of the project in 2015
+## Support
 
-![announcement for 2015's restructuring](_tutorial/announcement-mini-massive-2015.png)
+If you want to support MINI, then rent your next server at
+[A2Hosting](https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579) or donate a coffee via
+[PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG),
+[GitTip](https://www.gittip.com/Panique/) or
+[Flattr](https://flattr.com/submit/auto?user_id=panique&url=https%3A%2F%2Fgithub.com%2Fpanique%2Fmini).
+
+## TODO: documentation
+
+coming soon
+
+## TODO: quick-start
+
+coming soon
+
+## History
+
+MINI is the successor of php-mvc. As php-mvc didn't provide a real MVC structure (and several people complained
+about that - which is totally right!) I've renamed and rebuild the project.
+
+## Dear haters, trolls and everything-sucks-people...
+
+... MINI is just a simple helper-tool I've created for my daily work, simply because it was much easier to setup and to
+handle than real frameworks. For daily agency work, quick prototyping and frontend-driven projects it's totally okay.
+
+I've written this unpaid, voluntarily, in my free-time and uploaded it on GitHub to share.
+It's totally free, for private and commercial use. If you don't like it, don't use it.
+If you see issues, then please write a ticket (and if you are really cool: I'm very thankful for any commits!).
+But don't bash, don't complain, don't hate. Only bad people do so.
 
 ## Contribute
 
 Please commit into the develop branch (which holds the in-development version), not into master branch
 (which holds the tested and stable version).
 
-## Support / Donate
+## Changelog
 
-If you think this script is useful and saves you a lot of work, then think about supporting the project:
+**November 2014**
+- [panique] removed all "models", using one model file now
+- [panique] full project renaming, re-branding
 
-1. Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG), [GitTip](https://www.gittip.com/Panique/) or [Flattr](https://flattr.com/submit/auto?user_id=panique&url=https%3A%2F%2Fgithub.com%2Fpanique%2Fphp-mvc).
-2. Rent your next server at [A2 Hosting](http://www.a2hosting.com/4471.html) or [DigitalOcean](https://www.digitalocean.com/?refcode=40d978532a20).
-3. Contribute to this project. Feel free to improve this project with your skills.
-4. Spread the word: Tell others about this project.
+**October 2014**
+- [tarcnux/panique] PDO debugging
+- [panique] demo ajax call
+- [panique] better output escaping
+- [panique] renamed /libs to /core
+- [tarcnux] basic CRUD (create/read/update/delete) examples have now an U (update)
+- [panique] URL is now config-free, application detects URL and sub-folder
+- [elysdir] htaccess has some good explanation-comments now
+- [bst27] fallback for non-existing controller / method
+- [panique] fallback will show error-page now
+- [digitaltoast] URL split fix to make php-mvc work flawlessly on nginx
+- [AD7six] security improvement: moved index.php to /public, route ALL request to /public
 
-## Linked music tracks in the demo application
+**September 2014**
+- [panique] added link to support forum
+- [panique] added link to Facebook page
 
-The linked tracks in this naked application are just some of my personal favourites of the last few months.
-I think it's always a good idea to fill boring nerd-code stuff with quality culture.
+**August 2014**
+- [panique] several changes in the README, donate-button changes
+
+**June 2014**
+- [digitaltoast] removed X-UA-Compatible meta tag from header (as it's not needed anymore these days)
+- [digitaltoast] removed protocol in jQuery URL (modern way to load external files, making it independent to protocol change)
+- [digitaltoast] downgraded jQuery from 2.1 to 1.11 to avoid problems when working with IE7/8 (jQuery 2 dropped IE7/8 support)
+- [panique] moved jQuery loading to footer (to avoid page render blocking)
+
+**April 2014**
+- [panique] updated jQuery link to 2.1
+- [panique] more than 3 parameters (arguments to be concrete) are possible
+- [panique] cleaner way of parameter handling
+- [panique] smaller cleanings and improvements
+- [panique] Apache 2.4 install information
+
+**January 2014**
+- [panique] fixed .htaccess issue when there's a controller named "index" and a base index.php (which collide)
