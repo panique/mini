@@ -31,7 +31,7 @@ MINI is easy to install, runs nearly everywhere and doesn't make things more com
 
 MINI runs without any further configuration.
 
-## After installation
+## When installing in a sub-folder
 
 In case you run the script inside a sub-folder: Then the AJAX-calls will not work by default. To fix this, you'll need
 to add the folder's name to all paths in AJAX-calls in the `public/js/application.js`. This will be fixed in future
@@ -50,7 +50,8 @@ This means you can use and modify it for free in private or commercial projects.
 
 ## Support
 
-[![Donate by server affiliate sale](_tutorial/support-a2hosting.png)](https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579)
+If you want to support MINI, then rent your next server at
+[A2Hosting](https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579).
 
 ## History
 
@@ -84,11 +85,11 @@ If you think this script is useful and saves you a lot of work, then think about
 
 ## Changelog
 
-*November 2014*
+**November 2014**
 - [panique] removed all "models", using one model file now
 - [panique] full project renaming, re-branding
 
-*October 2014*
+**October 2014**
 - [tarcnux/panique] PDO debugging
 - [panique] demo ajax call
 - [panique] better output escaping
@@ -101,25 +102,25 @@ If you think this script is useful and saves you a lot of work, then think about
 - [digitaltoast] URL split fix to make php-mvc work flawlessly on nginx
 - [AD7six] security improvement: moved index.php to /public, route ALL request to /public
 
-*September 2014*
+**September 2014**
 - [panique] added link to support forum
 - [panique] added link to Facebook page
 
-*August 2014*
+**August 2014**
 - [panique] several changes in the README, donate-button changes
 
-*June 2014*
+**June 2014**
 - [digitaltoast] removed X-UA-Compatible meta tag from header (as it's not needed anymore these days)
 - [digitaltoast] removed protocol in jQuery URL (modern way to load external files, making it independent to protocol change)
 - [digitaltoast] downgraded jQuery from 2.1 to 1.11 to avoid problems when working with IE7/8 (jQuery 2 dropped IE7/8 support)
 - [panique] moved jQuery loading to footer (to avoid page render blocking)
 
-*April 2014*
+**April 2014**
 - [panique] updated jQuery link to 2.1
 - [panique] more than 3 parameters (arguments to be concrete) are possible
 - [panique] cleaner way of parameter handling
 - [panique] smaller cleanings and improvements
 - [panique] Apache 2.4 install information
 
-*January 2014*
+**January 2014**
 - [panique] fixed .htaccess issue when there's a controller named "index" and a base index.php (which collide)
