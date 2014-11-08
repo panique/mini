@@ -69,6 +69,14 @@ If you want to support MINI, then rent your next server at
 [GitTip](https://www.gittip.com/Panique/) or
 [Flattr](https://flattr.com/submit/auto?user_id=panique&url=https%3A%2F%2Fgithub.com%2Fpanique%2Fmini).
 
+## TODO: documentation
+
+coming soon
+
+## TODO: quick-start
+
+coming soon
+
 ## History
 
 MINI is the successor of php-mvc. As php-mvc didn't provide a real MVC structure (and several people complained
