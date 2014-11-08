@@ -29,7 +29,12 @@ MINI is easy to install, runs nearly everywhere and doesn't make things more com
 1. Edit the database credentials in `application/config/config.php`
 2. Execute the .sql statements in the `_installation/`-folder (with PHPMyAdmin for example).
 3. Make sure you have mod_rewrite activated on your server / in your environment. Some guidelines:
-   [TODO Ubuntu 14.04 LTS, Ubuntu 12.04 LTS, EasyPHP on Windows, ...]
+   [Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/),
+   [Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/),
+   [EasyPHP on Windows](http://stackoverflow.com/questions/8158770/easyphp-and-htaccess),
+   [AMPPS on Windows/Mac OS](http://www.softaculous.com/board/index.php?tid=3634&title=AMPPS_rewrite_enable/disable_option%3F_please%3F),
+   [XAMPP for Windows](http://www.leonardaustin.com/blog/technical/enable-mod_rewrite-in-xampp/),
+   [MAMP on Mac OS](http://stackoverflow.com/questions/7670561/how-to-get-htaccess-to-work-on-mamp)
 
 MINI runs without any further configuration.
 
