@@ -41,14 +41,18 @@ MINI runs without any further configuration.
 ## When installing in a sub-folder
 
 In case you run the script inside a sub-folder: Then the AJAX-calls will not work by default. To fix this, you'll need
-to add the folder's name to all paths in AJAX-calls in the `public/js/application.js`. This will be fixed in future
+to add the folder's name to all paths in AJAX-calls in `public/js/application.js`. This will be fixed in future
 versions.
 
 ## Security
 
 The script makes use of mod_rewrite and blocks all access to everything outside the /public folder.
 Your .git folder/files, operating system temp files, the application-folder and everything else is not accessible
-(when set up correctly).
+(when set up correctly). For database requests PDO is used, so no need to think about SQL injection.
+
+## Goodies
+
+MINI comes with a little PDO debugger tool, making it easy to see your PDO statements.
 
 ## License
 
@@ -58,7 +62,10 @@ This means you can use and modify it for free in private or commercial projects.
 ## Support
 
 If you want to support MINI, then rent your next server at
-[A2Hosting](https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579).
+[A2Hosting](https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579) or donate a coffee via
+[PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG),
+[GitTip](https://www.gittip.com/Panique/) or
+[Flattr](https://flattr.com/submit/auto?user_id=panique&url=https%3A%2F%2Fgithub.com%2Fpanique%2Fmini).
 
 ## History
 
@@ -79,16 +86,6 @@ a fix!). But don't bash, don't complain, don't hate. There's no reason to do so.
 
 Please commit into the develop branch (which holds the in-development version), not into master branch
 (which holds the tested and stable version).
-
-## Support / Donate
-
-If you think this script is useful and saves you a lot of work, then think about supporting the project:
-
-1. Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG),
-   [GitTip](https://www.gittip.com/Panique/) or
-   [Flattr](https://flattr.com/submit/auto?user_id=panique&url=https%3A%2F%2Fgithub.com%2Fpanique%2Fmini).
-2. Rent your next server at [A2 Hosting](https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579).
-3. Contribute to this project. Feel free to improve this project with your skills.
 
 ## Changelog
 
