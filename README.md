@@ -46,6 +46,16 @@ In case you run the script inside a sub-folder: Then the AJAX-calls will not wor
 to add the folder's name to all paths in AJAX-calls in `public/js/application.js`. This will be fixed in future
 versions.
 
+## Server configs for
+
+### nginx
+
+TODO
+
+### IIS
+
+TODO
+
 ## Security
 
 The script makes use of mod_rewrite and blocks all access to everything outside the /public folder.
@@ -54,7 +64,8 @@ Your .git folder/files, operating system temp files, the application-folder and 
 
 ## Goodies
 
-MINI comes with a little PDO debugger tool, making it easy to see your PDO statements.
+MINI comes with a little [PDO debugger tool](https://github.com/panique/pdo-debug), trying to emulate your PDO-SQL
+statements.
 
 ## License
 
