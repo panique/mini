@@ -1,16 +1,16 @@
 <?php
 
 /**
- * A simple PHP MVC skeleton
+ * MINI - an extremely simple naked PHP application
  *
- * @package php-mvc
+ * @package mini
  * @author Panique
- * @link http://www.php-mvc.net
- * @link https://github.com/panique/php-mvc/
+ * @link http://www.php-mini.com
+ * @link https://github.com/panique/mini/
  * @license http://opensource.org/licenses/MIT MIT License
  */
 
-// TODO maybe it's possible to put this into config or so
+// TODO get rid of this and work with namespaces + composer's autoloader
 
 // set a constant that holds the project's folder path, like "/var/www/".
 // DIRECTORY_SEPARATOR adds a slash to the end of the path

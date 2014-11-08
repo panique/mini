@@ -17,18 +17,9 @@ class Songs extends Controller
      */
     public function index()
     {
-        // simple message to show where you are
-        echo 'Message from Controller: You are in the Controller: Songs, using the method index().';
-
-        // load a model, perform an action, pass the returned data to a variable
-        // NOTE: please write the name of the model "LikeThis"
-        $songs_model = $this->loadModel('SongsModel');
-        $songs = $songs_model->getAllSongs();
-
-        // load another model, perform an action, pass the returned data to a variable
-        // NOTE: please write the name of the model "LikeThis"
-        $stats_model = $this->loadModel('StatsModel');
-        $amount_of_songs = $stats_model->getAmountOfSongs();
+        // getting all songs and amount of songs
+        $songs = $this->model->getAllSongs();
+        $amount_of_songs = $this->model->getAmountOfSongs();
 
        // load views. within the views we can echo out $songs and $amount_of_songs easily
         require APP . 'views/_templates/header.php';
@@ -46,12 +37,10 @@ class Songs extends Controller
      */
     public function addSong()
     {
-
         // if we have POST data to create a new song entry
         if (isset($_POST["submit_add_song"])) {
-            // load model, perform an action on the model
-            $songs_model = $this->loadModel('SongsModel');
-            $songs_model->addSong($_POST["artist"], $_POST["track"],  $_POST["link"]);
+            // do addSong() in model/model.php
+            $this->model->addSong($_POST["artist"], $_POST["track"],  $_POST["link"]);
         }
 
         // where to go after song has been added
@@ -69,12 +58,10 @@ class Songs extends Controller
      */
     public function deleteSong($song_id)
     {
-
         // if we have an id of a song that should be deleted
         if (isset($song_id)) {
-            // load model, perform an action on the model
-            $songs_model = $this->loadModel('SongsModel');
-            $songs_model->deleteSong($song_id);
+            // do deleteSong() in model/model.php
+            $this->model->deleteSong($song_id);
         }
 
         // where to go after song has been deleted
@@ -90,9 +77,9 @@ class Songs extends Controller
     {
         // if we have an id of a song that should be edited
         if (isset($song_id)) {
-            // load model, perform an action on the model: here we get the song by its id
-            $songs_model = $this->loadModel('SongsModel');
-            $song = $songs_model->getSong($song_id);
+            // do getSong() in model/model.php
+            $song = $this->model->getSong($song_id);
+
             // in a real application we would also check if this db entry exists and therefore show the result or
             // redirect the user to an error page or similar
 
@@ -116,12 +103,10 @@ class Songs extends Controller
      */
     public function updateSong()
     {
-
         // if we have POST data to create a new song entry
         if (isset($_POST["submit_update_song"])) {
-            // load model, perform an action on the model
-            $songs_model = $this->loadModel('SongsModel');
-            $songs_model->updateSong($_POST["artist"], $_POST["track"],  $_POST["link"], $_POST['song_id']);
+            // do updateSong() from model/model.php
+            $this->model->updateSong($_POST["artist"], $_POST["track"],  $_POST["link"], $_POST['song_id']);
         }
 
         // where to go after song has been added
@@ -134,11 +119,9 @@ class Songs extends Controller
      */
     public function ajaxGetStats()
     {
-        $stats_model = $this->loadModel('StatsModel');
-        $amount_of_songs = $stats_model->getAmountOfSongs();
+        $amount_of_songs = $this->model->getAmountOfSongs();
 
-        // simply echo out something
-        // side-fact: This is also a nice way to build an API. For serious application you would output JSON here
+        // simply echo out something. A supersimple API would be possible by echoing JSON here
         echo $amount_of_songs;
     }
 

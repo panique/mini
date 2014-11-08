@@ -1,4 +1,4 @@
-CREATE TABLE `php-mvc`.`song` (
+CREATE TABLE `mini`.`song` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `artist` text COLLATE utf8_unicode_ci NOT NULL,
   `track` text COLLATE utf8_unicode_ci NOT NULL,

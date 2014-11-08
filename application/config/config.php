@@ -36,9 +36,6 @@ ini_set("display_errors", 1);
  * then replace this line with full URL (and sub-folder) and a trailing slash.
  */
 
-// TODO: get rid of unnecessary constants
-// more https://github.com/panique/php-mvc/commit/f4add025bedb681e467cd8aa8b5883249f0b6d42
-
 define('URL_PUBLIC_FOLDER', 'public');
 define('URL_PROTOCOL', 'http://');
 define('URL_DOMAIN', $_SERVER['HTTP_HOST']);
@@ -51,6 +48,6 @@ define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
  */
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'php-mvc');
+define('DB_NAME', 'mini');
 define('DB_USER', 'root');
 define('DB_PASS', 'mysql');

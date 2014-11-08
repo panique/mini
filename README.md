@@ -22,6 +22,11 @@ there are masses of frameworks that might be really good, but really hard to und
 complex. This project tries to be some kind of naked skeleton bare-bone for quick application building,
 especially for the not-so-advanced coder.
 
+
+# Interesting to read:
+http://stackoverflow.com/questions/5863870/how-should-a-model-be-structured-in-mvc/
+
+
 ### Goals of this project:
 
 - give people a clean base MVC structure to build a modern PHP application with
