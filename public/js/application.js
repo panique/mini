@@ -1,39 +1,23 @@
-$(function() {
+var demoHeaderBox, ajaxButton, ajaxResultBox;
 
-    // TODO can a JS expert write this code like it should look like ?
+demoHeaderBox = document.getElementById('javascript-header-demo-box');
+ajaxButton = document.getElementById('javascript-ajax-button');
+ajaxResultBox = document.getElementById('javascript-ajax-result-box');
 
-	var demoHeaderBox;
+demoHeaderBox.innerHTML = 'Hello from JavaScript! This line has been added by public/js/application.js';
+demoHeaderBox.style.color = 'green';
 
-    // simple demo to show create something via javascript on the page
-    if ($('#javascript-header-demo-box').length !== 0) {
-    	demoHeaderBox = $('#javascript-header-demo-box');
-    	demoHeaderBox
-    		.hide()
-    		.text('Hello from JavaScript! This line has been added by public/js/application.js')
-    		.css('color', 'green')
-    		.fadeIn('slow');
-    }
+ajaxButton.addEventListener('click', function() {
+	var request;
 
-    // if #javascript-ajax-button exists
-    if ($('#javascript-ajax-button').length !== 0) {
+	request = new XMLHttpRequest();
 
-        $('#javascript-ajax-button').on('click', function(){
+	request.open('GET', url + 'songs/ajaxGetStats');
+	request.responseType = 'text';
 
-            // send an ajax-request to this URL: current-server.com/songs/ajaxGetStats
-            // TODO this will not work directly when using the project in a sub-folder
-            $.ajax("/songs/ajaxGetStats")
-                .done(function(result) {
-                    // this will be executed if the ajax-call was successful
-                    // here we get the feedback from the ajax-call (result) and show it in #javascript-ajax-result-box
-                    $('#javascript-ajax-result-box').html(result);
-                })
-                .fail(function() {
-                    // this will be executed if the ajax-call had failed
-                })
-                .always(function() {
-                    // this will ALWAYS be executed, regardless if the ajax-call was success or not
-                });
-        });
-    }
+	request.onload = function() {
+		ajaxResultBox.innerHTML = request.response;
+	};
 
+	request.send();
 });
