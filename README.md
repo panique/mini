@@ -1,169 +1,70 @@
-# PHP-MVC
+# MINI
 
-An extremely simple and easy to understand MVC skeleton application, reduced to the max.
-Everything is **as simple as possible**, as **manually as possible** and as readable as possible.
-This project is - by intention - NOT a full framework, it's a bare-bone structure, written in
-purely native PHP ! The php-mvc skeleton tries to be the extremely slimmed down opposite of big frameworks
-like Zend2, Symfony or Laravel.
+MINI is an extremely simple and easy to understand skeleton PHP application, reduced to the max.
+MINI is NOT a professional framework and it does not come with all the stuff real frameworks have.
+If you just want to show some pages, do a few database calls and a little-bit of AJAX here and there, without
+reading in massive documentations of highly complex professional frameworks, then MINI might be very useful for you.
+MINI is easy to install, runs nearly everywhere and doesn't make things more complicated than necessary.
 
-[![Donate by server affiliate sale](_tutorial/support-a2hosting.png)](https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579)
+## Features
 
-## Basic and Advanced version
+- extremely simple, easy to understand
+- encourages people to code according to PSR 1/2 coding guidelines
+- promotes the usage of PDO
+- promotes the usage of external libraries via Composer
+- promotes development with max. error reporting
+- promotes to comment code
+- uses only native PHP code, so people don't have to learn a framework
 
-This is the basic version. There's another "Advanced" version in development which has
-additional features, currently Twig and SASS. More to come!
-Have a look here: https://github.com/panique/php-mvc-advanced
+## Requirements
 
-## Why does this project exist ?
-
-One of the biggest question in the PHP world is "How do I build an application ?".
-It's hard to find a good base, a good file structure and useful information on that, but at the same time
-there are masses of frameworks that might be really good, but really hard to understand, hard to use and extremely
-complex. This project tries to be some kind of naked skeleton bare-bone for quick application building,
-especially for the not-so-advanced coder.
-
-
-# Interesting to read:
-http://stackoverflow.com/questions/5863870/how-should-a-model-be-structured-in-mvc/
-
-
-### Goals of this project:
-
-- give people a clean base MVC structure to build a modern PHP application with
-- teach people the basics of the Model-View-Controller architecture
-- encourage people to code according to PSR 1/2 coding guidelines
-- promote the usage of PDO
-- promote the usage of external libraries via Composer
-- promote development with max. error reporting
-- promote to comment code
-- promote the usage of OOP code
-- using only native PHP code, so people don't have to learn a framework
-
-## Support forum
-
-If you are stuck with something even AFTER reading and following the install tutorials and the quick-manual, then feel
-free to ask in the [official forum](http://forum.php-mvc.net/). Note that this forum is fresh and new, more content
-will come over time.
-
-## Keep on track with development by following ...
-
-... on [Facebook](https://www.facebook.com/pages/The-PHP-MVC-Project/1488883564703966) or check this GitHub repo.
+- PHP 5.3.0+
+- MySQL
+- mod_rewrite activated (tutorials below)
 
 ## Installation
 
-### On Windows 7 (with EasyPHP)
+1. Edit the database credentials in `application/config/config.php`
+2. Execute the .sql statements in the `_installation/`-folder (with PHPMyAdmin for example).
+3. Make sure you have mod_rewrite activated on your server / in your environment. Some guidelines:
+   [TODO Ubuntu 14.04 LTS, Ubuntu 12.04 LTS, EasyPHP on Windows, ...]
 
-TODO: [this tutorial is now outdated]
+MINI runs without any further configuration.
 
-There's a tutorial on [How to install php-mvc on Windows 7, 8 and 8.1](http://www.dev-metal.com/install-php-mvc-windows-7/).
+## After installation
 
-### On Ubuntu 12.04 LTS
+In case you run the script inside a sub-folder: Then the AJAX-calls will not work by default. To fix this, you'll need
+to add the folder's name to all paths in AJAX-calls in the `public/js/application.js`. This will be fixed in future
+versions.
 
-TODO: [this tutorial is now outdated]
-TODO: [add server setup here: apache, php etc.]
+## Security
 
-Ubuntu 12.04 LTS is the most common mainstream server operating system. Unless you know what you do and have a very good
-reason to use something else: Use this version!
-
-First, copy this repo into a public accessible folder on your server.
-Common techniques are a) downloading and extracting the .zip / .tgz by hand, b) cloning the repo with git (into var/www)
-
-```
-git clone https://github.com/panique/php-mvc.git /var/www
-```
-
-or c) getting the repo via Composer (here we copy into var/www)
-
-```
-composer create-project panique/php-mvc /var/www dev-master
-```
-
-1. Install mod_rewrite, for example by following this guideline:
-[How to install mod_rewrite in Ubuntu](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/)
-
-2. Run the SQL statements in the *application/_install* folder.
-
-3. REMOVED
-
-4. Edit the *application/config/config.php*, change this line
-```php
-define('URL', 'http://127.0.0.1/php-mvc/');
-```
-to where your project is. Real domain, IP or 127.0.0.1 when developing locally. Make sure you put the sub-folder
-in here (when installing in a sub-folder) too, also don't forget the trailing slash !
-
-5. Edit the *application/config/config.php*, change these lines
-```php
-define('DB_TYPE', 'mysql');
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'php-mvc');
-define('DB_USER', 'root');
-define('DB_PASS', 'mysql');
-```
-to your database credentials. If you don't have an empty database, create one. Only change the type `mysql` if you
-know what you are doing.
-
-### On Ubuntu 14.04 LTS
-
-Ubuntu 14.04 LTS comes with a newer version of Apache (2.4) that has slightly different configs, config syntax and
-different filenames. Here's a tutorial on
-[how to enable mod_rewrite in Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/).
-To update the application itself for Ubuntu 14.04 LTS, change `application/.htaccess` to `Require all denied`, more
-details in [the official Apache docs](http://httpd.apache.org/docs/2.4/upgrading.html).
-Thanks to *adamholte* for the info!
-
-## A quickstart tutorial
-
-You can also find these tutorial pictures in the *_tutorial* folder.
-
-![php-mvc introduction tutorial - page 1](_tutorial/tutorial-part-01.png)
-![php-mvc introduction tutorial - page 2](_tutorial/tutorial-part-02.png)
-![php-mvc introduction tutorial - page 3](_tutorial/tutorial-part-03.png)
-![php-mvc introduction tutorial - page 4](_tutorial/tutorial-part-04.png)
-![php-mvc introduction tutorial - page 5](_tutorial/tutorial-part-05.png)
-
-## You like what you see ?
-
-Then please also have a look on ...
-
-#### My other project php-login
-
-A collection of 4 similar login scripts for PHP, from a super-simple one-file
-script with a SQLite one-file to a highly professional MVC frameworks solution. All scripts use the most advanced
-hashing algorithms possible in PHP, exactly like the PHP core developers want you to use them.
-
-https://github.com/panique/php-login (full MVC framework)
-
-https://github.com/panique/php-login-minimal (minimal)
-
-https://github.com/panique/php-login-advanced (advanced)
-
-https://github.com/panique/php-login-one-file (one-file)
-
-#### My PHP and frontend blog
-
-Lots of non-boring development stuff and tutorials there.
-
-http://www.dev-metal.com
-
-## Useful information
-
-1. SQLite does not have a rowCount() method (!). Keep that in mind in case you use SQLite.
-
-2. Don't use the same name for class and method, as this might trigger an (unintended) *__construct* of the class.
-   This is really weird behaviour, but documented here: [php.net - Constructors and Destructors](http://php.net/manual/en/language.oop5.decon.php).
-
-## Add external libraries via Composer
-
-To add external libraries/tools/whatever into your project in an extremely clean way, simply add a line with the
-repo name and version to the composer.json! Take a look on these tutorials if you want to get into Composer:
-[How to install (and update) Composer on Windows 7 or Ubuntu / Debian](http://www.dev-metal.com/install-update-composer-windows-7-ubuntu-debian-centos/)
-and [Getting started with Composer](http://www.dev-metal.com/getting-started-composer/).
+The script makes use of mod_rewrite and blocks all access to everything outside the /public folder.
+You .git folder/files, the application-folder and everything else is not accessible (when set up correctly).
 
 ## License
 
 This project is licensed under the MIT License.
 This means you can use and modify it for free in private or commercial projects.
+
+## Support
+
+[![Donate by server affiliate sale](_tutorial/support-a2hosting.png)](https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579)
+
+## History
+
+MINI is the successor of php-mvc. As php-mvc didn't provide a real MVC structure (and several people complained
+about that - which is totally right!) I've renamed and rebuild the project.
+
+## Dear haters, trolls and i-hate-everything-people...
+
+... MINI is just a simple helper-tool I've created for my daily work, simply because it was much easier to setup and
+handle than real frameworks. For daily agency work, quick prototyping and frontend-driven projects it's totally okay.
+
+I've written this unpaid, voluntarily, in my free-time and uploaded it on GitHub to share.
+It's totally free, for private and commercial use. If you don't like it, don't use it.
+If you see issues, then write a ticket (and if you are really cool: commit
+a fix!). But don't bash, don't complain, don't hate. There's no reason to do so.
 
 ## Contribute
 
@@ -175,11 +76,5 @@ Please commit into the develop branch (which holds the in-development version), 
 If you think this script is useful and saves you a lot of work, then think about supporting the project:
 
 1. Donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG), [GitTip](https://www.gittip.com/Panique/) or [Flattr](https://flattr.com/submit/auto?user_id=panique&url=https%3A%2F%2Fgithub.com%2Fpanique%2Fphp-mvc).
-2. Rent your next server at [A2 Hosting](http://www.a2hosting.com/4471.html) or [DigitalOcean](https://www.digitalocean.com/?refcode=40d978532a20).
+2. Rent your next server at [A2 Hosting](http://www.a2hosting.com/4471.html).
 3. Contribute to this project. Feel free to improve this project with your skills.
-4. Spread the word: Tell others about this project.
-
-## Linked music tracks in the demo application
-
-The linked tracks in this naked application are just some of my personal favourites of the last few months.
-I think it's always a good idea to fill boring nerd-code stuff with quality culture.
