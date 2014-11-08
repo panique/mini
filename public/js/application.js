@@ -1,4 +1,3 @@
-// common way to initialize jQuery
 $(function() {
 
     // TODO can a JS expert write this code like it should look like ?
