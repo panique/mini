@@ -11,11 +11,13 @@ MINI is easy to install, runs nearly everywhere and doesn't make things more com
 ## Features
 
 - extremely simple, easy to understand
-- encourages people to code according to PSR 1/2 coding guidelines
-- promotes the usage of PDO
-- promotes the usage of external libraries via Composer
-- promotes development with max. error reporting
-- promotes to comment code
+- simple but clean structure
+- makes "beautiful" clean URLs
+- demo CRUD actions: Create, Read, Update and Delete database entries easily
+- demo AJAX call
+- tries to follow PSR 1/2 coding guidelines
+- uses PDO for any database requests, comes with an additional PDO debug tool to emulate your SQL statements
+- commented code
 - uses only native PHP code, so people don't have to learn a framework
 
 ## Requirements
