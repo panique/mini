@@ -29,7 +29,7 @@ MINI is easy to install, runs nearly everywhere and doesn't make things more com
 ## Installation
 
 1. Edit the database credentials in `application/config/config.php`
-2. Execute the .sql statements in the `_installation/`-folder (with PHPMyAdmin for example).
+2. Execute the .sql statements in the `_installation/`-folder (running `_installation/demo-db.sh <sql username>` or PHPMyAdmin for example).
 3. Make sure you have mod_rewrite activated on your server / in your environment. Some guidelines:
    [Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/),
    [Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/),
