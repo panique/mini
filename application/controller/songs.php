@@ -11,6 +11,16 @@
  */
 class Songs extends Controller
 {
+	/**
+	 * constructor can be used to set layout/template/etc
+	 */
+	public function __construct() {
+		parent::__construct();
+	
+		// set the view path to "views/home/"
+		$this->view->setTemplate("songs");
+	}
+	
     /**
      * PAGE: index
      * This method handles what happens when you move to http://yourproject/songs/index
@@ -20,11 +30,15 @@ class Songs extends Controller
         // getting all songs and amount of songs
         $songs = $this->model->getAllSongs();
         $amount_of_songs = $this->model->getAmountOfSongs();
-
-       // load views. within the views we can echo out $songs and $amount_of_songs easily
-        require APP . 'views/_templates/header.php';
-        require APP . 'views/songs/index.php';
-        require APP . 'views/_templates/footer.php';
+		
+        // the variables to be passed to the subview. 
+        $subViewData = array('songs' => $songs, 'amount_of_songs' => $amount_of_songs);
+		
+       	// load subview (content of the page) to a variable, which can be sent to the layout via render.
+        $content = $this->view->factory('index', $subViewData);
+        
+        // render the page
+        $this->view->render(array('flashMessage' => '', 'content' => $content));
     }
 
     /**
@@ -84,9 +98,10 @@ class Songs extends Controller
             // redirect the user to an error page or similar
 
             // load views. within the views we can echo out $song easily
-            require APP . 'views/_templates/header.php';
-            require APP . 'views/songs/edit.php';
-            require APP . 'views/_templates/footer.php';
+            //require APP . 'views/_templates/header.php';
+            $editContent = $this->view->factory('edit', array('song' => $song));
+            
+            $this->view->render(array('flashMessage' => '', 'content' => $editContent));
         } else {
             // redirect user to songs index page (as we don't have a song_id)
             header('location: ' . URL . 'songs/index');

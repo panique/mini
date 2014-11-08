@@ -16,9 +16,13 @@ class Error extends Controller
      */
     public function index()
     {
-        // load views
-        require APP . 'views/_templates/header.php';
-        require APP . 'views/error/index.php';
-        require APP . 'views/_templates/footer.php';
+    	// the path to template directory
+    	$this->view->setTemplate('error');
+    	
+        // load views from within the template directory
+        $content = $this->view->factory('index');
+        
+        // render the layout with the content
+        $this->view->render(array('flashMessage' => '', 'content' => $content));
     }
 }
