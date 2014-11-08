@@ -74,15 +74,15 @@ If you want to support MINI, then rent your next server at
 MINI is the successor of php-mvc. As php-mvc didn't provide a real MVC structure (and several people complained
 about that - which is totally right!) I've renamed and rebuild the project.
 
-## Dear haters, trolls and i-hate-everything-people...
+## Dear haters, trolls and everything-sucks-people...
 
-... MINI is just a simple helper-tool I've created for my daily work, simply because it was much easier to setup and
+... MINI is just a simple helper-tool I've created for my daily work, simply because it was much easier to setup and to
 handle than real frameworks. For daily agency work, quick prototyping and frontend-driven projects it's totally okay.
 
 I've written this unpaid, voluntarily, in my free-time and uploaded it on GitHub to share.
 It's totally free, for private and commercial use. If you don't like it, don't use it.
-If you see issues, then write a ticket (and if you are really cool: commit
-a fix!). But don't bash, don't complain, don't hate. There's no reason to do so.
+If you see issues, then please write a ticket (and if you are really cool: I'm very thankful for any commits!).
+But don't bash, don't complain, don't hate. Only bad people do so.
 
 ## Contribute
 
