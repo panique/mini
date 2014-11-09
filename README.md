@@ -71,13 +71,13 @@ MINI comes with a little [PDO debugger tool](https://github.com/panique/pdo-debu
 statements. It's extremely easy to use:
 
 ```php
-    $sql = "SELECT id, artist, track, link FROM song WHERE id = :song_id LIMIT 1";
-    $query = $this->db->prepare($sql);
-    $parameters = array(':song_id' => $song_id);
-    
-    echo debugPDO($sql, $parameters);
+$sql = "SELECT id, artist, track, link FROM song WHERE id = :song_id LIMIT 1";
+$query = $this->db->prepare($sql);
+$parameters = array(':song_id' => $song_id);
 
-    $query->execute($parameters);
+echo debugPDO($sql, $parameters);
+
+$query->execute($parameters);
 ```
 
 ## License
@@ -99,53 +99,57 @@ coming soon
 
 ## Quick-Start
 
-### The structure in general
+#### The structure in general
 
 The application's URL-path translates directly to the controllers (=files) and their methods inside 
-`application/controllers`. 
+application/controllers. 
 
-`example.com/home/exampleOne` will do what the *exampleOne()* method in `application/controllers/home.php` says.
-`example.com/home` will do what the *index()* method in `application/controllers/home.php` says.
-`example.com` will do what the *index()* method in `application/controllers/home.php` says (default fallback).
-`example.com/songs` will do what the *index()* method in `application/controllers/songs.php` says.
-`example.com/songs/editsong/17` will do what the *editsong()* method in `application/controllers/songs.php` says and
+`example.com/home/exampleOne` will do what the *exampleOne()* method in application/controllers/home.php says.
+
+`example.com/home` will do what the *index()* method in application/controllers/home.php says.
+
+`example.com` will do what the *index()* method in application/controllers/home.php says (default fallback).
+
+`example.com/songs` will do what the *index()* method in application/controllers/songs.php says.
+
+`example.com/songs/editsong/17` will do what the *editsong()* method in application/controllers/songs.php says and
 will pass `17` as a parameter to it.
 
 Self-explaining, right ?
 
-## Showing a view
+#### Showing a view
 
 Let's look at the exampleOne()-method in the home-controller (application/controllers/home.php): This simply shows
 the header, footer and the example_one.php page (in views/home/). By intention as simple and native as possible.
 
 ```php
-    public function exampleOne()
-    {
-        // load views
-        require APP . 'views/_templates/header.php';
-        require APP . 'views/home/example_one.php';
-        require APP . 'views/_templates/footer.php';
-    }
+public function exampleOne()
+{
+    // load views
+    require APP . 'views/_templates/header.php';
+    require APP . 'views/home/example_one.php';
+    require APP . 'views/_templates/footer.php';
+}
 ```  
 
-### Working with data
+#### Working with data
 
 Let's look into the index()-method in the songs-controller (application/controllers/songs.php): Similar to exampleOne,
 but here we also request data. Again, everything is extremely reduced and simple: $this->model->getAllSongs() simply
 calls the getAllSongs()-method in application/model/model.php.
 
 ```php
-    public function index()
-    {
-        // getting all songs and amount of songs
-        $songs = $this->model->getAllSongs();
-        $amount_of_songs = $this->model->getAmountOfSongs();
+public function index()
+{
+    // getting all songs and amount of songs
+    $songs = $this->model->getAllSongs();
+    $amount_of_songs = $this->model->getAmountOfSongs();
 
-       // load views. within the views we can echo out $songs and $amount_of_songs easily
-        require APP . 'views/_templates/header.php';
-        require APP . 'views/songs/index.php';
-        require APP . 'views/_templates/footer.php';
-    }
+   // load views. within the views we can echo out $songs and $amount_of_songs easily
+    require APP . 'views/_templates/header.php';
+    require APP . 'views/songs/index.php';
+    require APP . 'views/_templates/footer.php';
+}
 ```
 
 For extreme simplicity, all data-handling methods are in application/model/model.php. This is for sure not really
@@ -153,28 +157,28 @@ professional, but the most simple implementation. Have a look how getAllSongs() 
 super-simple PDO.
 
 ```php
-    public function getAllSongs()
-    {
-        $sql = "SELECT id, artist, track, link FROM song";
-        $query = $this->db->prepare($sql);
-        $query->execute();
-        
-        return $query->fetchAll();
-    }
+public function getAllSongs()
+{
+    $sql = "SELECT id, artist, track, link FROM song";
+    $query = $this->db->prepare($sql);
+    $query->execute();
+    
+    return $query->fetchAll();
+}
 ```
 
 The result, here $songs, can then easily be used directly
 inside the view files (in this case application/views/songs/index.php, in a simplified example):
 
 ```php
-    <tbody>
-    <?php foreach ($songs as $song) { ?>
-        <tr>
-            <td><?php if (isset($song->artist)) echo htmlspecialchars($song->artist, ENT_QUOTES, 'UTF-8'); ?></td>
-            <td><?php if (isset($song->track)) echo htmlspecialchars($song->track, ENT_QUOTES, 'UTF-8'); ?></td>
-        </tr>
-    <?php } ?>
-    </tbody>
+<tbody>
+<?php foreach ($songs as $song) { ?>
+    <tr>
+        <td><?php if (isset($song->artist)) echo htmlspecialchars($song->artist, ENT_QUOTES, 'UTF-8'); ?></td>
+        <td><?php if (isset($song->track)) echo htmlspecialchars($song->track, ENT_QUOTES, 'UTF-8'); ?></td>
+    </tr>
+<?php } ?>
+</tbody>
 ```
 
 ## History
