@@ -68,15 +68,15 @@ are using extremely outdated MySQL versions).
 
 ## Goodies
 
-MINI comes with a little [PDO debugger tool](https://github.com/panique/pdo-debug), trying to emulate your PDO-SQL
-statements. It's extremely easy to use:
+MINI comes with a little customized [PDO debugger tool](https://github.com/panique/pdo-debug) (find the code in
+application/libs/helper.php), trying to emulate your PDO-SQL statements. It's extremely easy to use:
 
 ```php
 $sql = "SELECT id, artist, track, link FROM song WHERE id = :song_id LIMIT 1";
 $query = $this->db->prepare($sql);
 $parameters = array(':song_id' => $song_id);
 
-echo debugPDO($sql, $parameters);
+echo Helper::debugPDO($sql, $parameters);
 
 $query->execute($parameters);
 ```
@@ -208,6 +208,7 @@ Please commit into the develop branch (which holds the in-development version), 
 ## Changelog
 
 **November 2014**
+- [panique] PDO-debugger is now a static helper-method, not a global function anymore
 - [panique] folder renaming
 - [reg4in] JS AJAX calls runs now properly even when using script in sub-folder
 - [panique] removed all "models", using one model file now
