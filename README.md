@@ -207,6 +207,7 @@ Please commit into the develop branch (which holds the in-development version), 
 ## Changelog
 
 **November 2014**
+- [panique] folder renaming
 - [reg4in] JS AJAX calls runs now properly even when using script in sub-folder
 - [panique] removed all "models", using one model file now
 - [panique] full project renaming, re-branding
