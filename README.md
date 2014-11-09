@@ -22,8 +22,8 @@ MINI is easy to install, runs nearly everywhere and doesn't make things more com
 
 ## Forks of MINI
  
-MINI has a smaller brother, named TINY. It's similar to MINI, but runs without mod_rewrite in nearly every environment.
-Not suitable for live sites, but nice for quick prototyping.
+MINI has a smaller brother, named [TINY](https://github.com/panique/tiny). It's similar to MINI, but runs without 
+mod_rewrite in nearly every environment. Not suitable for live sites, but nice for quick prototyping.
  
 MINI also has a bigger brother, named MINI+. It's in development and comes with an improved architecture, 
 SASS-compiling, Twig, Unit Tests, etc.
