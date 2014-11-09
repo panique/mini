@@ -68,15 +68,15 @@ are using extremely outdated MySQL versions).
 
 ## Goodies
 
-MINI comes with a little [PDO debugger tool](https://github.com/panique/pdo-debug), trying to emulate your PDO-SQL
-statements. It's extremely easy to use:
+MINI comes with a little customized [PDO debugger tool](https://github.com/panique/pdo-debug) (find the code in
+application/libs/helper.php), trying to emulate your PDO-SQL statements. It's extremely easy to use:
 
 ```php
 $sql = "SELECT id, artist, track, link FROM song WHERE id = :song_id LIMIT 1";
 $query = $this->db->prepare($sql);
 $parameters = array(':song_id' => $song_id);
 
-echo debugPDO($sql, $parameters);
+echo Helper::debugPDO($sql, $parameters);
 
 $query->execute($parameters);
 ```
