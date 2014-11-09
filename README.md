@@ -49,6 +49,10 @@ version of MINI)
 
 MINI runs without any further configuration.
 
+## Documentation
+
+A very early documentation can be found on [php-mini.com/documentation](http://php-mini.com/documentation/).
+
 ## Server configs for
 
 ### nginx
