@@ -23,7 +23,7 @@ class Application
         // check for controller: no controller given ? then load start-page
         if (!$this->url_controller) {
 
-            require APP . 'controller/home.php';
+            require APP . 'controllers/home.php';
             $page = new Home();
             $page->index();
 
@@ -53,13 +53,13 @@ class Application
                 }
                 else {
                     // defined action not existent: show the error page
-                    require APP . 'controller/error.php';
+                    require APP . 'controllers/error.php';
                     $page = new Error();
                     $page->index();
                 }
             }
         } else {
-            require APP . 'controller/error.php';
+            require APP . 'controllers/error.php';
             $page = new Error();
             $page->index();
         }
