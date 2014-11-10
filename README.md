@@ -47,7 +47,8 @@ version of MINI)
    [XAMPP for Windows](http://www.leonardaustin.com/blog/technical/enable-mod_rewrite-in-xampp/),
    [MAMP on Mac OS](http://stackoverflow.com/questions/7670561/how-to-get-htaccess-to-work-on-mamp)
 
-MINI runs without any further configuration.
+MINI runs without any further configuration. You can also put it inside a sub-folder, it will work without any 
+further configuration.
 
 ## Documentation
 
