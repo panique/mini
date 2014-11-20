@@ -25,7 +25,7 @@ MINI is easy to install, runs nearly everywhere and doesn't make things more com
 MINI has a smaller brother, named [TINY](https://github.com/panique/tiny). It's similar to MINI, but runs without 
 mod_rewrite in nearly every environment. Not suitable for live sites, but nice for quick prototyping.
  
-MINI also has a bigger brother, named MINI+. It's in development and comes with an improved architecture, 
+MINI also has a bigger brother, named MINI2. It's in development and comes with an improved architecture, 
 SASS-compiling, Twig, Unit Tests, etc.
 
 ## Requirements
@@ -91,6 +91,10 @@ $query->execute($parameters);
 This project is licensed under the MIT License.
 This means you can use and modify it for free in private or commercial projects.
 
+## Follow on Facebook
+
+Follow the repo on [Facebook](https://www.facebook.com/pages/MINI-a-supersimple-PHP-application/1488883564703966).
+
 ## Support
 
 If you want to support MINI, then rent your next server at
@@ -131,7 +135,7 @@ the header, footer and the example_one.php page (in views/home/). By intention a
 ```php
 public function exampleOne()
 {
-    // load views
+    // load view
     require APP . 'views/_templates/header.php';
     require APP . 'views/home/example_one.php';
     require APP . 'views/_templates/footer.php';
@@ -151,7 +155,7 @@ public function index()
     $songs = $this->model->getAllSongs();
     $amount_of_songs = $this->model->getAmountOfSongs();
 
-   // load views. within the views we can echo out $songs and $amount_of_songs easily
+   // load view. within the view files we can echo out $songs and $amount_of_songs easily
     require APP . 'views/_templates/header.php';
     require APP . 'views/songs/index.php';
     require APP . 'views/_templates/footer.php';
