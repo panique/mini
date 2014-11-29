@@ -8,6 +8,10 @@ If you just want to show some pages, do a few database calls and a little-bit of
 reading in massive documentations of highly complex professional frameworks, then MINI might be very useful for you.
 MINI is easy to install, runs nearly everywhere and doesn't make things more complicated than necessary.
 
+#### MINI 2 is also in the making!
+
+Have a look [here for MINI 2](https://github.com/panique/mini2).
+
 ## Features
 
 - extremely simple, easy to understand
