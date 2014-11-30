@@ -39,10 +39,27 @@ SASS-compiling, Twig, Unit Tests, etc.
 - mod_rewrite activated (tutorials below, but there's also [TINY](https://github.com/panique/tiny), a mod_rewrite-less 
 version of MINI)
 
+## Installation (in Vagrant, 100% automatic)
+
+If you are using Vagrant for your development, then you can install MINI with one click (or one command on the
+command line) [[Vagrant doc](https://docs.vagrantup.com/v2/getting-started/provisioning.html)]. MINI comes with a demo 
+Vagrant-file (defines your Vagrant box) and a demo bootstrap.sh which automatically installs Apache, PHP, MySQL, 
+PHPMyAdmin, git and Composer, sets a chosen password in MySQL and PHPMyadmin and even inside the application code, 
+downloads the Composer-dependencies, activates mod_rewrite and edits the Apache settings, downloads the code from GitHub
+and runs the demo SQL statements (for demo data). This is 100% automatic, you'll end up after +/- 5 minutes with a fully 
+running installation of MINI2 inside an Ubuntu 14.04 LTS Vagrant box.
+
+To do so, put `Vagrantfile` and `bootstrap.sh` from `_vagrant` inside a folder (and nothing else). 
+Do `vagrant box add ubuntu/trusty64` to add Ubuntu 14.04 LTS ("Trusty Thar") 64bit to Vagrant (unless you already have 
+it), then do `vagrant up` to run the box. When installation is finished you can directly use the fully installed demo 
+app on `192.168.33.44`. As this just a quick demo environment the MySQL root password and the PHPMyAdmin root password 
+are set to `12345678`, the project is installed in `/var/www/html/myproject`. You can change this for sure inside
+`bootstrap.sh`.
+
 ## Installation
 
 1. Edit the database credentials in `application/config/config.php`
-2. Execute the .sql statements in the `_installation/`-folder (with PHPMyAdmin for example).
+2. Execute the .sql statements in the `_install/`-folder (with PHPMyAdmin for example).
 3. Make sure you have mod_rewrite activated on your server / in your environment. Some guidelines:
    [Ubuntu 14.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-14-04-lts/),
    [Ubuntu 12.04 LTS](http://www.dev-metal.com/enable-mod_rewrite-ubuntu-12-04-lts/),
@@ -64,11 +81,11 @@ A very early documentation can be found on [php-mini.com/documentation](http://p
 
 ### nginx
 
-TODO
+TODO (please commit if you have a perfect config)
 
 ### IIS
 
-TODO
+TODO (please commit if you have a perfect config)
 
 ## Security
 
@@ -223,6 +240,8 @@ Please commit into the develop branch (which holds the in-development version), 
 ## Changelog
 
 **November 2014**
+- [panique] auto-install script for Vagrant
+- [panique] basic documentation
 - [panique] PDO-debugger is now a static helper-method, not a global function anymore
 - [panique] folder renaming
 - [reg4in] JS AJAX calls runs now properly even when using script in sub-folder
