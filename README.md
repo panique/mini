@@ -1,4 +1,4 @@
-[![MINI - A naked barebone PHP application](_installation/php-mini.png)](http://www.php-mini.com)
+[![MINI - A naked barebone PHP application](_install/php-mini.png)](http://www.php-mini.com)
 
 # MINI
 
