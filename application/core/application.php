@@ -38,7 +38,7 @@ class Application
             // check for method: does such a method exist in the controller ?
             if (method_exists($this->url_controller, $this->url_action)) {
 
-                if(!empty($this->url_params)) {
+                if (!empty($this->url_params)) {
                     // Call the method and pass arguments to it
                     call_user_func_array(array($this->url_controller, $this->url_action), $this->url_params);
                 } else {
@@ -47,21 +47,16 @@ class Application
                 }
 
             } else {
-                if(strlen($this->url_action) == 0) {
+                if (strlen($this->url_action) == 0) {
                     // no action defined: call the default index() method of a selected controller
                     $this->url_controller->index();
                 }
                 else {
-                    // defined action not existent: show the error page
-                    require APP . 'controllers/error.php';
-                    $page = new Error();
-                    $page->index();
+                    header('location: ' . URL . 'error');
                 }
             }
         } else {
-            require APP . 'controllers/error.php';
-            $page = new Error();
-            $page->index();
+            header('location: ' . URL . 'error');
         }
     }
 
