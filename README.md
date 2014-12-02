@@ -25,12 +25,18 @@ Have a look [here for MINI 2](https://github.com/panique/mini2).
 - uses only native PHP code, so people don't have to learn a framework
 
 ## Forks of MINI
+
+### TINY
  
 MINI has a smaller brother, named [TINY](https://github.com/panique/tiny). It's similar to MINI, but runs without 
 mod_rewrite in nearly every environment. Not suitable for live sites, but nice for quick prototyping.
  
 MINI also has a bigger brother, named MINI2. It's in development and comes with an improved architecture, 
 SASS-compiling, Twig, Unit Tests, etc.
+
+### branch feature-better-view
+
+This branch handles the view in a better (but more complicated) way. Have a look, it's self-explaining.
 
 ## Requirements
 
