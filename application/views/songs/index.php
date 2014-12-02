@@ -1,7 +1,7 @@
 <div class="container">
     <h2>You are in the View: application/views/song/index.php (everything in this box comes from that file)</h2>
     <!-- add song form -->
-    <div>
+    <div class="box">
         <h3>Add a song</h3>
         <form action="<?php echo URL; ?>songs/addsong" method="POST">
             <label>Artist</label>
@@ -14,7 +14,7 @@
         </form>
     </div>
     <!-- main content output -->
-    <div>
+    <div class="box">
         <h3>Amount of songs (data from second model)</h3>
         <div>
             <?php echo $amount_of_songs; ?>
