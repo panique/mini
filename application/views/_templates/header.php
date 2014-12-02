@@ -16,7 +16,7 @@
 <body>
     <!-- logo -->
     <div class="logo">
-        MINI<span class="number">2</span>
+        MINI
     </div>
 
     <!-- navigation -->
