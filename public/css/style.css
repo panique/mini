@@ -1,29 +1,80 @@
-/* Demo CSS */
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-size: 15px;
+    font-family: Arial;
+    font-size: 14px;
 }
-
-table {
-    font-size: 13px;
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: #222;
+    margin: 20px 30px;
 }
-
-.container {
-    border: 3px solid #000;
-    padding: 20px;
-    margin: 10px;
+.logo .number {
+    color: #222;
+    opacity: 0.1;
 }
-
-.where-are-we-box {
-    position: relative;
-    left: -20px;
-    top: -20px;
-    background-color: #bbb;
-    padding: 10px 15px;
+.navigation {
+    margin-left: 33px;
+}
+.navigation a {
     display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid #222;
+    background: #222;
+    color: #fff;
+}
+.navigation a:hover {
+    color: #222;
+    background: transparent;
+}
+.container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 33px;
+}
+.container a {
+    color: #222;
+}
+.container table {
+    font-size: 11px;
+    margin-top: 20px;
+}
+.container table thead td {
+    background-color: #f5f5f5;
+    padding: 4px 10px;
+}
+.container table tbody td {
+    padding: 4px 10px;
+}
+.container .box {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 30px;
+}
+.container input {
+    background-color: #f5f5f5;
+    border: 0;
+    padding: 5px 10px;
+}
+.container input[type="submit"] {
+    background-color: #ccc;
+    cursor: pointer;
+}
+.container input[type="submit"]:hover {
+    background-color: #222;
+    color: #fff;
+}
+.container button {
+    background-color: #ccc;
+    border: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.container button:hover {
+    background-color: #222;
+    color: #fff;
 }
