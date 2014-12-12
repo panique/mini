@@ -62,6 +62,28 @@ app on `192.168.33.44`. As this just a quick demo environment the MySQL root pas
 are set to `12345678`, the project is installed in `/var/www/html/myproject`. You can change this for sure inside
 `bootstrap.sh`.
 
+## Auto-Installation on Ubuntu 14.04 LTS (in 10 seconds)
+
+You can install MINI including Apache, MySQL, PHP and PHPMyAdmin, mod_rewrite, Composer, all necessary settings and even the passwords inside the configs file by simply downloading one file and executing it, the entire installation will run 100% automatically. See the bootstrap.sh file for more infos (and the default passwords). Keep in mind that this is quick dev setup, not a perfect choice for production for sure. This should work perfectly in every naked Ubuntu 14.04 LTS.
+
+Download the installer script
+
+```bash
+wget https://raw.githubusercontent.com/panique/mini/master/_vagrant/bootstrap.sh
+```
+
+Make it executable [is this necessary ?]
+
+```bash
+chmod +x bootstrap.sh
+```
+
+Run it! Boooooom. Give it some minutes to perform all the tasks. And yes, you can thank me later :)
+
+```bash
+sudo ./bootstrap.sh
+```
+
 ## Installation
 
 1. Edit the database credentials in `application/config/config.php`
