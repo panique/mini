@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>You are in the View: application/views/song/edit.php (everything in this box comes from that file)</h2>
+    <h2>You are in the View: application/view/song/edit.php (everything in this box comes from that file)</h2>
     <!-- add song form -->
     <div>
         <h3>Edit a song</h3>

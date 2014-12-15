@@ -13,7 +13,7 @@ class Controller
     public $model = null;
 
     /**
-     * Whenever a controller is created, open a database connection too and load "the model".
+     * Whenever controller is created, open a database connection too and load "the model".
      */
     function __construct()
     {
