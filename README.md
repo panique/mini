@@ -268,6 +268,7 @@ Please commit into the develop branch (which holds the in-development version), 
 ## Changelog
 
 **December 2014**
+- [panique] renamed controller / view to singular
 - [panique] added charset to PDO creation (increased security) 
 
 **November 2014**
