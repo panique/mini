@@ -73,7 +73,7 @@ Download the installer script
 wget https://raw.githubusercontent.com/panique/mini/master/_vagrant/bootstrap.sh
 ```
 
-Make it executable [is this necessary ?]
+Make it executable
 
 ```bash
 chmod +x bootstrap.sh
