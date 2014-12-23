@@ -31,8 +31,9 @@ Have a look [here for MINI 2](https://github.com/panique/mini2).
 MINI has a smaller brother, named [TINY](https://github.com/panique/tiny). It's similar to MINI, but runs without 
 mod_rewrite in nearly every environment. Not suitable for live sites, but nice for quick prototyping.
  
-MINI also has a bigger brother, named MINI2. It's in development and comes with an improved architecture, 
-SASS-compiling, Twig, Unit Tests, etc.
+### MINI2 
+ 
+MINI also has a bigger brother, named [MINI2](https://github.com/panique/mini2). It's even simpler, has been built using Slim and has nice features like SASS-compiling, Twig etc.
 
 ### branch feature-better-view
 
