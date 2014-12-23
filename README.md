@@ -79,7 +79,7 @@ Make it executable
 chmod +x bootstrap.sh
 ```
 
-Run it! Boooooom. Give it some minutes to perform all the tasks. And yes, you can thank me later :)
+Run it, make 100% sure you are using it with *sudo*, otherwise it will result in a broken installation. Give it some minutes to perform all the tasks. And yes, you can thank me later :)
 
 ```bash
 sudo ./bootstrap.sh
