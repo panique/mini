@@ -31,8 +31,9 @@ Have a look [here for MINI 2](https://github.com/panique/mini2).
 MINI has a smaller brother, named [TINY](https://github.com/panique/tiny). It's similar to MINI, but runs without 
 mod_rewrite in nearly every environment. Not suitable for live sites, but nice for quick prototyping.
  
-MINI also has a bigger brother, named MINI2. It's in development and comes with an improved architecture, 
-SASS-compiling, Twig, Unit Tests, etc.
+### MINI2 
+ 
+MINI also has a bigger brother, named [MINI2](https://github.com/panique/mini2). It's even simpler, has been built using Slim and has nice features like SASS-compiling, Twig etc.
 
 ### branch feature-better-view
 
@@ -62,27 +63,9 @@ app on `192.168.33.44`. As this just a quick demo environment the MySQL root pas
 are set to `12345678`, the project is installed in `/var/www/html/myproject`. You can change this for sure inside
 `bootstrap.sh`.
 
-## Auto-Installation on Ubuntu 14.04 LTS (in 10 seconds)
+## Auto-Installation on Ubuntu 14.04 LTS (in 30 seconds)
 
-You can install MINI including Apache, MySQL, PHP and PHPMyAdmin, mod_rewrite, Composer, all necessary settings and even the passwords inside the configs file by simply downloading one file and executing it, the entire installation will run 100% automatically. See the bootstrap.sh file for more infos (and the default passwords). Keep in mind that this is quick dev setup, not a perfect choice for production for sure. This should work perfectly in every naked Ubuntu 14.04 LTS.
-
-Download the installer script
-
-```bash
-wget https://raw.githubusercontent.com/panique/mini/master/_vagrant/bootstrap.sh
-```
-
-Make it executable [is this necessary ?]
-
-```bash
-chmod +x bootstrap.sh
-```
-
-Run it! Boooooom. Give it some minutes to perform all the tasks. And yes, you can thank me later :)
-
-```bash
-sudo ./bootstrap.sh
-```
+You can install MINI including Apache, MySQL, PHP and PHPMyAdmin, mod_rewrite, Composer, all necessary settings and even the passwords inside the configs file by simply downloading one file and executing it, the entire installation will run 100% automatically. Find the tutorial in this blog article: [Install MINI in 30 seconds inside Ubuntu 14.04 LTS](http://www.dev-metal.com/install-mini-30-seconds-inside-ubuntu-14-04-lts/)
 
 ## Installation
 

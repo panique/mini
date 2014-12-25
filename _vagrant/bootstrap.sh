@@ -4,9 +4,6 @@
 PASSWORD='12345678'
 PROJECTFOLDER='myproject'
 
-# create project folder
-sudo mkdir "/var/www/html/${PROJECTFOLDER}"
-
 sudo apt-get update
 sudo apt-get -y upgrade
 
@@ -24,6 +21,9 @@ sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/admin-pass password
 sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password $PASSWORD"
 sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2"
 sudo apt-get -y install phpmyadmin
+
+# create project folder
+sudo mkdir "/var/www/html/${PROJECTFOLDER}"
 
 # setup hosts file
 VHOST=$(cat <<EOF
@@ -67,7 +67,7 @@ sudo mysql -h "localhost" -u "root" "-p${PASSWORD}" < "/var/www/html/${PROJECTFO
 sudo mysql -h "localhost" -u "root" "-p${PASSWORD}" < "/var/www/html/${PROJECTFOLDER}/_install/03-insert-demo-data-into-table-song.sql"
 
 # put the password into the application's config. This is quite hardcore, but why not :)
-sed -i "s/your_password/${PASSWORD}/" "/var/www/html/${PROJECTFOLDER}/application/config/config.php"
+sudo sed -i "s/your_password/${PASSWORD}/" "/var/www/html/${PROJECTFOLDER}/application/config/config.php"
 
 # final feedback
 echo "Voila!"
