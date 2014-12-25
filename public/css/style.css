@@ -3,9 +3,9 @@ body {
     font-size: 14px;
 }
 .logo {
-    font-family: 'Oswald', sans-serif;
-    font-size: 80px;
-    font-weight: bold;
+    font-size: 100px;
+    font-weight: bolder;
+    letter-spacing: -6px;
     color: #222;
     margin: 20px 30px;
 }
