@@ -92,7 +92,27 @@ A very early documentation can be found on [php-mini.com/documentation](http://p
 
 ### nginx
 
-TODO (please commit if you have a perfect config)
+```nginx
+server {
+    server_name default_server _;   # Listen to any servername
+    listen      [::]:80;
+    listen      80;
+
+    root /var/www/html/myproject/public;
+
+    location / {
+        index index.php;
+        try_files /$uri /$uri/ /index.php?url=$uri;
+    }
+
+    location ~ \.(php)$ {
+        fastcgi_pass   unix:/var/run/php5-fpm.sock;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+```
 
 ### IIS
 
