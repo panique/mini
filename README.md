@@ -33,7 +33,13 @@ mod_rewrite in nearly every environment. Not suitable for live sites, but nice f
  
 ### MINI2 
  
-MINI also has a bigger brother, named [MINI2](https://github.com/panique/mini2). It's even simpler, has been built using Slim and has nice features like SASS-compiling, Twig etc.
+MINI also has a bigger brother, named [MINI2](https://github.com/panique/mini2). It's even simpler, has been built 
+using Slim and has nice features like SASS-compiling, Twig etc.
+
+## Simple MVC
+
+Somebody has used the codebase of an older version of MINI for this interesting framework: 
+[SMVCF](https://github.com/simple-mvc-framework/v2). Definitely worth a look!
 
 ### branch feature-better-view
 
@@ -65,7 +71,10 @@ are set to `12345678`, the project is installed in `/var/www/html/myproject`. Yo
 
 ## Auto-Installation on Ubuntu 14.04 LTS (in 30 seconds)
 
-You can install MINI including Apache, MySQL, PHP and PHPMyAdmin, mod_rewrite, Composer, all necessary settings and even the passwords inside the configs file by simply downloading one file and executing it, the entire installation will run 100% automatically. Find the tutorial in this blog article: [Install MINI in 30 seconds inside Ubuntu 14.04 LTS](http://www.dev-metal.com/install-mini-30-seconds-inside-ubuntu-14-04-lts/)
+You can install MINI including Apache, MySQL, PHP and PHPMyAdmin, mod_rewrite, Composer, all necessary settings and 
+even the passwords inside the configs file by simply downloading one file and executing it, the entire installation 
+will run 100% automatically. Find the tutorial in this blog article: 
+[Install MINI in 30 seconds inside Ubuntu 14.04 LTS](http://www.dev-metal.com/install-mini-30-seconds-inside-ubuntu-14-04-lts/)
 
 ## Installation
 
