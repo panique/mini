@@ -114,6 +114,8 @@ server {
 }
 ```
 
+A deeper discussion on nginx setups can be found [here](https://github.com/panique/mini/issues/55).
+
 ### IIS
 
 TODO (please commit if you have a perfect config)
@@ -269,6 +271,10 @@ Please commit into the develop branch (which holds the in-development version), 
 (which holds the tested and stable version).
 
 ## Changelog
+
+**February 2015**
+
+- [jeroenseegers] nginx setup configuration
 
 **December 2014**
 - [panique] css fixes
