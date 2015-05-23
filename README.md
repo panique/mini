@@ -162,15 +162,12 @@ Follow the repo on [Facebook](https://www.facebook.com/pages/MINI-a-supersimple-
 
 ## Support
 
-If you want to support MINI, then rent your next server at
-[A2Hosting](https://affiliates.a2hosting.com/idevaffiliate.php?id=4471&url=579) or donate a coffee via
-[PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P5YLUK4MW3LDG),
-[GitTip](https://www.gittip.com/Panique/) or
-[Flattr](https://flattr.com/submit/auto?user_id=panique&url=https%3A%2F%2Fgithub.com%2Fpanique%2Fmini).
+If you want to support MINI, then rent your next server at [Host1Plus](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html).
+Thanks! :)
 
 ## TODO: documentation
 
-coming soon
+Yeah, maybe in the future when there's some time...
 
 ## Quick-Start
 
