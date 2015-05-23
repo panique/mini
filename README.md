@@ -159,6 +159,7 @@ This means you can use and modify it for free in private or commercial projects.
 ## Follow on Facebook
 
 Follow the repo on [Facebook](https://www.facebook.com/pages/MINI-a-supersimple-PHP-application/1488883564703966).
+And by the way, I'm also blogging at [Dev Metal](http://www.dev-metal.com).
 
 ## Support
 
