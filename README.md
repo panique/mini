@@ -8,10 +8,6 @@ If you just want to show some pages, do a few database calls and a little-bit of
 reading in massive documentations of highly complex professional frameworks, then MINI might be very useful for you.
 MINI is easy to install, runs nearly everywhere and doesn't make things more complicated than necessary.
 
-#### MINI 2 is also in the making!
-
-Have a look [here for MINI 2](https://github.com/panique/mini2).
-
 ## Features
 
 - extremely simple, easy to understand
@@ -40,10 +36,6 @@ using Slim and has nice features like SASS-compiling, Twig etc.
 
 Somebody has used the codebase of an older version of MINI for this interesting framework: 
 [SMVCF](https://github.com/simple-mvc-framework/v2). Definitely worth a look!
-
-### branch feature-better-view
-
-This branch handles the view in a better (but more complicated) way. Have a look, it's self-explaining.
 
 ## Requirements
 
@@ -125,10 +117,6 @@ server {
 
 A deeper discussion on nginx setups can be found [here](https://github.com/panique/mini/issues/55).
 
-### IIS
-
-TODO (please commit if you have a perfect config)
-
 ## Security
 
 The script makes use of mod_rewrite and blocks all access to everything outside the /public folder.
@@ -156,19 +144,14 @@ $query->execute($parameters);
 This project is licensed under the MIT License.
 This means you can use and modify it for free in private or commercial projects.
 
-## Follow on Facebook
-
-Follow the repo on [Facebook](https://www.facebook.com/pages/MINI-a-supersimple-PHP-application/1488883564703966).
-And by the way, I'm also blogging at [Dev Metal](http://www.dev-metal.com).
-
 ## Support
 
 If you want to support MINI, then rent your next server at [Host1Plus](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html).
 Thanks! :)
 
-## TODO: documentation
+## My blog
 
-Yeah, maybe in the future when there's some time...
+And by the way, I'm also blogging at [Dev Metal](http://www.dev-metal.com).
 
 ## Quick-Start
 
