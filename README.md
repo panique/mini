@@ -85,10 +85,6 @@ further configuration.
 Maybe useful: A simple tutorial on [How to install LAMPP (Linux, Apache, MySQL, PHP, PHPMyAdmin) on Ubuntu 14.04 LTS](http://www.dev-metal.com/installsetup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-14-04-lts/)
 and [the same for Ubuntu 12.04 LTS](http://www.dev-metal.com/setup-basic-lamp-stack-linux-apache-mysql-php-ubuntu-12-04/).
 
-## Documentation
-
-A very early documentation can be found on [php-mini.com/documentation](http://php-mini.com/documentation/).
-
 ## Server configs for
 
 ### nginx
