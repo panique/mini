@@ -8,6 +8,9 @@ If you just want to show some pages, do a few database calls and a little-bit of
 reading in massive documentations of highly complex professional frameworks, then MINI might be very useful for you.
 MINI is easy to install, runs nearly everywhere and doesn't make things more complicated than necessary.
 
+For a deeper introduction in MINI have a look into this blog post:
+[MINI, an extremely simple barebone PHP application](http://www.dev-metal.com/mini-extremely-simple-barebone-php-application/).
+
 ## Features
 
 - extremely simple, easy to understand
