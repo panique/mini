@@ -11,6 +11,8 @@ MINI is easy to install, runs nearly everywhere and doesn't make things more com
 For a deeper introduction into MINI have a look into this blog post:
 [MINI, an extremely simple barebone PHP application](http://www.dev-metal.com/mini-extremely-simple-barebone-php-application/).
 
+[![Support the project](_install/banner-host1plus.png)](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html)
+
 ## Features
 
 - extremely simple, easy to understand
@@ -314,3 +316,5 @@ Please commit into the develop branch (which holds the in-development version), 
 
 **January 2014**
 - [panique] fixed .htaccess issue when there's a controller named "index" and a base index.php (which collide)
+
+[![Support the project](_install/banner-host1plus.png)](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html)
