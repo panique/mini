@@ -37,11 +37,6 @@ mod_rewrite in nearly every environment. Not suitable for live sites, but nice f
 MINI also has a bigger brother, named [MINI2](https://github.com/panique/mini2). It's even simpler, has been built 
 using Slim and has nice features like SASS-compiling, Twig etc.
 
-### Simple MVC
-
-Somebody has used the codebase of an older version of MINI for this interesting framework: 
-[SMVCF](https://github.com/simple-mvc-framework/v2). Definitely worth a look!
-
 ## Requirements
 
 - PHP 5.3.0+
