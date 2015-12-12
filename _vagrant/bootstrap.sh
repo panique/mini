@@ -22,7 +22,9 @@ sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password $
 sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2"
 sudo apt-get -y install phpmyadmin
 
-# create project folder
+# Create project folder, written in 3 single mkdir-statements to make sure this runs everywhere without problems
+sudo mkdir "/var/www"
+sudo mkdir "/var/www/html"
 sudo mkdir "/var/www/html/${PROJECTFOLDER}"
 
 # setup hosts file
