@@ -5,7 +5,6 @@
  *
  * @package mini
  * @author Panique
- * @link http://www.php-mini.com
  * @link https://github.com/panique/mini/
  * @license http://opensource.org/licenses/MIT MIT License
  */
