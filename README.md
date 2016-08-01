@@ -35,9 +35,16 @@ mod_rewrite in nearly every environment. Not suitable for live sites, but nice f
 MINI also has a bigger brother, named [MINI2](https://github.com/panique/mini2). It's even simpler, has been built 
 using Slim and has nice features like SASS-compiling, Twig etc.
 
+### MINI3
+ 
+[MINI3](https://github.com/panique/mini3) it the successor of MINI, 
+using the original MINI1 native application structure (without Slim 
+under the hood), but with proper PSR-4 autoloading, multiple model 
+classes and real namespaces.
+
 ## Requirements
 
-- PHP 5.3.0+, works fine with current stable versions PHP 5.6 and 7.0
+- PHP 5.3.0+ (when first released), now it works fine with current stable versions PHP 5.6 and 7.0
 - MySQL
 - mod_rewrite activated (tutorials below, but there's also [TINY](https://github.com/panique/tiny), a mod_rewrite-less 
 version of MINI)
