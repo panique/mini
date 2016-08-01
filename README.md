@@ -39,7 +39,7 @@ using Slim and has nice features like SASS-compiling, Twig etc.
 
 ## Requirements
 
-- PHP 5.3.0+
+- PHP 5.3.0+, works fine with current stable versions PHP 5.6 and 7.0
 - MySQL
 - mod_rewrite activated (tutorials below, but there's also [TINY](https://github.com/panique/tiny), a mod_rewrite-less 
 version of MINI)
@@ -134,6 +134,13 @@ echo Helper::debugPDO($sql, $parameters);
 
 $query->execute($parameters);
 ```
+
+## Why has the *Error* class been renamed to *Problem*?
+
+The project was written in PHP5 times, but with the release of PHP7 it's not possible anymore to name a class
+"Error" as PHP itself has a internal Error class now. Renaming was the most simple solution, compared to other
+options like "ErrorController" etc. which would add new problems like uppercase filenames etc. (which will not
+work properly on some setups). 
 
 ## License
 
@@ -258,8 +265,11 @@ Please commit into the develop branch (which holds the in-development version), 
 
 ## Changelog
 
-**February 2015**
+**August 2016**
+- [codebicycle/panique] renamed Error class to Problem to make it PHP7 compatible #209
+- [ynohtna92/panique] URL protocol is now protocol-independent #208
 
+**February 2015**
 - [jeroenseegers] nginx setup configuration
 
 **December 2014**
