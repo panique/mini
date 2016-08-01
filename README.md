@@ -1,8 +1,5 @@
 ![MINI - A naked barebone PHP application](_install/mini.png)
 
-[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
-![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
-
 # MINI
 
 MINI is an extremely simple and easy to understand skeleton PHP application, reduced to the max.
@@ -68,6 +65,11 @@ You can install MINI including Apache, MySQL, PHP and PHPMyAdmin, mod_rewrite, C
 even the passwords inside the configs file by simply downloading one file and executing it, the entire installation 
 will run 100% automatically. Find the tutorial in this blog article: 
 [Install MINI in 30 seconds inside Ubuntu 14.04 LTS](http://www.dev-metal.com/install-mini-30-seconds-inside-ubuntu-14-04-lts/)
+
+## Support the project
+
+[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
+![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
 
 ## Installation
 
@@ -136,7 +138,7 @@ echo Helper::debugPDO($sql, $parameters);
 $query->execute($parameters);
 ```
 
-## Why has the *Error* class been renamed to *Problem*?
+## Why has the "Error" class been renamed to "Problem"?
 
 The project was written in PHP5 times, but with the release of PHP7 it's not possible anymore to name a class
 "Error" as PHP itself has a internal Error class now. Renaming was the most simple solution, compared to other
@@ -148,10 +150,10 @@ work properly on some setups).
 This project is licensed under the MIT License.
 This means you can use and modify it for free in private or commercial projects.
 
-## Support
+## Support the project
 
-If you want to support MINI, then rent your next server at [Host1Plus](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html).
-Thanks! :)
+[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
+![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
 
 ## My blog
 
@@ -323,4 +325,7 @@ Please commit into the develop branch (which holds the in-development version), 
 **January 2014**
 - [panique] fixed .htaccess issue when there's a controller named "index" and a base index.php (which collide)
 
+## Support the project
+
 [![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
+![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
