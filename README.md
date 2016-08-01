@@ -1,4 +1,7 @@
-[![MINI - A naked barebone PHP application](_install/mini.png)]
+[MINI - A naked barebone PHP application](_install/mini.png)
+
+[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
+[Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
 
 # MINI
 
@@ -10,9 +13,6 @@ MINI is easy to install, runs nearly everywhere and doesn't make things more com
 
 For a deeper introduction into MINI have a look into this blog post:
 [MINI, an extremely simple barebone PHP application](http://www.dev-metal.com/mini-extremely-simple-barebone-php-application/).
-
-[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
-[![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)](http://tracking.rackspace.com/SH1ES)
 
 ## Features
 
