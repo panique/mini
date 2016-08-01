@@ -154,7 +154,6 @@ This means you can use and modify it for free in private or commercial projects.
 ## Support the project
 
 [![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
-![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
 
 ## My blog
 
@@ -330,4 +329,3 @@ Please commit into the develop branch (which holds the in-development version), 
 
 [![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
 ![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
-* *this is an affiliate link*
