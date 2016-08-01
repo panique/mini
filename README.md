@@ -1,4 +1,4 @@
-![MINI - A naked barebone PHP application](_install/mini.png)
+![MINI - A naked barebone PHP application](_install/mini-logo.png)
 
 # MINI
 
@@ -149,10 +149,6 @@ work properly on some setups).
 
 This project is licensed under the MIT License.
 This means you can use and modify it for free in private or commercial projects.
-
-## Support the project
-
-[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
 
 ## My blog
 
