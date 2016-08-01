@@ -1,7 +1,7 @@
-[MINI - A naked barebone PHP application](_install/mini.png)
+![MINI - A naked barebone PHP application](_install/mini.png)
 
 [![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
-[Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
+![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
 
 # MINI
 
