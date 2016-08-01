@@ -1,4 +1,4 @@
-[![MINI - A naked barebone PHP application](_install/mini.png)](http://www.php-mini.com)
+[![MINI - A naked barebone PHP application](_install/mini.png)]
 
 # MINI
 
@@ -11,7 +11,8 @@ MINI is easy to install, runs nearly everywhere and doesn't make things more com
 For a deeper introduction into MINI have a look into this blog post:
 [MINI, an extremely simple barebone PHP application](http://www.dev-metal.com/mini-extremely-simple-barebone-php-application/).
 
-[![Support the project](_install/banner-host1plus.png)](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html)
+[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
+[![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)](http://tracking.rackspace.com/SH1ES)
 
 ## Features
 
@@ -322,4 +323,4 @@ Please commit into the develop branch (which holds the in-development version), 
 **January 2014**
 - [panique] fixed .htaccess issue when there's a controller named "index" and a base index.php (which collide)
 
-[![Support the project](_install/banner-host1plus.png)](https://affiliates.host1plus.com/ref/devmetal/36f4d828.html)
+[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
