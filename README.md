@@ -70,6 +70,7 @@ will run 100% automatically. Find the tutorial in this blog article:
 
 [![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
 ![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
+* *this is an affiliate link*
 
 ## Installation
 
@@ -329,3 +330,4 @@ Please commit into the develop branch (which holds the in-development version), 
 
 [![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
 ![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
+* *this is an affiliate link*
