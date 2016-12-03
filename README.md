@@ -73,11 +73,6 @@ even the passwords inside the configs file by simply downloading one file and ex
 will run 100% automatically. Find the tutorial in this blog article: 
 [Install MINI in 30 seconds inside Ubuntu 14.04 LTS](http://www.dev-metal.com/install-mini-30-seconds-inside-ubuntu-14-04-lts/)
 
-## Support the project
-
-[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
-![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
-
 ## Installation
 
 1. Edit the database credentials in `application/config/config.php`
@@ -329,5 +324,4 @@ Please commit into the develop branch (which holds the in-development version), 
 
 ## Support the project
 
-[![Support the project](_install/banner-rackspace.png)](http://tracking.rackspace.com/SH1ES)
-![Support banner tracking pixel](http://tracking.rackspace.com/aff_i?offer_id=2&aff_id=3472)
+Rent your next server at [1&1](http://www.anrdoezrs.net/click-8225479-12015878-1477926464000) to support this open-source project.
