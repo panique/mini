@@ -23,6 +23,8 @@ For a deeper introduction into MINI have a look into this blog post:
 - commented code
 - uses only native PHP code, so people don't have to learn a framework
 
+## Support the project
+
 [![Support](https://supporterhq.com/api/b/9guz00i6rep05k1mwxyquz30k)](https://supporterhq.com/give/9guz00i6rep05k1mwxyquz30k)
 
 ## Forks of MINI
