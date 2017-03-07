@@ -10,6 +10,7 @@ class Model
         try {
             $this->db = $db;
         } catch (PDOException $e) {
+            header($_SERVER['SERVER_PROTOCOL'] . " 503 Service Unavailable");
             exit('Database connection could not be established.');
         }
     }
