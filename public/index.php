@@ -35,4 +35,5 @@ require APP . 'core/application.php';
 require APP . 'core/controller.php';
 
 // start the application
+// add some text
 $app = new Application();
