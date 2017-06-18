@@ -36,4 +36,5 @@ require APP . 'core/controller.php';
 
 // start the application
 // add some text
+// edit edit infomation Thuy Tien
 $app = new Application();
