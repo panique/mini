@@ -23,10 +23,6 @@ For a deeper introduction into MINI have a look into this blog post:
 - commented code
 - uses only native PHP code, so people don't have to learn a framework
 
-## Support the project
-
-[![Support](https://supporterhq.com/api/b/9guz00i6rep05k1mwxyquz30k)](https://supporterhq.com/give/9guz00i6rep05k1mwxyquz30k)
-
 ## Forks of MINI
 
 ### TINY
@@ -48,7 +44,8 @@ classes and real namespaces.
 
 ## Requirements
 
-- PHP 5.3.0+ (when first released), now it works fine with current stable versions PHP 5.6 and 7.0
+- PHP 5.3.0+ (when first released), now it works fine with current stable versions PHP 5.6 and 7.1, 7.2., 7.3 and 7.4. 
+  The latest PHP 8.0 is not tested yet but should also work fine.
 - MySQL
 - mod_rewrite activated (tutorials below, but there's also [TINY](https://github.com/panique/tiny), a mod_rewrite-less 
 version of MINI)
@@ -64,11 +61,11 @@ and runs the demo SQL statements (for demo data). This is 100% automatic, you'll
 running installation of MINI2 inside an Ubuntu 14.04 LTS Vagrant box.
 
 To do so, put `Vagrantfile` and `bootstrap.sh` from `_vagrant` inside a folder (and nothing else). 
-Do `vagrant box add ubuntu/trusty64` to add Ubuntu 14.04 LTS ("Trusty Thar") 64bit to Vagrant (unless you already have 
+Do `vagrant box add ubuntu/focal64` to add Ubuntu 20.04 LTS 64bit to Vagrant (unless you already have 
 it), then do `vagrant up` to run the box. When installation is finished you can directly use the fully installed demo 
-app on `192.168.33.44`. As this just a quick demo environment the MySQL root password and the PHPMyAdmin root password 
-are set to `12345678`, the project is installed in `/var/www/html/myproject`. You can change this for sure inside
-`bootstrap.sh`.
+app on `192.168.33.44` (you can change this in the Vagrantfile). As this just a quick demo environment the MySQL 
+root password and the PHPMyAdmin root password are set to `12345678`, the project is installed in `/var/www/html/myproject`. 
+You can change this for sure inside `bootstrap.sh`. Shut down the box with `vagrant halt`
 
 ## Auto-Installation on Ubuntu 14.04 LTS (in 30 seconds)
 
@@ -268,6 +265,9 @@ Please commit into the develop branch (which holds the in-development version), 
 (which holds the tested and stable version).
 
 ## Changelog
+
+**December 2002**
+- [panique] updated Vagrant installer to run with PHP 7.4 and Ubuntu 20.04
 
 **August 2016**
 - [codebicycle/panique] renamed Error class to Problem to make it PHP7 compatible #209
