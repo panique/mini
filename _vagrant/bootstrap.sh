@@ -7,13 +7,15 @@ PROJECTFOLDER='myproject'
 sudo apt-get update
 sudo apt-get -y upgrade
 
+# installs Apache 2.x
 sudo apt-get install -y apache2
-sudo apt-get install -y php5
+# install PHP 7.4
+sudo apt-get install -y php
 
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password $PASSWORD"
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $PASSWORD"
 sudo apt-get -y install mysql-server
-sudo apt-get install php5-mysql
+sudo apt-get install php-mysql
 
 sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean true"
 sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/app-password-confirm password $PASSWORD"
@@ -23,8 +25,8 @@ sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver mul
 sudo apt-get -y install phpmyadmin
 
 # Create project folder, written in 3 single mkdir-statements to make sure this runs everywhere without problems
-sudo mkdir "/var/www"
-sudo mkdir "/var/www/html"
+#sudo mkdir "/var/www"
+#sudo mkdir "/var/www/html"
 sudo mkdir "/var/www/html/${PROJECTFOLDER}"
 
 # setup hosts file
@@ -72,4 +74,4 @@ sudo mysql -h "localhost" -u "root" "-p${PASSWORD}" < "/var/www/html/${PROJECTFO
 sudo sed -i "s/your_password/${PASSWORD}/" "/var/www/html/${PROJECTFOLDER}/application/config/config.php"
 
 # final feedback
-echo "Voila!"
+echo "Voila! Open the project by putting 192.168.33.44 inside your browser!"
