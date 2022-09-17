@@ -328,4 +328,6 @@ Please commit into the develop branch (which holds the in-development version), 
 
 ## Support the project
 
-Rent your next server at [1&1](http://www.anrdoezrs.net/click-8225479-12015878-1477926464000) to support this open-source project.
+Support the project by renting a server at [DigitalOcean](https://www.digitalocean.com/?refcode=40d978532a20) or just tipping a coffee at BuyMeACoffee.com. Thanks! :)
+
+<a href="https://www.buymeacoffee.com/panique" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
